@@ -1,0 +1,97 @@
+// Vitest Snapshot v1
+
+exports[`EditDeleteButton tests > should display the component with the options below if the button is clicked 1`] = `
+"<div data-v-d42ab394=\\"\\" data-v-a87be266=\\"\\" class=\\"container\\"><button data-v-d42ab394=\\"\\" type=\\"button\\" class=\\"button button--completed\\" data-testid=\\"button\\">
+    <div data-v-d42ab394=\\"\\" class=\\"icon-text-container\\">
+      <div data-v-d42ab394=\\"\\" class=\\"icon-container\\"><svg data-v-a87be266=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"40\\" height=\\"40\\" fill=\\"none\\" alt=\\"Plus\\" class=\\"left-icon\\">
+          <path fill=\\"currentColor\\" d=\\"M32.444 18.75H21.25V7.557a1.25 1.25 0 1 0-2.5 0V18.75H7.557a1.25 1.25 0 1 0 0 2.5H18.75v11.194a1.25 1.25 0 1 0 2.5 0V21.25h11.194a1.25 1.25 0 1 0 0-2.5Z\\"></path>
+        </svg></div>
+      <div data-v-d42ab394=\\"\\" class=\\"text-container\\"><span data-v-a87be266=\\"\\" class=\\"text--highlighted text-default-bold\\">Title</span><span data-v-a87be266=\\"\\" class=\\"text--highlighted text-small-regular\\">Subtitle</span></div>
+    </div>
+    <div data-v-d42ab394=\\"\\" class=\\"right-icon--completed\\">
+      <div data-v-b9dd0015=\\"\\" data-v-a87be266=\\"\\" class=\\"container right-icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M480.281 915.218q-22.542 0-38.52-15.968-15.979-15.968-15.979-38.391 0-21.893 15.927-38.267 15.927-16.374 38.293-16.374 22.824 0 38.52 16.445 15.696 16.445 15.696 38.522 0 22.077-15.698 38.055-15.697 15.978-38.239 15.978Zm0-285q-22.542 0-38.52-15.927-15.979-15.927-15.979-38.293 0-22.824 15.927-38.52 15.927-15.696 38.293-15.696 22.824 0 38.52 15.698 15.696 15.697 15.696 38.239 0 22.542-15.698 38.52-15.697 15.979-38.239 15.979Zm0-284.436q-22.542 0-38.52-16.14-15.979-16.14-15.979-38.804 0-22.665 15.927-38.643 15.927-15.979 38.293-15.979 22.824 0 38.52 16.12 15.696 16.12 15.696 38.785 0 22.665-15.698 38.663-15.697 15.998-38.239 15.998Z\\"></path>
+        </svg></div>
+    </div>
+  </button>
+  <div data-v-a87be266=\\"\\" name=\\"more-options\\" class=\\"option-buttons-container\\"><button data-v-a87be266=\\"\\" class=\\"option-button\\" data-testid=\\"edit-option\\">
+      <div data-v-b9dd0015=\\"\\" data-v-a87be266=\\"\\" class=\\"container\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M795.696 394.522 665.435 264.261l39.739-40.304q18.696-18.696 46.174-18.479 27.478.218 47.87 19.479l37.347 36.782q20.392 19.826 18.979 47.087-1.414 27.261-20.109 45.957l-39.739 39.739Zm-41.435 41.435L247.435 942.783H117.174V812.522l506.261-506.261 130.826 129.696Z\\"></path>
+        </svg></div><span data-v-a87be266=\\"\\">Edit</span>
+    </button><button data-v-a87be266=\\"\\" class=\\"option-button\\" data-testid=\\"delete-option\\">
+      <div data-v-b9dd0015=\\"\\" data-v-a87be266=\\"\\" class=\\"container\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M256.478 950.131q-32.74 0-56.262-23.356-23.522-23.355-23.522-55.862V310.522h-50.609v-79.218h212.306v-40.175h282.653v40.175h212.871v79.218h-50.609v560.391q0 32.507-23.522 55.862-23.522 23.356-56.262 23.356H256.478Zm103.174-160.696h69.609v-399h-69.609v399Zm171.087 0h70.174v-399h-70.174v399Z\\"></path>
+        </svg></div><span data-v-a87be266=\\"\\">Delete</span>
+    </button></div>
+</div>"
+`;
+
+exports[`EditDeleteButton tests > should display the component with the subtitle 1`] = `
+"<div data-v-d42ab394=\\"\\" data-v-a87be266=\\"\\" class=\\"container\\"><button data-v-d42ab394=\\"\\" type=\\"button\\" class=\\"button button--completed\\" data-testid=\\"button\\">
+    <div data-v-d42ab394=\\"\\" class=\\"icon-text-container\\">
+      <div data-v-d42ab394=\\"\\" class=\\"icon-container\\">
+        <div data-v-b9dd0015=\\"\\" data-v-a87be266=\\"\\" class=\\"container left-icon\\" alt=\\"ArrowForwardIOS\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M304 987.566 234.434 917l343-343-343-343L304 160.434 717.566 574 304 987.566Z\\"></path>
+          </svg></div>
+      </div>
+      <div data-v-d42ab394=\\"\\" class=\\"text-container\\"><span data-v-a87be266=\\"\\" class=\\"text--highlighted text-default-bold\\">Title</span><span data-v-a87be266=\\"\\" class=\\"text--highlighted text-small-regular\\">Subtitle</span></div>
+    </div>
+    <div data-v-d42ab394=\\"\\" class=\\"right-icon--completed\\">
+      <div data-v-b9dd0015=\\"\\" data-v-a87be266=\\"\\" class=\\"container right-icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M480.281 915.218q-22.542 0-38.52-15.968-15.979-15.968-15.979-38.391 0-21.893 15.927-38.267 15.927-16.374 38.293-16.374 22.824 0 38.52 16.445 15.696 16.445 15.696 38.522 0 22.077-15.698 38.055-15.697 15.978-38.239 15.978Zm0-285q-22.542 0-38.52-15.927-15.979-15.927-15.979-38.293 0-22.824 15.927-38.52 15.927-15.696 38.293-15.696 22.824 0 38.52 15.698 15.696 15.697 15.696 38.239 0 22.542-15.698 38.52-15.697 15.979-38.239 15.979Zm0-284.436q-22.542 0-38.52-16.14-15.979-16.14-15.979-38.804 0-22.665 15.927-38.643 15.927-15.979 38.293-15.979 22.824 0 38.52 16.12 15.696 16.12 15.696 38.785 0 22.665-15.698 38.663-15.697 15.998-38.239 15.998Z\\"></path>
+        </svg></div>
+    </div>
+  </button></div>"
+`;
+
+exports[`EditDeleteButton tests > should display the component without the options below if the button is clicked twice 1`] = `
+"<div data-v-d42ab394=\\"\\" data-v-a87be266=\\"\\" class=\\"container\\"><button data-v-d42ab394=\\"\\" type=\\"button\\" class=\\"button button--completed\\" data-testid=\\"button\\">
+    <div data-v-d42ab394=\\"\\" class=\\"icon-text-container\\">
+      <div data-v-d42ab394=\\"\\" class=\\"icon-container\\"><svg data-v-a87be266=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"40\\" height=\\"40\\" fill=\\"none\\" alt=\\"Plus\\" class=\\"left-icon\\">
+          <path fill=\\"currentColor\\" d=\\"M32.444 18.75H21.25V7.557a1.25 1.25 0 1 0-2.5 0V18.75H7.557a1.25 1.25 0 1 0 0 2.5H18.75v11.194a1.25 1.25 0 1 0 2.5 0V21.25h11.194a1.25 1.25 0 1 0 0-2.5Z\\"></path>
+        </svg></div>
+      <div data-v-d42ab394=\\"\\" class=\\"text-container\\"><span data-v-a87be266=\\"\\" class=\\"text--highlighted text-default-bold\\">Title</span><span data-v-a87be266=\\"\\" class=\\"text--highlighted text-small-regular\\">Subtitle</span></div>
+    </div>
+    <div data-v-d42ab394=\\"\\" class=\\"right-icon--completed\\">
+      <div data-v-b9dd0015=\\"\\" data-v-a87be266=\\"\\" class=\\"container right-icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M480.281 915.218q-22.542 0-38.52-15.968-15.979-15.968-15.979-38.391 0-21.893 15.927-38.267 15.927-16.374 38.293-16.374 22.824 0 38.52 16.445 15.696 16.445 15.696 38.522 0 22.077-15.698 38.055-15.697 15.978-38.239 15.978Zm0-285q-22.542 0-38.52-15.927-15.979-15.927-15.979-38.293 0-22.824 15.927-38.52 15.927-15.696 38.293-15.696 22.824 0 38.52 15.698 15.696 15.697 15.696 38.239 0 22.542-15.698 38.52-15.697 15.979-38.239 15.979Zm0-284.436q-22.542 0-38.52-16.14-15.979-16.14-15.979-38.804 0-22.665 15.927-38.643 15.927-15.979 38.293-15.979 22.824 0 38.52 16.12 15.696 16.12 15.696 38.785 0 22.665-15.698 38.663-15.697 15.998-38.239 15.998Z\\"></path>
+        </svg></div>
+    </div>
+  </button></div>"
+`;
+
+exports[`EditDeleteButton tests > should display the component without the subtitle 1`] = `
+"<div data-v-d42ab394=\\"\\" data-v-a87be266=\\"\\" class=\\"container\\"><button data-v-d42ab394=\\"\\" type=\\"button\\" class=\\"button button--completed\\" data-testid=\\"button\\">
+    <div data-v-d42ab394=\\"\\" class=\\"icon-text-container\\">
+      <div data-v-d42ab394=\\"\\" class=\\"icon-container\\">
+        <div data-v-b9dd0015=\\"\\" data-v-a87be266=\\"\\" class=\\"container left-icon\\" alt=\\"ArrowForwardIOS\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M304 987.566 234.434 917l343-343-343-343L304 160.434 717.566 574 304 987.566Z\\"></path>
+          </svg></div>
+      </div>
+      <div data-v-d42ab394=\\"\\" class=\\"text-container\\"><span data-v-a87be266=\\"\\" class=\\"text--highlighted text-default-bold\\">Title</span>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-v-d42ab394=\\"\\" class=\\"right-icon--completed\\">
+      <div data-v-b9dd0015=\\"\\" data-v-a87be266=\\"\\" class=\\"container right-icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M480.281 915.218q-22.542 0-38.52-15.968-15.979-15.968-15.979-38.391 0-21.893 15.927-38.267 15.927-16.374 38.293-16.374 22.824 0 38.52 16.445 15.696 16.445 15.696 38.522 0 22.077-15.698 38.055-15.697 15.978-38.239 15.978Zm0-285q-22.542 0-38.52-15.927-15.979-15.927-15.979-38.293 0-22.824 15.927-38.52 15.927-15.696 38.293-15.696 22.824 0 38.52 15.698 15.696 15.697 15.696 38.239 0 22.542-15.698 38.52-15.697 15.979-38.239 15.979Zm0-284.436q-22.542 0-38.52-16.14-15.979-16.14-15.979-38.804 0-22.665 15.927-38.643 15.927-15.979 38.293-15.979 22.824 0 38.52 16.12 15.696 16.12 15.696 38.785 0 22.665-15.698 38.663-15.697 15.998-38.239 15.998Z\\"></path>
+        </svg></div>
+    </div>
+  </button></div>"
+`;
+
+exports[`EditDeleteButton tests > should not display the options below when the button is clicked if the disabled prop is set to true 1`] = `
+"<div data-v-d42ab394=\\"\\" data-v-a87be266=\\"\\" class=\\"container\\"><button data-v-d42ab394=\\"\\" type=\\"button\\" class=\\"button button--completed\\" disabled=\\"\\" data-testid=\\"button\\">
+    <div data-v-d42ab394=\\"\\" class=\\"icon-text-container\\">
+      <div data-v-d42ab394=\\"\\" class=\\"icon-container\\">
+        <plus data-v-a87be266=\\"\\" alt=\\"Plus\\" class=\\"left-icon\\"></plus>
+      </div>
+      <div data-v-d42ab394=\\"\\" class=\\"text-container\\"><span data-v-a87be266=\\"\\" class=\\"text--highlighted text-default-bold\\">Title</span><span data-v-a87be266=\\"\\" class=\\"text--highlighted text-small-regular\\">Subtitle</span></div>
+    </div>
+    <div data-v-d42ab394=\\"\\" class=\\"right-icon--completed\\">
+      <div data-v-b9dd0015=\\"\\" data-v-a87be266=\\"\\" class=\\"container right-icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M480.281 915.218q-22.542 0-38.52-15.968-15.979-15.968-15.979-38.391 0-21.893 15.927-38.267 15.927-16.374 38.293-16.374 22.824 0 38.52 16.445 15.696 16.445 15.696 38.522 0 22.077-15.698 38.055-15.697 15.978-38.239 15.978Zm0-285q-22.542 0-38.52-15.927-15.979-15.927-15.979-38.293 0-22.824 15.927-38.52 15.927-15.696 38.293-15.696 22.824 0 38.52 15.698 15.696 15.697 15.696 38.239 0 22.542-15.698 38.52-15.697 15.979-38.239 15.979Zm0-284.436q-22.542 0-38.52-16.14-15.979-16.14-15.979-38.804 0-22.665 15.927-38.643 15.927-15.979 38.293-15.979 22.824 0 38.52 16.12 15.696 16.12 15.696 38.785 0 22.665-15.698 38.663-15.697 15.998-38.239 15.998Z\\"></path>
+        </svg></div>
+    </div>
+  </button></div>"
+`;

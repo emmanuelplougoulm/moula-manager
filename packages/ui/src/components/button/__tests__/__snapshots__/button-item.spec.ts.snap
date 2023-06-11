@@ -1,0 +1,49 @@
+// Vitest Snapshot v1
+
+exports[`Button item tests > should display the button component of link type and disabled 1`] = `
+"<button data-v-71b6af39=\\"\\" type=\\"button\\" class=\\"button--link text-small-regular\\" disabled=\\"\\"><span data-v-71b6af39=\\"\\">Button</span>
+  <!--v-if-->
+</button>"
+`;
+
+exports[`Button item tests > should display the button component of link type enabled by default 1`] = `
+"<button data-v-71b6af39=\\"\\" type=\\"button\\" class=\\"button--link text-small-regular\\"><span data-v-71b6af39=\\"\\">Button</span>
+  <!--v-if-->
+</button>"
+`;
+
+exports[`Button item tests > should display the button component of primary type and disabled 1`] = `
+"<button data-v-71b6af39=\\"\\" type=\\"button\\" class=\\"button--primary text-big-regular\\" disabled=\\"\\"><span data-v-71b6af39=\\"\\">Button</span>
+  <!--v-if-->
+</button>"
+`;
+
+exports[`Button item tests > should display the button component of primary type and disabled 2`] = `
+"<button data-v-71b6af39=\\"\\" type=\\"button\\" class=\\"button--secondary text-big-regular\\" disabled=\\"\\"><span data-v-71b6af39=\\"\\">Button</span>
+  <!--v-if-->
+</button>"
+`;
+
+exports[`Button item tests > should display the button component of primary type with an icon and enabled by default 1`] = `
+"<button data-v-71b6af39=\\"\\" type=\\"button\\" class=\\"button--right-icon button--primary text-big-regular\\"><span data-v-71b6af39=\\"\\">Button</span>
+  <div data-v-b9dd0015=\\"\\" data-v-71b6af39=\\"\\" class=\\"container\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+      <path d=\\"M304 987.566 234.434 917l343-343-343-343L304 160.434 717.566 574 304 987.566Z\\"></path>
+    </svg></div>
+</button>"
+`;
+
+exports[`Button item tests > should display the button component of secondary type with an icon and enabled by default 1`] = `
+"<button data-v-71b6af39=\\"\\" type=\\"button\\" class=\\"button--left-icon button--secondary text-big-regular\\"><span data-v-71b6af39=\\"\\">Button</span>
+  <div data-v-b9dd0015=\\"\\" data-v-71b6af39=\\"\\" class=\\"container\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+      <path d=\\"M656.13 989.566 241.999 576 656.13 162.434 725.696 233l-343 343 343 343-69.566 70.566Z\\"></path>
+    </svg></div>
+</button>"
+`;
+
+exports[`Button item tests > should emit event when click on button 1`] = `
+"<button data-v-71b6af39=\\"\\" type=\\"button\\" class=\\"button--right-icon button--primary text-big-regular\\"><span data-v-71b6af39=\\"\\">Button</span>
+  <div data-v-b9dd0015=\\"\\" data-v-71b6af39=\\"\\" class=\\"container\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+      <path d=\\"M304 987.566 234.434 917l343-343-343-343L304 160.434 717.566 574 304 987.566Z\\"></path>
+    </svg></div>
+</button>"
+`;

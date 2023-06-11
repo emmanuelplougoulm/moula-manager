@@ -1,0 +1,38 @@
+// Vitest Snapshot v1
+
+exports[`CompletedFormButton tests > should display the component with one subtitle 1`] = `
+"<div data-v-d42ab394=\\"\\" data-v-c71fe769=\\"\\" class=\\"container\\"><button data-v-d42ab394=\\"\\" type=\\"button\\" class=\\"button button--completed\\" data-testid=\\"button\\">
+    <div data-v-d42ab394=\\"\\" class=\\"icon-text-container\\">
+      <div data-v-d42ab394=\\"\\" class=\\"icon-container\\"><svg data-v-c71fe769=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"40\\" height=\\"40\\" fill=\\"none\\" class=\\"left-icon\\">
+          <path fill=\\"currentColor\\" fill-rule=\\"evenodd\\" d=\\"M14.156 30a.84.84 0 0 1-.59-.243l-9.988-9.995a.834.834 0 0 1 1.178-1.179l9.4 9.405 19.41-19.411a.836.836 0 0 1 1.18 0 .836.836 0 0 1 0 1.18l-20 20a.84.84 0 0 1-.59.243Z\\" clip-rule=\\"evenodd\\"></path>
+        </svg></div>
+      <div data-v-d42ab394=\\"\\" class=\\"text-container\\"><span data-v-c71fe769=\\"\\" class=\\"text--highlighted text-default-bold\\">Title</span>
+        <div data-v-c71fe769=\\"\\" class=\\"subtitle-container\\"><span data-v-c71fe769=\\"\\" class=\\"text--highlighted text-small-regular\\">Phone number</span><span data-v-c71fe769=\\"\\" class=\\"text--highlighted text-small-regular\\">Email address</span></div>
+      </div>
+    </div>
+    <div data-v-d42ab394=\\"\\" class=\\"right-icon--completed\\">
+      <div data-v-b9dd0015=\\"\\" data-v-c71fe769=\\"\\" class=\\"container right-icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M795.696 394.522 665.435 264.261l39.739-40.304q18.696-18.696 46.174-18.479 27.478.218 47.87 19.479l37.347 36.782q20.392 19.826 18.979 47.087-1.414 27.261-20.109 45.957l-39.739 39.739Zm-41.435 41.435L247.435 942.783H117.174V812.522l506.261-506.261 130.826 129.696Z\\"></path>
+        </svg></div>
+    </div>
+  </button></div>"
+`;
+
+exports[`CompletedFormButton tests > should display the component with several subtitles 1`] = `
+"<div data-v-d42ab394=\\"\\" data-v-c71fe769=\\"\\" class=\\"container\\"><button data-v-d42ab394=\\"\\" type=\\"button\\" class=\\"button button--completed\\" data-testid=\\"button\\">
+    <div data-v-d42ab394=\\"\\" class=\\"icon-text-container\\">
+      <div data-v-d42ab394=\\"\\" class=\\"icon-container\\"><svg data-v-c71fe769=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"40\\" height=\\"40\\" fill=\\"none\\" class=\\"left-icon\\">
+          <path fill=\\"currentColor\\" fill-rule=\\"evenodd\\" d=\\"M14.156 30a.84.84 0 0 1-.59-.243l-9.988-9.995a.834.834 0 0 1 1.178-1.179l9.4 9.405 19.41-19.411a.836.836 0 0 1 1.18 0 .836.836 0 0 1 0 1.18l-20 20a.84.84 0 0 1-.59.243Z\\" clip-rule=\\"evenodd\\"></path>
+        </svg></div>
+      <div data-v-d42ab394=\\"\\" class=\\"text-container\\"><span data-v-c71fe769=\\"\\" class=\\"text--highlighted text-default-bold\\">Title</span>
+        <div data-v-c71fe769=\\"\\" class=\\"subtitle-container\\"><span data-v-c71fe769=\\"\\" class=\\"text--highlighted text-small-regular\\">Phone number</span><span data-v-c71fe769=\\"\\" class=\\"text--highlighted text-small-regular\\">Email address</span></div>
+        <div data-v-c71fe769=\\"\\" class=\\"subtitle-container\\"><span data-v-c71fe769=\\"\\" class=\\"text--highlighted text-small-regular\\">Address</span><span data-v-c71fe769=\\"\\" class=\\"text--highlighted text-small-regular\\">Zipcode</span><span data-v-c71fe769=\\"\\" class=\\"text--highlighted text-small-regular\\">City</span></div>
+      </div>
+    </div>
+    <div data-v-d42ab394=\\"\\" class=\\"right-icon--completed\\">
+      <div data-v-b9dd0015=\\"\\" data-v-c71fe769=\\"\\" class=\\"container right-icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M795.696 394.522 665.435 264.261l39.739-40.304q18.696-18.696 46.174-18.479 27.478.218 47.87 19.479l37.347 36.782q20.392 19.826 18.979 47.087-1.414 27.261-20.109 45.957l-39.739 39.739Zm-41.435 41.435L247.435 942.783H117.174V812.522l506.261-506.261 130.826 129.696Z\\"></path>
+        </svg></div>
+    </div>
+  </button></div>"
+`;

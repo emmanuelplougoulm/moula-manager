@@ -1,0 +1,5 @@
+// Vitest Snapshot v1
+
+exports[`CaptionItem tests > should display the caption text 1`] = `"<span data-v-b41f83c4=\\"\\" data-testid=\\"caption-item\\" class=\\"text-small-regular\\">This is a caption</span>"`;
+
+exports[`CaptionItem tests > should not display the caption text 1`] = `"<!--v-if-->"`;

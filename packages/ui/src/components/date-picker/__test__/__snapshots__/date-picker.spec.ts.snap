@@ -1,0 +1,79 @@
+// Vitest Snapshot v1
+
+exports[`DatePicker tests > should display a required error and the highlighted classes if the input is emptied and the required prop is true 1`] = `
+"<div class=\\"date-picker-container\\"><span data-v-0704e93f=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Label <!--v-if--></span>
+  <div class=\\"mx-datepicker\\">
+    <div class=\\"mx-input-wrapper\\"><input name=\\"date\\" type=\\"text\\" autocomplete=\\"off\\" class=\\"mx-input\\" readonly=\\"\\"><i class=\\"mx-icon-clear\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 1024 1024\\" width=\\"1em\\" height=\\"1em\\">
+          <path d=\\"M810.005 274.005 572.011 512l237.994 237.995-60.01 60.01L512 572.011 274.005 810.005l-60.01-60.01L451.989 512 213.995 274.005l60.01-60.01L512 451.989l237.995-237.994z\\"></path>
+        </svg></i><i class=\\"mx-icon-calendar\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M185.087 990.131q-32.507 0-55.862-23.356-23.356-23.355-23.356-55.862V301.087q0-32.74 23.356-56.262 23.355-23.521 55.862-23.521H245v-60h74.609v60h320.782v-60H715v60h59.913q32.74 0 56.262 23.521 23.521 23.522 23.521 56.262v609.826q0 32.507-23.521 55.862-23.522 23.356-56.262 23.356H185.087Zm0-79.218h589.826V486H185.087v424.913Z\\"></path>
+        </svg></i></div>
+    <!--teleport start-->
+    <!--teleport end-->
+  </div>
+  <!--v-if--><span data-v-c1d8433f=\\"\\" id=\\"error-item\\" data-testid=\\"error-item\\" class=\\"text-small-regular\\">Required</span>
+</div>"
+`;
+
+exports[`DatePicker tests > should display the default class by default 1`] = `
+"<div class=\\"date-picker-container\\"><span data-v-0704e93f=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default\\" data-testid=\\"label-item\\">Label <!--v-if--></span>
+  <div class=\\"mx-datepicker\\">
+    <div class=\\"mx-input-wrapper\\"><input name=\\"date\\" type=\\"text\\" autocomplete=\\"off\\" class=\\"mx-input\\" readonly=\\"\\"><i class=\\"mx-icon-clear\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 1024 1024\\" width=\\"1em\\" height=\\"1em\\">
+          <path d=\\"M810.005 274.005 572.011 512l237.994 237.995-60.01 60.01L512 572.011 274.005 810.005l-60.01-60.01L451.989 512 213.995 274.005l60.01-60.01L512 451.989l237.995-237.994z\\"></path>
+        </svg></i><i class=\\"mx-icon-calendar\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M185.087 990.131q-32.507 0-55.862-23.356-23.356-23.355-23.356-55.862V301.087q0-32.74 23.356-56.262 23.355-23.521 55.862-23.521H245v-60h74.609v60h320.782v-60H715v60h59.913q32.74 0 56.262 23.521 23.521 23.522 23.521 56.262v609.826q0 32.507-23.521 55.862-23.522 23.356-56.262 23.356H185.087Zm0-79.218h589.826V486H185.087v424.913Z\\"></path>
+        </svg></i></div>
+    <!--teleport start-->
+    <!--teleport end-->
+  </div>
+  <!--v-if-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DatePicker tests > should display the default class if there is a value, even if the required prop is true 1`] = `
+"<div class=\\"date-picker-container\\"><span data-v-0704e93f=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default\\" data-testid=\\"label-item\\">Label <!--v-if--></span>
+  <div class=\\"mx-datepicker\\">
+    <div class=\\"mx-input-wrapper\\"><input name=\\"date\\" type=\\"text\\" autocomplete=\\"off\\" class=\\"mx-input\\" readonly=\\"\\"><i class=\\"mx-icon-clear\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 1024 1024\\" width=\\"1em\\" height=\\"1em\\">
+          <path d=\\"M810.005 274.005 572.011 512l237.994 237.995-60.01 60.01L512 572.011 274.005 810.005l-60.01-60.01L451.989 512 213.995 274.005l60.01-60.01L512 451.989l237.995-237.994z\\"></path>
+        </svg></i><i class=\\"mx-icon-calendar\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M185.087 990.131q-32.507 0-55.862-23.356-23.356-23.355-23.356-55.862V301.087q0-32.74 23.356-56.262 23.355-23.521 55.862-23.521H245v-60h74.609v60h320.782v-60H715v60h59.913q32.74 0 56.262 23.521 23.521 23.522 23.521 56.262v609.826q0 32.507-23.521 55.862-23.522 23.356-56.262 23.356H185.087Zm0-79.218h589.826V486H185.087v424.913Z\\"></path>
+        </svg></i></div>
+    <!--teleport start-->
+    <!--teleport end-->
+  </div>
+  <!--v-if-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DatePicker tests > should display the highlighted class and a caption 1`] = `
+"<div class=\\"date-picker-container\\"><span data-v-0704e93f=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Label <!--v-if--></span>
+  <div class=\\"mx-datepicker\\">
+    <div class=\\"mx-input-wrapper\\"><input name=\\"date\\" type=\\"text\\" autocomplete=\\"off\\" class=\\"mx-input\\" readonly=\\"\\">
+      <!----><i class=\\"mx-icon-calendar\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M185.087 990.131q-32.507 0-55.862-23.356-23.356-23.355-23.356-55.862V301.087q0-32.74 23.356-56.262 23.355-23.521 55.862-23.521H245v-60h74.609v60h320.782v-60H715v60h59.913q32.74 0 56.262 23.521 23.521 23.522 23.521 56.262v609.826q0 32.507-23.521 55.862-23.522 23.356-56.262 23.356H185.087Zm0-79.218h589.826V486H185.087v424.913Z\\"></path>
+        </svg></i>
+    </div>
+    <!--teleport start-->
+    <!--teleport end-->
+  </div><span data-v-b41f83c4=\\"\\" data-testid=\\"caption-item\\" class=\\"text-small-regular\\">This is a caption</span>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DatePicker tests > should display the highlighted class if there is no initial value and the required prop is true 1`] = `
+"<div class=\\"date-picker-container\\"><span data-v-0704e93f=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Label <!--v-if--></span>
+  <div class=\\"mx-datepicker\\">
+    <div class=\\"mx-input-wrapper\\"><input name=\\"date\\" type=\\"text\\" autocomplete=\\"off\\" class=\\"mx-input\\" readonly=\\"\\">
+      <!----><i class=\\"mx-icon-calendar\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M185.087 990.131q-32.507 0-55.862-23.356-23.356-23.355-23.356-55.862V301.087q0-32.74 23.356-56.262 23.355-23.521 55.862-23.521H245v-60h74.609v60h320.782v-60H715v60h59.913q32.74 0 56.262 23.521 23.521 23.522 23.521 56.262v609.826q0 32.507-23.521 55.862-23.522 23.356-56.262 23.356H185.087Zm0-79.218h589.826V486H185.087v424.913Z\\"></path>
+        </svg></i>
+    </div>
+    <!--teleport start-->
+    <!--teleport end-->
+  </div>
+  <!--v-if-->
+  <!--v-if-->
+</div>"
+`;

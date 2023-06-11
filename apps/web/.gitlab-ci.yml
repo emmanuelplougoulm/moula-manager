@@ -1,0 +1,62 @@
+variables:
+  DOCKERFILE: 'apps/web/Dockerfile.build'
+  DOCKER_CONTAINER_REGISTRY: ${CONTAINER_REGISTRY}/onboarding-web
+  DOCKER_IMAGE_NAME: onboardingweb
+  DOCKER_IMAGE_TAG_VERSION: ${DOCKER_IMAGE_NAME}:${DOCKER_TAG_VERSION}
+  ANSIBLE_DEPLOY_TAG: tagdocker
+  ANSIBLE_DEPLOY_PRODUCT: ${DOCKER_IMAGE_NAME}
+  ANSIBLE_DEPLOY_ENV: staging-fr
+  PRODUCTION_BRANCH_NAME: main
+
+stages: # List of stages for jobs, and their order of execution
+  - build
+  - deploy-development
+  - deploy-staging
+
+build:
+  stage: build
+  image: docker:git
+  tags:
+    - linux_runner
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD container-registry.lemonway.com
+    - docker build --network=host --pull -t "${DOCKER_CONTAINER_REGISTRY}/${DOCKER_IMAGE_TAG_VERSION}" -f $DOCKERFILE --label "${DOCKER_IMAGE_NAME}" .
+    - docker push "${DOCKER_CONTAINER_REGISTRY}/${DOCKER_IMAGE_TAG_VERSION}"
+
+deploy-development:
+  stage: deploy-development
+  variables:
+    ENVIRONMENT_TO_DEPLOY: development
+    URL_TO_ENVIRONMENT: http://onboarding-web.dev.lemonway.com:3001
+    DEPLOYMENT_TYPE: docker
+    DOCKER_IMAGE_TAG_VERSION: ${DOCKER_IMAGE_NAME}:${DOCKER_TAG_VERSION}
+    AWX_ANSIBLE_GROUP: onboarding-web
+    AWX_JOB_TEMPLATE: ${AWX_JOB_TEMPLATE}
+  trigger:
+    include:
+      - project: 'cicd/stages'
+        ref: 'master'
+        file: 'deployment/awx.yml'
+    strategy: depend
+  only:
+    - main
+    - /.*MANAGE-.*/
+# deploy-staging:
+#   stage: deploy-staging
+#   variables:
+#     ENVIRONMENT_TO_DEPLOY: staging
+#     URL_TO_ENVIRONMENT: http://onboarding-web.dev.lemonway.com:3001
+#     DEPLOYMENT_TYPE: docker
+#     DOCKER_IMAGE_TAG_VERSION: ${DOCKER_IMAGE_NAME}:${DOCKER_TAG_VERSION}
+#     AWX_ANSIBLE_GROUP: onboarding-web
+#     AWX_JOB_TEMPLATE: ${AWX_JOB_TEMPLATE}
+#   trigger:
+#     include:
+#       - project: 'cicd/stages'
+#         ref: 'master'
+#         file: 'deployment/awx.yml'
+#     strategy: depend
+#   only:
+#     - main
+#     - /.*MANAGE-.*/
+#   needs: [build]

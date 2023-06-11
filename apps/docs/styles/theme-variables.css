@@ -1,0 +1,82 @@
+:root {
+  --primary-0: hsl(var(--hue-primary), calc(var(--sat-primary) * 1%), 0%);
+  --primary-10: hsl(var(--hue-primary), calc(var(--sat-primary) * 1%), 15%);
+  --primary-20: hsl(
+    var(--hue-primary),
+    calc(var(--sat-primary) * 1%),
+    calc(((var(--light-primary) + 15) / 2) * 1%)
+  );
+  --primary-30: hsl(
+    var(--hue-primary),
+    calc(var(--sat-primary) * 1%),
+    calc(var(--light-primary) * 1%)
+  );
+  --primary-40: hsl(
+    var(--hue-primary),
+    calc(var(--sat-primary) * 1%),
+    calc(((var(--light-primary) + 70) / 2) * 1%)
+  );
+  --primary-50: hsl(var(--hue-primary), calc((var(--sat-primary) - 10) * 1%), 70%);
+  --primary-60: hsl(var(--hue-primary), calc((var(--sat-primary) - 10) * 1%), 80%);
+  --primary-70: hsl(var(--hue-primary), calc(var(--sat-primary) * 1%), 85%);
+  --primary-75: hsl(var(--hue-primary), calc((var(--sat-primary) - 15) * 1%), 85%);
+  --primary-80: hsl(var(--hue-primary), calc((var(--sat-primary) - 15) * 1%), 92%);
+  --primary-90: hsl(var(--hue-primary), calc(var(--sat-primary) * 1%), 98%);
+  --primary-100: hsl(var(--hue-primary), calc(var(--sat-primary) * 1%), 100%);
+
+  --primary-text: var(--primary-30);
+  --primary-text-hover: var(--primary-20);
+  --primary-text-contrast: var(--primary-100);
+
+  --secondary-0: hsl(var(--hue-secondary), calc(var(--sat-secondary) * 1%), 0%);
+  --secondary-10: hsl(var(--hue-secondary), calc(var(--sat-secondary) * 1%), 15%);
+  --secondary-20: hsl(
+    var(--hue-secondary),
+    calc(var(--sat-secondary) * 1%),
+    calc(((var(--light-secondary) + 15) / 2) * 1%)
+  );
+  --secondary-30: hsl(
+    var(--hue-secondary),
+    calc(var(--sat-secondary) * 1%),
+    calc(var(--light-secondary) * 1%)
+  );
+  --secondary-40: hsl(
+    var(--hue-secondary),
+    calc(var(--sat-secondary) * 1%),
+    calc(((var(--light-secondary) + 70) / 2) * 1%)
+  );
+  --secondary-50: hsl(var(--hue-secondary), calc((var(--sat-secondary) - 10) * 1%), 70%);
+  --secondary-60: hsl(var(--hue-secondary), calc((var(--sat-secondary) - 10) * 1%), 80%);
+  --secondary-70: hsl(var(--hue-secondary), calc(var(--sat-secondary) * 1%), 85%);
+  --secondary-75: hsl(var(--hue-secondary), calc((var(--sat-secondary) - 15) * 1%), 85%);
+  --secondary-80: hsl(var(--hue-secondary), calc((var(--sat-secondary) - 15) * 1%), 92%);
+  --secondary-90: hsl(var(--hue-secondary), calc(var(--sat-secondary) * 1%), 98%);
+  --secondary-100: hsl(var(--hue-secondary), calc(var(--sat-secondary) * 1%), 100%);
+
+  --neutral-0: #000000;
+  --neutral-10: #1e1e2c;
+  --neutral-20: #4e4e4e;
+  --neutral-30: #656565;
+  --neutral-40: #767676;
+  --neutral-60: #d7dbe1;
+  --neutral-70: #e9ecf0;
+  --neutral-75: #eeeeee;
+  --neutral-80: #f4f5f7;
+  --neutral-85: #f8f8f8;
+  --neutral-90: #fbfbfc;
+  --neutral-100: #ffffff;
+
+  --success-30: #136548;
+  --success-90: #f6fdfb;
+  --info-30: #005882;
+  --info-90: #f5fcff;
+  --warning-30: #986200;
+  --warning-90: #fffbf5;
+  --error-30: #c1094b;
+  --error-90: #fff5f9;
+
+  --box-shadow: 0px 60px 132px rgba(0, 0, 0, 0.12), 0px 25.0666px 55.1464px rgba(0, 0, 0, 0.0862625),
+    0px 13.4018px 29.4839px rgba(0, 0, 0, 0.0715329), 0px 7.51293px 16.5284px rgba(0, 0, 0, 0.06),
+    0px 3.99006px 8.77813px rgba(0, 0, 0, 0.0484671),
+    0px 1.66035px 3.65278px rgba(0, 0, 0, 0.0337375);
+}

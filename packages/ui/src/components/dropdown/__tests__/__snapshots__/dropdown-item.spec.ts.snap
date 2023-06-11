@@ -1,0 +1,124 @@
+// Vitest Snapshot v1
+
+exports[`DropdownItem component tests > should close dropdown on click outside 1`] = `
+"<div data-v-124a8955=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-124a8955=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted label\\" data-testid=\\"label\\">Text <!--v-if--></span>
+  <div data-v-124a8955=\\"\\" class=\\"select-container\\">
+    <div data-v-124a8955=\\"\\" data-testid=\\"select\\" class=\\"text-big-regular select\\"><span data-v-124a8955=\\"\\" class=\\"select-text\\">Sélectionnez une option</span>
+      <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container select-icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M480 725.566 226.434 472 283 415.434l197 197 197-197L733.566 472 480 725.566Z\\"></path>
+        </svg></div>
+    </div>
+    <div data-v-124a8955=\\"\\" class=\\"options\\" style=\\"\\">
+      <div data-v-124a8955=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-1\\">
+        <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container option-icon\\" style=\\"display: none;\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div><span data-v-124a8955=\\"\\" class=\\"option-text\\">Option 1: Lorem ipsum dolor sit amet.</span>
+      </div>
+      <div data-v-124a8955=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-2\\">
+        <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container option-icon\\" style=\\"display: none;\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div><span data-v-124a8955=\\"\\" class=\\"option-text\\">Option 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat odio, accumsan non risus sed, imperdiet malesuada diam. Etiam dictum mauris sed malesuada volutpat. Morbi accumsan vitae enim ut facilisis.</span>
+      </div>
+    </div>
+  </div><span data-v-c1d8433f=\\"\\" data-v-124a8955=\\"\\" id=\\"error-item\\" data-testid=\\"error-item\\" class=\\"text-small-regular\\">This field is required</span>
+</div>"
+`;
+
+exports[`DropdownItem component tests > should display an error message if the error prop is not empty 1`] = `
+"<div data-v-124a8955=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-124a8955=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted label\\" data-testid=\\"label\\">Text <!--v-if--></span>
+  <div data-v-124a8955=\\"\\" class=\\"select-container\\">
+    <div data-v-124a8955=\\"\\" data-testid=\\"select\\" class=\\"text-big-regular select\\"><span data-v-124a8955=\\"\\" class=\\"select-text\\">Sélectionnez une option</span>
+      <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container select-icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M480 725.566 226.434 472 283 415.434l197 197 197-197L733.566 472 480 725.566Z\\"></path>
+        </svg></div>
+    </div>
+    <div data-v-124a8955=\\"\\" class=\\"options\\" style=\\"display: none;\\">
+      <div data-v-124a8955=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-1\\">
+        <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container option-icon\\" style=\\"display: none;\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div><span data-v-124a8955=\\"\\" class=\\"option-text\\">Option 1: Lorem ipsum dolor sit amet.</span>
+      </div>
+      <div data-v-124a8955=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-2\\">
+        <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container option-icon\\" style=\\"display: none;\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div><span data-v-124a8955=\\"\\" class=\\"option-text\\">Option 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat odio, accumsan non risus sed, imperdiet malesuada diam. Etiam dictum mauris sed malesuada volutpat. Morbi accumsan vitae enim ut facilisis.</span>
+      </div>
+    </div>
+  </div><span data-v-c1d8433f=\\"\\" data-v-124a8955=\\"\\" id=\\"error-item\\" data-testid=\\"error-item\\" class=\\"text-small-regular\\">This field is required</span>
+</div>"
+`;
+
+exports[`DropdownItem component tests > should display the component with a placeholder when no option is selected 1`] = `
+"<div data-v-124a8955=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-124a8955=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted label\\" data-testid=\\"label\\">Text <!--v-if--></span>
+  <div data-v-124a8955=\\"\\" class=\\"select-container\\">
+    <div data-v-124a8955=\\"\\" data-testid=\\"select\\" class=\\"text-big-regular select\\"><span data-v-124a8955=\\"\\" class=\\"select-text\\">Sélectionnez une option</span>
+      <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container select-icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M480 725.566 226.434 472 283 415.434l197 197 197-197L733.566 472 480 725.566Z\\"></path>
+        </svg></div>
+    </div>
+    <div data-v-124a8955=\\"\\" class=\\"options\\" style=\\"display: none;\\">
+      <div data-v-124a8955=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-1\\">
+        <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container option-icon\\" style=\\"display: none;\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div><span data-v-124a8955=\\"\\" class=\\"option-text\\">Option 1: Lorem ipsum dolor sit amet.</span>
+      </div>
+      <div data-v-124a8955=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-2\\">
+        <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container option-icon\\" style=\\"display: none;\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div><span data-v-124a8955=\\"\\" class=\\"option-text\\">Option 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat odio, accumsan non risus sed, imperdiet malesuada diam. Etiam dictum mauris sed malesuada volutpat. Morbi accumsan vitae enim ut facilisis.</span>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DropdownItem component tests > should display the component with a selected option and emit a update:modelValue event 1`] = `
+"<div data-v-124a8955=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-124a8955=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label\\" data-testid=\\"label\\">Text <!--v-if--></span>
+  <div data-v-124a8955=\\"\\" class=\\"select-container\\">
+    <div data-v-124a8955=\\"\\" data-testid=\\"select\\" class=\\"text-big-regular select selected-colors selected-border\\"><span data-v-124a8955=\\"\\" class=\\"select-text\\">Option 1: Lorem ipsum dolor sit amet.</span>
+      <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container select-icon selected-colors\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M480 725.566 226.434 472 283 415.434l197 197 197-197L733.566 472 480 725.566Z\\"></path>
+        </svg></div>
+    </div>
+    <div data-v-124a8955=\\"\\" class=\\"options\\" style=\\"display: none;\\">
+      <div data-v-124a8955=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-1\\">
+        <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container option-icon\\" style=\\"\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div><span data-v-124a8955=\\"\\" class=\\"option-text\\">Option 1: Lorem ipsum dolor sit amet.</span>
+      </div>
+      <div data-v-124a8955=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-2\\">
+        <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container option-icon\\" style=\\"display: none;\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div><span data-v-124a8955=\\"\\" class=\\"option-text\\">Option 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat odio, accumsan non risus sed, imperdiet malesuada diam. Etiam dictum mauris sed malesuada volutpat. Morbi accumsan vitae enim ut facilisis.</span>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DropdownItem component tests > should not display an error message if an option is selected 1`] = `
+"<div data-v-124a8955=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-124a8955=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label\\" data-testid=\\"label\\">Text <!--v-if--></span>
+  <div data-v-124a8955=\\"\\" class=\\"select-container\\">
+    <div data-v-124a8955=\\"\\" data-testid=\\"select\\" class=\\"text-big-regular select selected-colors selected-border\\"><span data-v-124a8955=\\"\\" class=\\"select-text\\">Option 1: Lorem ipsum dolor sit amet.</span>
+      <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container select-icon selected-colors\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M480 725.566 226.434 472 283 415.434l197 197 197-197L733.566 472 480 725.566Z\\"></path>
+        </svg></div>
+    </div>
+    <div data-v-124a8955=\\"\\" class=\\"options\\" style=\\"display: none;\\">
+      <div data-v-124a8955=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-1\\">
+        <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container option-icon\\" style=\\"\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div><span data-v-124a8955=\\"\\" class=\\"option-text\\">Option 1: Lorem ipsum dolor sit amet.</span>
+      </div>
+      <div data-v-124a8955=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-2\\">
+        <div data-v-b9dd0015=\\"\\" data-v-124a8955=\\"\\" class=\\"container option-icon\\" style=\\"display: none;\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div><span data-v-124a8955=\\"\\" class=\\"option-text\\">Option 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat odio, accumsan non risus sed, imperdiet malesuada diam. Etiam dictum mauris sed malesuada volutpat. Morbi accumsan vitae enim ut facilisis.</span>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</div>"
+`;

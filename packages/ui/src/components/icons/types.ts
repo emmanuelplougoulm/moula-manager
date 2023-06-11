@@ -1,0 +1,20 @@
+export const IconType = [
+  'ArrowForwardIOS',
+  'ArrowBackIOS',
+  'KeyboardArrowDown',
+  'Check',
+  'MoreVert',
+  'Edit',
+  'Delete',
+  'Plus',
+  'Contact',
+  'Done',
+  'Documents',
+  'Home',
+  'ID',
+  'Incomes',
+  'Job',
+  'Legal',
+  'Politic',
+  'User'
+];

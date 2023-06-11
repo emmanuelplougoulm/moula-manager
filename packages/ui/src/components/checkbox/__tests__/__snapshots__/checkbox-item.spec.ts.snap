@@ -1,0 +1,45 @@
+// Vitest Snapshot v1
+
+exports[`CheckboxItem tests > should display the component with the default classes 1`] = `
+"<div data-v-58fd6536=\\"\\"><input data-v-58fd6536=\\"\\" id=\\"checkbox\\" class=\\"input\\" type=\\"checkbox\\" data-testid=\\"input\\"><label data-v-58fd6536=\\"\\" class=\\"label text-big-regular container\\" for=\\"checkbox\\">
+    <div data-v-b9dd0015=\\"\\" data-v-58fd6536=\\"\\" class=\\"container icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+        <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+      </svg></div><span data-v-58fd6536=\\"\\" class=\\"text\\">Text</span>
+    <!--v-if-->
+  </label></div>"
+`;
+
+exports[`CheckboxItem tests > should display the component with the highlighted classes 1`] = `
+"<div data-v-58fd6536=\\"\\"><input data-v-58fd6536=\\"\\" id=\\"checkbox\\" class=\\"input\\" type=\\"checkbox\\" data-testid=\\"input\\"><label data-v-58fd6536=\\"\\" class=\\"label text-big-regular container label--highlighted\\" for=\\"checkbox\\">
+    <div data-v-b9dd0015=\\"\\" data-v-58fd6536=\\"\\" class=\\"container icon icon--highlighted\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+        <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+      </svg></div><span data-v-58fd6536=\\"\\" class=\\"text\\">Text</span>
+    <!--v-if-->
+  </label></div>"
+`;
+
+exports[`CheckboxItem tests > should emit an update:checked event if the box is checked 1`] = `
+"<div data-v-58fd6536=\\"\\"><input data-v-58fd6536=\\"\\" id=\\"checkbox\\" class=\\"input\\" type=\\"checkbox\\" data-testid=\\"input\\"><label data-v-58fd6536=\\"\\" class=\\"label text-big-regular container\\" for=\\"checkbox\\">
+    <div data-v-b9dd0015=\\"\\" data-v-58fd6536=\\"\\" class=\\"container icon icon--checked\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+        <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+      </svg></div><span data-v-58fd6536=\\"\\" class=\\"text\\">Text</span>
+    <!--v-if-->
+  </label></div>"
+`;
+
+exports[`CheckboxItem tests > should not display an error message if the checkbox is checked 1`] = `
+"<div data-v-58fd6536=\\"\\"><input data-v-58fd6536=\\"\\" id=\\"checkbox\\" class=\\"input\\" type=\\"checkbox\\" data-testid=\\"input\\"><label data-v-58fd6536=\\"\\" class=\\"label text-big-regular container\\" for=\\"checkbox\\">
+    <div data-v-b9dd0015=\\"\\" data-v-58fd6536=\\"\\" class=\\"container icon icon--checked icon--highlighted\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+        <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+      </svg></div><span data-v-58fd6536=\\"\\" class=\\"text\\">Text</span>
+    <!--v-if-->
+  </label></div>"
+`;
+
+exports[`should display an error message if the checkbox is required and unchecked 1`] = `
+"<div data-v-58fd6536=\\"\\"><input data-v-58fd6536=\\"\\" id=\\"checkbox\\" class=\\"input\\" type=\\"checkbox\\" data-testid=\\"input\\"><label data-v-58fd6536=\\"\\" class=\\"label text-big-regular container label--highlighted\\" for=\\"checkbox\\">
+    <div data-v-b9dd0015=\\"\\" data-v-58fd6536=\\"\\" class=\\"container icon icon--highlighted\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+        <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+      </svg></div><span data-v-58fd6536=\\"\\" class=\\"text\\">Text</span><span data-v-c1d8433f=\\"\\" data-v-58fd6536=\\"\\" id=\\"error-item\\" data-testid=\\"error-item\\" class=\\"text-small-regular error\\">Required</span>
+  </label></div>"
+`;

@@ -1,0 +1,82 @@
+// Vitest Snapshot v1
+
+exports[`Carousel item tests > should display 3 slides and switch images when clicking on dots 1`] = `
+"<div data-v-33b50c4b=\\"\\" class=\\"container\\">
+  <div data-v-33b50c4b=\\"\\" class=\\"slides-container\\">
+    <div data-v-33b50c4b=\\"\\">
+      <doc_checking data-v-33b50c4b=\\"\\" class=\\"slide-image\\"></doc_checking>
+      <h2 data-v-33b50c4b=\\"\\" class=\\"slide-title\\">Vérifions votre association</h2>
+      <div data-v-33b50c4b=\\"\\" class=\\"slide-description text-default-regular\\">Conformément aux législations en vigueur, nous devons vérifier permettre d’utiliser nos services</div>
+    </div>
+    <div data-v-33b50c4b=\\"\\">
+      <edit data-v-33b50c4b=\\"\\" class=\\"slide-image\\"></edit>
+      <h2 data-v-33b50c4b=\\"\\" class=\\"slide-title\\">Vos informations</h2>
+      <div data-v-33b50c4b=\\"\\" class=\\"slide-description text-default-regular\\">Conformément aux législations en vigueur, de votre association pour vous permettre d’utiliser nos services</div>
+    </div>
+    <div data-v-33b50c4b=\\"\\">
+      <more_checks data-v-33b50c4b=\\"\\" class=\\"slide-image\\"></more_checks>
+      <h2 data-v-33b50c4b=\\"\\" class=\\"slide-title\\">Représentant légal</h2>
+      <div data-v-33b50c4b=\\"\\" class=\\"slide-description text-default-regular\\">Nous aurons besoin d’une pièce d’identité et de l’association pour réaliser un selfie</div>
+    </div>
+  </div>
+  <div data-v-33b50c4b=\\"\\" class=\\"dots-container\\">
+    <div data-v-33b50c4b=\\"\\" class=\\"dot active\\" data-testid=\\"dot-0\\"></div>
+    <div data-v-33b50c4b=\\"\\" class=\\"dot\\" data-testid=\\"dot-1\\"></div>
+    <div data-v-33b50c4b=\\"\\" class=\\"dot\\" data-testid=\\"dot-2\\"></div>
+  </div>
+</div>"
+`;
+
+exports[`Carousel item tests > should display 3 slides and switch images when clicking on dots 2`] = `
+"<div data-v-33b50c4b=\\"\\" class=\\"container\\">
+  <div data-v-33b50c4b=\\"\\" class=\\"slides-container\\">
+    <div data-v-33b50c4b=\\"\\">
+      <doc_checking data-v-33b50c4b=\\"\\" class=\\"slide-image\\"></doc_checking>
+      <h2 data-v-33b50c4b=\\"\\" class=\\"slide-title\\">Vérifions votre association</h2>
+      <div data-v-33b50c4b=\\"\\" class=\\"slide-description text-default-regular\\">Conformément aux législations en vigueur, nous devons vérifier permettre d’utiliser nos services</div>
+    </div>
+    <div data-v-33b50c4b=\\"\\">
+      <edit data-v-33b50c4b=\\"\\" class=\\"slide-image\\"></edit>
+      <h2 data-v-33b50c4b=\\"\\" class=\\"slide-title\\">Vos informations</h2>
+      <div data-v-33b50c4b=\\"\\" class=\\"slide-description text-default-regular\\">Conformément aux législations en vigueur, de votre association pour vous permettre d’utiliser nos services</div>
+    </div>
+    <div data-v-33b50c4b=\\"\\">
+      <more_checks data-v-33b50c4b=\\"\\" class=\\"slide-image\\"></more_checks>
+      <h2 data-v-33b50c4b=\\"\\" class=\\"slide-title\\">Représentant légal</h2>
+      <div data-v-33b50c4b=\\"\\" class=\\"slide-description text-default-regular\\">Nous aurons besoin d’une pièce d’identité et de l’association pour réaliser un selfie</div>
+    </div>
+  </div>
+  <div data-v-33b50c4b=\\"\\" class=\\"dots-container\\">
+    <div data-v-33b50c4b=\\"\\" class=\\"dot\\" data-testid=\\"dot-0\\"></div>
+    <div data-v-33b50c4b=\\"\\" class=\\"dot active\\" data-testid=\\"dot-1\\"></div>
+    <div data-v-33b50c4b=\\"\\" class=\\"dot\\" data-testid=\\"dot-2\\"></div>
+  </div>
+</div>"
+`;
+
+exports[`Carousel item tests > should display 3 slides and switch images when clicking on dots 3`] = `
+"<div data-v-33b50c4b=\\"\\" class=\\"container\\">
+  <div data-v-33b50c4b=\\"\\" class=\\"slides-container\\">
+    <div data-v-33b50c4b=\\"\\">
+      <doc_checking data-v-33b50c4b=\\"\\" class=\\"slide-image\\"></doc_checking>
+      <h2 data-v-33b50c4b=\\"\\" class=\\"slide-title\\">Vérifions votre association</h2>
+      <div data-v-33b50c4b=\\"\\" class=\\"slide-description text-default-regular\\">Conformément aux législations en vigueur, nous devons vérifier permettre d’utiliser nos services</div>
+    </div>
+    <div data-v-33b50c4b=\\"\\">
+      <edit data-v-33b50c4b=\\"\\" class=\\"slide-image\\"></edit>
+      <h2 data-v-33b50c4b=\\"\\" class=\\"slide-title\\">Vos informations</h2>
+      <div data-v-33b50c4b=\\"\\" class=\\"slide-description text-default-regular\\">Conformément aux législations en vigueur, de votre association pour vous permettre d’utiliser nos services</div>
+    </div>
+    <div data-v-33b50c4b=\\"\\">
+      <more_checks data-v-33b50c4b=\\"\\" class=\\"slide-image\\"></more_checks>
+      <h2 data-v-33b50c4b=\\"\\" class=\\"slide-title\\">Représentant légal</h2>
+      <div data-v-33b50c4b=\\"\\" class=\\"slide-description text-default-regular\\">Nous aurons besoin d’une pièce d’identité et de l’association pour réaliser un selfie</div>
+    </div>
+  </div>
+  <div data-v-33b50c4b=\\"\\" class=\\"dots-container\\">
+    <div data-v-33b50c4b=\\"\\" class=\\"dot\\" data-testid=\\"dot-0\\"></div>
+    <div data-v-33b50c4b=\\"\\" class=\\"dot\\" data-testid=\\"dot-1\\"></div>
+    <div data-v-33b50c4b=\\"\\" class=\\"dot active\\" data-testid=\\"dot-2\\"></div>
+  </div>
+</div>"
+`;

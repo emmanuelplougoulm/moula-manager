@@ -1,0 +1,24 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".nuxt/**"]
+    },
+    "build:prod": {
+      "outputs": ["dist/**", ".nuxt/**", "storybook-static/**"]
+    },
+    "generate": {
+      "dependsOn": ["^generate"],      
+      "outputs": ["dist/**", ".nuxt/**"],
+      "cache": false
+    },        
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    }
+  }
+}

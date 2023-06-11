@@ -1,0 +1,5 @@
+// Vitest Snapshot v1
+
+exports[`LabelItem tests > should be highlighted 1`] = `"<span data-v-0704e93f=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">City of birth <!--v-if--></span>"`;
+
+exports[`LabelItem tests > should not be highlighted 1`] = `"<span data-v-0704e93f=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default\\" data-testid=\\"label-item\\">City of birth <!--v-if--></span>"`;

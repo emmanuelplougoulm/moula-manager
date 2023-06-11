@@ -1,0 +1,55 @@
+// Vitest Snapshot v1
+
+exports[`LanguageDropdown component tests > should display the default option flag icon if no option has been selected yet 1`] = `
+"<div data-v-afe87b12=\\"\\" class=\\"container\\">
+  <div data-v-afe87b12=\\"\\" class=\\"text-big-regular select\\" data-testid=\\"select\\">
+    <en data-v-afe87b12=\\"\\" alt=\\"en\\" class=\\"select-flag\\"></en>
+    <div data-v-b9dd0015=\\"\\" data-v-afe87b12=\\"\\" class=\\"container select-arrow-down\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+        <path d=\\"M480 725.566 226.434 472 283 415.434l197 197 197-197L733.566 472 480 725.566Z\\"></path>
+      </svg></div>
+  </div>
+  <div data-v-afe87b12=\\"\\" class=\\"options\\" style=\\"display: none;\\">
+    <div data-v-afe87b12=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-0\\">
+      <div data-v-b9dd0015=\\"\\" data-v-afe87b12=\\"\\" class=\\"container option-check\\" style=\\"display: none;\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+        </svg></div>
+      <div data-v-afe87b12=\\"\\" class=\\"option-text\\">Français</div>
+      <fr data-v-afe87b12=\\"\\" alt=\\"fr\\" class=\\"option-flag\\"></fr>
+    </div>
+    <div data-v-afe87b12=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-1\\">
+      <div data-v-b9dd0015=\\"\\" data-v-afe87b12=\\"\\" class=\\"container option-check\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+        </svg></div>
+      <div data-v-afe87b12=\\"\\" class=\\"option-text\\">English</div>
+      <en data-v-afe87b12=\\"\\" alt=\\"en\\" class=\\"option-flag\\"></en>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`LanguageDropdown component tests > should emit a update:modelValue event if an option has been selected  1`] = `
+"<div data-v-afe87b12=\\"\\" class=\\"container\\">
+  <div data-v-afe87b12=\\"\\" class=\\"text-big-regular select\\" data-testid=\\"select\\">
+    <fr data-v-afe87b12=\\"\\" alt=\\"fr\\" class=\\"select-flag\\"></fr>
+    <div data-v-b9dd0015=\\"\\" data-v-afe87b12=\\"\\" class=\\"container select-arrow-down\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+        <path d=\\"M480 725.566 226.434 472 283 415.434l197 197 197-197L733.566 472 480 725.566Z\\"></path>
+      </svg></div>
+  </div>
+  <div data-v-afe87b12=\\"\\" class=\\"options\\" style=\\"display: none;\\">
+    <div data-v-afe87b12=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-0\\">
+      <div data-v-b9dd0015=\\"\\" data-v-afe87b12=\\"\\" class=\\"container option-check\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+        </svg></div>
+      <div data-v-afe87b12=\\"\\" class=\\"option-text\\">Français</div>
+      <fr data-v-afe87b12=\\"\\" alt=\\"fr\\" class=\\"option-flag\\"></fr>
+    </div>
+    <div data-v-afe87b12=\\"\\" class=\\"text-big-regular option\\" data-testid=\\"option-1\\">
+      <div data-v-b9dd0015=\\"\\" data-v-afe87b12=\\"\\" class=\\"container option-check\\" style=\\"display: none;\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+          <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+        </svg></div>
+      <div data-v-afe87b12=\\"\\" class=\\"option-text\\">English</div>
+      <en data-v-afe87b12=\\"\\" alt=\\"en\\" class=\\"option-flag\\"></en>
+    </div>
+  </div>
+</div>"
+`;

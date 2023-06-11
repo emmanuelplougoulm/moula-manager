@@ -1,0 +1,41 @@
+// Vitest Snapshot v1
+
+exports[`TextInput tests > should display default class on label and focus pseudo class on input 1`] = `
+"<div data-v-e10f066f=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-e10f066f=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Informations <!--v-if--></span><input data-v-e10f066f=\\"\\" id=\\"text-input\\" data-testid=\\"text-input\\" type=\\"text\\" placeholder=\\"\\" class=\\"input--highlighted text-big-regular input--default\\">
+  <!--v-if-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`TextInput tests > should display default class on label and text-area 1`] = `
+"<div data-v-e10f066f=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-e10f066f=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default\\" data-testid=\\"label-item\\">Nom de famille <!--v-if--></span><input data-v-e10f066f=\\"\\" id=\\"text-input\\" data-testid=\\"text-input\\" type=\\"text\\" placeholder=\\"\\" class=\\"text-big-regular input--default\\">
+  <!--v-if-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`TextInput tests > should display highlighted class on label and text-area 1`] = `
+"<div data-v-e10f066f=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-e10f066f=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Description <!--v-if--></span><input data-v-e10f066f=\\"\\" id=\\"text-input\\" data-testid=\\"text-input\\" type=\\"text\\" placeholder=\\"\\" class=\\"input--highlighted text-big-regular input--default\\">
+  <!--v-if-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`TextInput tests > should display highlighted class on label and text-area with a caption 1`] = `
+"<div data-v-e10f066f=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-e10f066f=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Description <!--v-if--></span><input data-v-e10f066f=\\"\\" id=\\"text-input\\" data-testid=\\"text-input\\" type=\\"text\\" placeholder=\\"\\" class=\\"input--highlighted text-big-regular input--default\\"><span data-v-b41f83c4=\\"\\" data-v-e10f066f=\\"\\" data-testid=\\"caption-item\\" class=\\"text-small-regular\\">This is a caption</span>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`TextInput tests > should display highlighted class on label due to invalid format 1`] = `
+"<div data-v-e10f066f=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-e10f066f=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Adresse complète <!--v-if--></span><input data-v-e10f066f=\\"\\" id=\\"text-input\\" data-testid=\\"text-input\\" type=\\"text\\" placeholder=\\"\\" class=\\"input--highlighted text-big-regular input--default\\">
+  <!--v-if--><span data-v-c1d8433f=\\"\\" data-v-e10f066f=\\"\\" id=\\"error-item\\" data-testid=\\"error-item\\" class=\\"text-small-regular\\">Invalid format</span>
+</div>"
+`;
+
+exports[`TextInput tests > should not display highlighted class and error due to invalid format with the default pattern 1`] = `
+"<div data-v-e10f066f=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-e10f066f=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default\\" data-testid=\\"label-item\\">Veuillez préciser <!--v-if--></span><input data-v-e10f066f=\\"\\" id=\\"text-input\\" data-testid=\\"text-input\\" type=\\"text\\" placeholder=\\"\\" class=\\"text-big-regular input--default\\">
+  <!--v-if-->
+  <!--v-if-->
+</div>"
+`;

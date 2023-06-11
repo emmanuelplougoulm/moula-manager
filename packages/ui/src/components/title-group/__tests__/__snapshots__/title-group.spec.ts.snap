@@ -1,0 +1,10 @@
+// Vitest Snapshot v1
+
+exports[`TitleGroup tests > should display the component with its title, subtitle, description and alert item 1`] = `
+"<div data-v-1691f798=\\"\\" class=\\"container\\">
+  <h1 data-v-1691f798=\\"\\">Nunc sit amet consectetur </h1>
+  <h2 data-v-1691f798=\\"\\">Nullam pellentesque felis ac faucibus vestibulum</h2>
+  <h3 data-v-1691f798=\\"\\">Phasellus quis justo dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</h3>
+  <p data-v-a2a80cda=\\"\\" data-v-1691f798=\\"\\" class=\\"text-default-regular alert-text\\">Quisque non massa nunc. Ut facilisis tincidunt elit, et porta enim finibus vitae. Quisque quis faucibus nunc. Maecenas molestie nisi laoreet mi finibus imperdiet.</p>
+</div>"
+`;

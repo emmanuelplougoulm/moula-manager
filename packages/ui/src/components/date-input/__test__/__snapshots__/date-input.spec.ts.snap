@@ -1,0 +1,29 @@
+// Vitest Snapshot v1
+
+exports[`DateInput tests > should display a format error if the full date is a non-existing date 1`] = `"<div data-v-c69729d6=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-c69729d6=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Label <!--v-if--></span><input data-v-c69729d6=\\"\\" placeholder=\\"\\" data-testid=\\"date-input\\" class=\\"input--highlighted input input--default text-big-regular\\" maxlength=\\"10\\"><span data-v-c1d8433f=\\"\\" data-v-c69729d6=\\"\\" id=\\"error-item\\" data-testid=\\"error-item\\" class=\\"text-small-regular\\">Invalid format</span></div>"`;
+
+exports[`DateInput tests > should display a format error if the full date is in an invalid format 1`] = `"<div data-v-c69729d6=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-c69729d6=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Label <!--v-if--></span><input data-v-c69729d6=\\"\\" placeholder=\\"\\" data-testid=\\"date-input\\" class=\\"input--highlighted input input--default text-big-regular\\" maxlength=\\"10\\"><span data-v-c1d8433f=\\"\\" data-v-c69729d6=\\"\\" id=\\"error-item\\" data-testid=\\"error-item\\" class=\\"text-small-regular\\">Invalid format</span></div>"`;
+
+exports[`DateInput tests > should display a format error if the input is not fully completed and unfocused 1`] = `"<div data-v-c69729d6=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-c69729d6=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Label <!--v-if--></span><input data-v-c69729d6=\\"\\" placeholder=\\"\\" data-testid=\\"date-input\\" class=\\"input--highlighted input input--default text-big-regular\\" maxlength=\\"10\\"><span data-v-c1d8433f=\\"\\" data-v-c69729d6=\\"\\" id=\\"error-item\\" data-testid=\\"error-item\\" class=\\"text-small-regular\\">Invalid format</span></div>"`;
+
+exports[`DateInput tests > should display a required error if the input is completed then emptied and the required prop is true 1`] = `"<div data-v-c69729d6=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-c69729d6=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Label <!--v-if--></span><input data-v-c69729d6=\\"\\" placeholder=\\"\\" data-testid=\\"date-input\\" class=\\"input--highlighted input input--default text-big-regular\\" maxlength=\\"10\\"><span data-v-c1d8433f=\\"\\" data-v-c69729d6=\\"\\" id=\\"error-item\\" data-testid=\\"error-item\\" class=\\"text-small-regular\\">Required</span></div>"`;
+
+exports[`DateInput tests > should display the default class by default 1`] = `
+"<div data-v-c69729d6=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-c69729d6=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default\\" data-testid=\\"label-item\\">Label <!--v-if--></span><input data-v-c69729d6=\\"\\" placeholder=\\"\\" data-testid=\\"date-input\\" class=\\"input input--default text-big-regular\\" maxlength=\\"10\\">
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DateInput tests > should display the default class if the value is valid even if the required prop is true 1`] = `
+"<div data-v-c69729d6=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-c69729d6=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default\\" data-testid=\\"label-item\\">Label <!--v-if--></span><input data-v-c69729d6=\\"\\" placeholder=\\"\\" data-testid=\\"date-input\\" class=\\"input input--default text-big-regular\\" maxlength=\\"10\\">
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DateInput tests > should display the highlighted class if the value is invalid 1`] = `"<div data-v-c69729d6=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-c69729d6=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Label <!--v-if--></span><input data-v-c69729d6=\\"\\" placeholder=\\"\\" data-testid=\\"date-input\\" class=\\"input--highlighted input input--default text-big-regular\\" maxlength=\\"10\\"><span data-v-c1d8433f=\\"\\" data-v-c69729d6=\\"\\" id=\\"error-item\\" data-testid=\\"error-item\\" class=\\"text-small-regular\\">Invalid format</span></div>"`;
+
+exports[`DateInput tests > should display the highlighted class if there is no value and the required prop is true 1`] = `
+"<div data-v-c69729d6=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-c69729d6=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Label <!--v-if--></span><input data-v-c69729d6=\\"\\" placeholder=\\"\\" data-testid=\\"date-input\\" class=\\"input--highlighted input input--default text-big-regular\\" maxlength=\\"10\\">
+  <!--v-if-->
+</div>"
+`;

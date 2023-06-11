@@ -1,0 +1,25 @@
+// Vitest Snapshot v1
+
+exports[`TextArea tests > should display default class on label and focus pseudo class on text-area 1`] = `
+"<div data-v-370ce806=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-370ce806=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Informations <!--v-if--></span><textarea data-v-370ce806=\\"\\" id=\\"text-area\\" data-testid=\\"text-area\\" type=\\"text\\" placeholder=\\"\\" class=\\"text-area--highlighted text-big-regular text-area--default\\"></textarea>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`TextArea tests > should display default class on label and text-area 1`] = `
+"<div data-v-370ce806=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-370ce806=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default\\" data-testid=\\"label-item\\">Adresse complète <!--v-if--></span><textarea data-v-370ce806=\\"\\" id=\\"text-area\\" data-testid=\\"text-area\\" type=\\"text\\" placeholder=\\"\\" class=\\"text-big-regular text-area--default\\"></textarea>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`TextArea tests > should display highlighted class on label and text-area 1`] = `
+"<div data-v-370ce806=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-370ce806=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Description <!--v-if--></span><textarea data-v-370ce806=\\"\\" id=\\"text-area\\" data-testid=\\"text-area\\" type=\\"text\\" placeholder=\\"\\" class=\\"text-area--highlighted text-big-regular text-area--default\\"></textarea>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`TextArea tests > should display highlighted class on label text-area due to invalid format 1`] = `
+"<div data-v-370ce806=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-370ce806=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Adresse complète <!--v-if--></span><textarea data-v-370ce806=\\"\\" id=\\"text-area\\" data-testid=\\"text-area\\" type=\\"text\\" placeholder=\\"\\" class=\\"text-area--highlighted text-big-regular text-area--default\\"></textarea>
+  <!--v-if-->
+</div>"
+`;

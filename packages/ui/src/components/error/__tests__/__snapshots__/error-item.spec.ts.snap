@@ -1,0 +1,5 @@
+// Vitest Snapshot v1
+
+exports[`ErrorItem tests > should display the error message 1`] = `"<span data-v-c1d8433f=\\"\\" id=\\"error-item\\" data-testid=\\"error-item\\" class=\\"text-small-regular\\">This field is required</span>"`;
+
+exports[`ErrorItem tests > should not display the error message 1`] = `"<!--v-if-->"`;

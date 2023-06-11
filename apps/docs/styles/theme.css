@@ -1,0 +1,53 @@
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.text-bigger-regular {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.text-big-regular {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.text-default-bold {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.text-default-regular {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.text-small-semi-bold {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.text-small-medium {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.text-small-regular {
+  font-size: 0.875rem;
+  font-weight: 400;
+}

@@ -1,0 +1,11 @@
+{
+  "style": {
+    "hue-primary": 14,
+    "sat-primary": 100,
+    "light-primary": 50,
+    "hue-secondary": 140,
+    "sat-secondary": 100,
+    "light-secondary": 62,
+    "primary-30": "hsl(var(--hue-primary), calc(var(--sat-primary) * 1%), calc(var(--light-primary) / 3 * 1%));"
+  }
+}

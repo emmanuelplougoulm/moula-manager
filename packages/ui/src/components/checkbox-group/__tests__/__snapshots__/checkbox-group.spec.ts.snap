@@ -1,0 +1,80 @@
+// Vitest Snapshot v1
+
+exports[`CheckboxGroup tests > should display a highlighted label and an error message if an option is checked then unchecked 1`] = `
+"<div data-v-35f5b373=\\"\\" data-v-b44588ef=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-35f5b373=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Text <!--v-if--></span>
+  <div data-v-b44588ef=\\"\\"><input data-v-b44588ef=\\"\\" id=\\"option-1\\" type=\\"checkbox\\" name=\\"name\\" data-testid=\\"input-0\\" value=\\"option-1\\"><label data-v-b44588ef=\\"\\" class=\\"text-big-regular\\" for=\\"option-1\\">
+      <div data-v-b44588ef=\\"\\" class=\\"icon-container\\">
+        <div data-v-b9dd0015=\\"\\" data-v-b44588ef=\\"\\" class=\\"container icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div>
+      </div> Option 1
+    </label></div>
+  <div data-v-b44588ef=\\"\\"><input data-v-b44588ef=\\"\\" id=\\"option-2\\" type=\\"checkbox\\" name=\\"name\\" data-testid=\\"input-1\\" value=\\"option-2\\"><label data-v-b44588ef=\\"\\" class=\\"text-big-regular\\" for=\\"option-2\\">
+      <div data-v-b44588ef=\\"\\" class=\\"icon-container\\">
+        <div data-v-b9dd0015=\\"\\" data-v-b44588ef=\\"\\" class=\\"container icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div>
+      </div> Option 2
+    </label></div><span data-v-c1d8433f=\\"\\" data-v-35f5b373=\\"\\" id=\\"error-item\\" data-testid=\\"error-item\\" class=\\"text-small-regular\\">Required</span>
+</div>"
+`;
+
+exports[`CheckboxGroup tests > should display a highlighted label and no error message by default 1`] = `
+"<div data-v-35f5b373=\\"\\" data-v-b44588ef=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-35f5b373=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Text <!--v-if--></span>
+  <div data-v-b44588ef=\\"\\"><input data-v-b44588ef=\\"\\" id=\\"option-1\\" type=\\"checkbox\\" name=\\"name\\" data-testid=\\"input-0\\" value=\\"option-1\\"><label data-v-b44588ef=\\"\\" class=\\"text-big-regular\\" for=\\"option-1\\">
+      <div data-v-b44588ef=\\"\\" class=\\"icon-container\\">
+        <div data-v-b9dd0015=\\"\\" data-v-b44588ef=\\"\\" class=\\"container icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div>
+      </div> Option 1
+    </label></div>
+  <div data-v-b44588ef=\\"\\"><input data-v-b44588ef=\\"\\" id=\\"option-2\\" type=\\"checkbox\\" name=\\"name\\" data-testid=\\"input-1\\" value=\\"option-2\\"><label data-v-b44588ef=\\"\\" class=\\"text-big-regular\\" for=\\"option-2\\">
+      <div data-v-b44588ef=\\"\\" class=\\"icon-container\\">
+        <div data-v-b9dd0015=\\"\\" data-v-b44588ef=\\"\\" class=\\"container icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div>
+      </div> Option 2
+    </label></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`CheckboxGroup tests > should display a non highlighted label and no error message if an option is checked 1`] = `
+"<div data-v-35f5b373=\\"\\" data-v-b44588ef=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-35f5b373=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default\\" data-testid=\\"label-item\\">Text <!--v-if--></span>
+  <div data-v-b44588ef=\\"\\"><input data-v-b44588ef=\\"\\" id=\\"option-1\\" type=\\"checkbox\\" name=\\"name\\" data-testid=\\"input-0\\" value=\\"option-1\\"><label data-v-b44588ef=\\"\\" class=\\"text-big-regular\\" for=\\"option-1\\">
+      <div data-v-b44588ef=\\"\\" class=\\"icon-container\\">
+        <div data-v-b9dd0015=\\"\\" data-v-b44588ef=\\"\\" class=\\"container icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div>
+      </div> Option 1
+    </label></div>
+  <div data-v-b44588ef=\\"\\"><input data-v-b44588ef=\\"\\" id=\\"option-2\\" type=\\"checkbox\\" name=\\"name\\" data-testid=\\"input-1\\" value=\\"option-2\\"><label data-v-b44588ef=\\"\\" class=\\"text-big-regular\\" for=\\"option-2\\">
+      <div data-v-b44588ef=\\"\\" class=\\"icon-container\\">
+        <div data-v-b9dd0015=\\"\\" data-v-b44588ef=\\"\\" class=\\"container icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div>
+      </div> Option 2
+    </label></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`CheckboxGroup tests > should display the component with disabled options 1`] = `
+"<div data-v-35f5b373=\\"\\" data-v-b44588ef=\\"\\" class=\\"container\\"><span data-v-0704e93f=\\"\\" data-v-35f5b373=\\"\\" id=\\"label-item\\" class=\\"text-small-semi-bold label--default label--highlighted\\" data-testid=\\"label-item\\">Text <!--v-if--></span>
+  <div data-v-b44588ef=\\"\\"><input data-v-b44588ef=\\"\\" id=\\"option-1\\" type=\\"checkbox\\" name=\\"name\\" data-testid=\\"input-0\\" disabled=\\"\\" value=\\"option-1\\"><label data-v-b44588ef=\\"\\" class=\\"text-big-regular\\" for=\\"option-1\\">
+      <div data-v-b44588ef=\\"\\" class=\\"icon-container\\">
+        <div data-v-b9dd0015=\\"\\" data-v-b44588ef=\\"\\" class=\\"container icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div>
+      </div> Option 1
+    </label></div>
+  <div data-v-b44588ef=\\"\\"><input data-v-b44588ef=\\"\\" id=\\"option-2\\" type=\\"checkbox\\" name=\\"name\\" data-testid=\\"input-1\\" disabled=\\"\\" value=\\"option-2\\"><label data-v-b44588ef=\\"\\" class=\\"text-big-regular\\" for=\\"option-2\\">
+      <div data-v-b44588ef=\\"\\" class=\\"icon-container\\">
+        <div data-v-b9dd0015=\\"\\" data-v-b44588ef=\\"\\" class=\\"container icon\\"><svg data-v-b9dd0015-s=\\"\\" xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"48\\" height=\\"48\\" viewBox=\\"0 96 960 960\\">
+            <path d=\\"M378 823.566 140.434 586l57.131-57.131L378 709.304l383.435-383.435L818.566 383 378 823.566Z\\"></path>
+          </svg></div>
+      </div> Option 2
+    </label></div>
+  <!--v-if-->
+</div>"
+`;
