@@ -11,5 +11,12 @@
 # turbo
 .turbo
 
+
+#modules
 node_modules/
 apps/*/node_modules/
+
+#dist
+
+./dist
+apps/*/dist/
