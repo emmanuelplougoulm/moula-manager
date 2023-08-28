@@ -1,0 +1,15 @@
+# misc
+.DS_Store
+*.pem
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# turbo
+.turbo
+
+node_modules/
+apps/*/node_modules/
