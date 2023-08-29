@@ -1,0 +1,20 @@
+{
+  "api": {
+    "hostname": "0.0.0.0",
+    "port": 8010
+  },
+  "db": {
+    "prefix": "mongodb://",
+    "hostname": "mongo",
+    "dbName": "admin",
+    "port": 27017,
+    "auth": {
+      "user": "user",
+      "password": "password"
+    },
+    "options": {
+      "useNewUrlParser": true,
+      "useUnifiedTopology": true
+    }
+  }
+}
