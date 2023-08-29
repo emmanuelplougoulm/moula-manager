@@ -13,7 +13,7 @@
 
 
 #modules
-node_modules/
+node_modules
 apps/*/node_modules/
 
 #dist
