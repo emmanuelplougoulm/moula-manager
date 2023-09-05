@@ -7,9 +7,10 @@ const transactionSchema = new Schema({
   walletName: String,
   date: String,
   currency: String,
+  symbol: String,
   amount: Number,
   price: Number,
   fees: Number,
 });
 
-export default model('Individual', transactionSchema);
+export default model('Transaction', transactionSchema);
