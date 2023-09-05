@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 import Transaction from '../models/transaction';
 @Injectable()
 export class TransactionRepository {
-  createOneTransaction() {
-    return new Transaction().save();
+  createOneTransaction(transaction) {
+    return new Transaction(transaction).save();
   }
 }
