@@ -89,6 +89,7 @@
 
 <script setup lang="ts">
 import { reactive } from "vue";
+import httpClient from "../../services/httpClient/httpClient";
 
 const transactionState = reactive({
   type: null,
