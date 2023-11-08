@@ -27,6 +27,8 @@
   },
   "packageManager": "pnpm@7.26.1",
   "dependencies": {
-    "dayjs": "^1.11.7"
+    "@intlify/vue-router-bridge": "^1.0.1",
+    "dayjs": "^1.11.7",
+    "vue-i18n": "^9.6.5"
   }
 }
