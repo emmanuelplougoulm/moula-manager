@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
-import config from '../config/index';
+// import config from '../config/index';
 import { logger } from './utils/logger';
 
 function dbConnection() {
-  console.log('config', config);
+  // console.log('config', config);
 
   // const { auth, options, ...db }: any = config.db;
   // const dbAuth = `${auth.user}:${auth.password}@`;
@@ -14,7 +14,7 @@ function dbConnection() {
 
   // for now use this one as mongo allows connection without credentials
   // when it's local
-  const uri = `mongodb://localhost:27017/mmdb`;
+  const uri = `mongodb://127.0.0.1:27017/db`;
 
   console.log('uri', uri);
 

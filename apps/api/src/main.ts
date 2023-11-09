@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 // import { Transport } from '@nestjs/microservices';
 import { dbConnection } from './db';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 async function bootstrap() {
   // const { hostname, port }: any = config.get('api');
@@ -19,6 +20,15 @@ async function bootstrap() {
 
   const app = await NestFactory.create(AppModule);
 
-  await app.listen(5000);
+  const config = new DocumentBuilder()
+    .setTitle('Moula Manager')
+    .setDescription('Managing my moula')
+    .setVersion('1.0')
+    .build();
+
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
+
+  await app.listen(3000);
 }
 bootstrap();
