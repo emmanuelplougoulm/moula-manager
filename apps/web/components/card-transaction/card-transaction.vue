@@ -104,7 +104,6 @@ const transactionState = reactive({
 });
 
 const handleSubmit = () => {
-  console.log("yo yo ");
   createTransaction(transactionState)
 };
 </script>

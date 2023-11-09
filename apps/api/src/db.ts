@@ -16,8 +16,6 @@ function dbConnection() {
   // when it's local
   const uri = `mongodb://127.0.0.1:27017/db`;
 
-  console.log('uri', uri);
-
   mongoose.connection.on('connected', () => {
     logger.info(`@Moula-Manager * connected to / LA GROSSE MOULA database`);
   });

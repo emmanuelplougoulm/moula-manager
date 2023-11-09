@@ -1,7 +1,5 @@
 import httpClient from "../httpClient/httpClient";
 
-// export default class TransactionService {
-
 export async function createTransaction(input: object) {
     try {
         const response = await httpClient.post("/transactions", input);
@@ -11,4 +9,3 @@ export async function createTransaction(input: object) {
         throw error;
     }
 }
-// }
