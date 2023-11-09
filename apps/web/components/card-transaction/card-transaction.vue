@@ -90,6 +90,7 @@
 <script setup lang="ts">
 import { reactive } from "vue";
 import httpClient from "../../services/httpClient/httpClient";
+import {createTransaction} from "../../services/transactions/transactions.service"
 
 const transactionState = reactive({
   type: null,
@@ -104,5 +105,6 @@ const transactionState = reactive({
 
 const handleSubmit = () => {
   console.log("yo yo ");
+  createTransaction(transactionState)
 };
 </script>

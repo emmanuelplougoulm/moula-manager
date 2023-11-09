@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 const httpClient = Axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "http://localhost:9000",
   timeout: 5000,
   headers: {
     "Content-Type": "application/json",
