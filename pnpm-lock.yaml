@@ -166,7 +166,9 @@ importers:
       '@nuxt/devtools': latest
       '@nuxtjs/color-mode': ^3.3.0
       axios: ^1.6.1
+      eslint: ^8.53.0
       eslint-config-custom: workspace:*
+      eslint-plugin-vue: ^9.18.1
       nuxt: ^3.8.1
       vue: ^3.3.8
       vue-router: ^4.2.5
@@ -175,8 +177,10 @@ importers:
     devDependencies:
       '@nuxt/devtools': 1.0.2_nuxt@3.8.1
       '@nuxtjs/color-mode': 3.3.0
+      eslint: 8.53.0
       eslint-config-custom: link:../../packages/eslint-config-custom
-      nuxt: 3.8.1
+      eslint-plugin-vue: 9.18.1_eslint@8.53.0
+      nuxt: 3.8.1_eslint@8.53.0
       vue: 3.3.8
       vue-router: 4.2.5_vue@3.3.8
 
@@ -4707,7 +4711,7 @@ packages:
       '@nuxt/kit': 3.8.1
       '@nuxt/schema': 3.8.1
       execa: 7.2.0
-      nuxt: 3.8.1
+      nuxt: 3.8.1_eslint@8.53.0
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -4756,7 +4760,7 @@ packages:
       local-pkg: 0.5.0
       magicast: 0.3.2
       nitropack: 2.7.2
-      nuxt: 3.8.1
+      nuxt: 3.8.1_eslint@8.53.0
       nypm: 0.3.3
       ofetch: 1.3.3
       ohash: 1.1.3
@@ -4871,7 +4875,7 @@ packages:
     resolution: {integrity: sha512-5gc02Pu1HycOVUWJ8aYsWeeXcSTPe8iX8+KIrhyEtEoOSkY0eMBuo0ssljB8wALuEmepv31DlYe5gpiRwkjESA==}
     dev: true
 
-  /@nuxt/vite-builder/3.8.1_vue@3.3.8:
+  /@nuxt/vite-builder/3.8.1_eslint@8.53.0+vue@3.3.8:
     resolution: {integrity: sha512-Ot/twGONxj22T9U4bxp771ibKVFlZxIiYDHY/e6mZsE4Blc0efKo6MzPPPo0W4/tXQbtKKEq41uINN3dMI3mag==}
     engines: {node: ^14.18.0 || >=16.10.0}
     peerDependencies:
@@ -4908,7 +4912,7 @@ packages:
       unplugin: 1.5.0
       vite: 4.5.0
       vite-node: 0.33.0
-      vite-plugin-checker: 0.6.2_vite@4.5.0
+      vite-plugin-checker: 0.6.2_eslint@8.53.0+vite@4.5.0
       vue: 3.3.8
       vue-bundle-renderer: 2.0.0
     transitivePeerDependencies:
@@ -11654,6 +11658,24 @@ packages:
       eslint: 8.34.0
     dev: true
 
+  /eslint-plugin-vue/9.18.1_eslint@8.53.0:
+    resolution: {integrity: sha512-7hZFlrEgg9NIzuVik2I9xSnJA5RsmOfueYgsUGUokEDLJ1LHtxO0Pl4duje1BriZ/jDWb+44tcIlC3yi0tdlZg==}
+    engines: {node: ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
+    dependencies:
+      '@eslint-community/eslint-utils': 4.4.0_eslint@8.53.0
+      eslint: 8.53.0
+      natural-compare: 1.4.0
+      nth-check: 2.1.1
+      postcss-selector-parser: 6.0.13
+      semver: 7.5.4
+      vue-eslint-parser: 9.3.2_eslint@8.53.0
+      xml-name-validator: 4.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /eslint-scope/4.0.3:
     resolution: {integrity: sha512-p7VutNr1O/QrxysMo3E45FjYDTeXBy0iTltPFNSqKAIfjDSXC+4dj+qfyuD8bfAXrW/y6lW3O76VaYNPKfpKrg==}
     engines: {node: '>=4.0.0'}
@@ -16600,7 +16622,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /nuxt/3.8.1:
+  /nuxt/3.8.1_eslint@8.53.0:
     resolution: {integrity: sha512-RSGO56Gv0x2f6AXWw4o4GoBaVdsD0qkPCjrX7Ud/jzH3cRJoyYMPuq/9AOLvf2o1ecZWl39j5elqJ4QHmggyOA==}
     engines: {node: ^14.18.0 || >=16.10.0}
     hasBin: true
@@ -16619,7 +16641,7 @@ packages:
       '@nuxt/schema': 3.8.1
       '@nuxt/telemetry': 2.5.2
       '@nuxt/ui-templates': 1.3.1
-      '@nuxt/vite-builder': 3.8.1_vue@3.3.8
+      '@nuxt/vite-builder': 3.8.1_eslint@8.53.0+vue@3.3.8
       '@unhead/dom': 1.8.3
       '@unhead/ssr': 1.8.3
       '@unhead/vue': 1.8.3_vue@3.3.8
@@ -21347,7 +21369,7 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-checker/0.6.2_vite@4.5.0:
+  /vite-plugin-checker/0.6.2_eslint@8.53.0+vite@4.5.0:
     resolution: {integrity: sha512-YvvvQ+IjY09BX7Ab+1pjxkELQsBd4rPhWNw8WLBeFVxu/E7O+n6VYAqNsKdK/a2luFlX/sMpoWdGFfg4HvwdJQ==}
     engines: {node: '>=14.16'}
     peerDependencies:
@@ -21383,6 +21405,7 @@ packages:
       chalk: 4.1.2
       chokidar: 3.5.3
       commander: 8.3.0
+      eslint: 8.53.0
       fast-glob: 3.3.2
       fs-extra: 11.1.1
       lodash.debounce: 4.0.8
@@ -21741,6 +21764,24 @@ packages:
       webpack: 5.80.0
     transitivePeerDependencies:
       - '@babel/preset-env'
+      - supports-color
+    dev: true
+
+  /vue-eslint-parser/9.3.2_eslint@8.53.0:
+    resolution: {integrity: sha512-q7tWyCVaV9f8iQyIA5Mkj/S6AoJ9KBN8IeUSf3XEmBrOtxOZnfTg5s4KClbZBCK3GtnT/+RyCLZyDHuZwTuBjg==}
+    engines: {node: ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: '>=6.0.0'
+    dependencies:
+      debug: 4.3.4
+      eslint: 8.53.0
+      eslint-scope: 7.2.2
+      eslint-visitor-keys: 3.4.3
+      espree: 9.6.1
+      esquery: 1.5.0
+      lodash: 4.17.21
+      semver: 7.5.4
+    transitivePeerDependencies:
       - supports-color
     dev: true
 

@@ -1,6 +1,7 @@
 {
-  "name": "nuxt-app",
+  "name": "moula-manager-webapp",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -11,7 +12,9 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.0",
+    "eslint": "^8.53.0",
     "eslint-config-custom": "workspace:*",
+    "eslint-plugin-vue": "^9.18.1",
     "nuxt": "^3.8.1",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
