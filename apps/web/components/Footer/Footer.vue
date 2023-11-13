@@ -7,6 +7,6 @@
 <style scoped>
 .footer-container {
   height: 60px;
-  background-color: #00e699;
+  /* background-color: #00e699; */
 }
 </style>

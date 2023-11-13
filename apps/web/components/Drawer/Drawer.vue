@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="drawer-container">I AM THE DRAWER</div>
+  <div class="drawer-container" :classes="theme">I AM THE DRAWER</div>
 </template>
 
 <style scoped>
@@ -9,7 +9,5 @@
   border: 1px violet solid;
   height: 100%;
   width: 70px;
-  background-color: blue;
-  opacity: 70%;
 }
 </style>

@@ -9,8 +9,9 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/color-mode": "^3.3.0",
+    "eslint-config-custom": "workspace:*",
     "nuxt": "^3.8.1",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"

@@ -1,5 +1,26 @@
+<script setup lang="ts">
+import { reactive } from 'vue';
+import httpClient from '../../services/httpClient/httpClient';
+import { createTransaction } from '../../services/transactions/transactions.service';
+
+const transactionState = reactive({
+  type: null,
+  walletName: '',
+  date: '',
+  currency: '',
+  symbol: '',
+  amount: 0,
+  price: 0,
+  fees: 0
+});
+
+const handleSubmit = () => {
+  createTransaction(transactionState);
+};
+</script>
+
 <template>
-  <form action="" method="post" class="form-example">
+  <form action="" method="post" class="form-example card-transaction">
     <div class="form-example">
       <label for="type">transaction type </label>
       <input type="text" v-model="transactionState.type" name="type" id="type" required />
@@ -51,24 +72,8 @@
   </form>
 </template>
 
-<script setup lang="ts">
-import { reactive } from 'vue';
-import httpClient from '../../services/httpClient/httpClient';
-import { createTransaction } from '../../services/transactions/transactions.service';
-
-const transactionState = reactive({
-  type: null,
-
-  walletName: '',
-  date: '',
-  currency: '',
-  symbol: '',
-  amount: 0,
-  price: 0,
-  fees: 0
-});
-
-const handleSubmit = () => {
-  createTransaction(transactionState);
-};
-</script>
+<style scoped>
+.card-transaction {
+  border: 1px green solid;
+}
+</style>
