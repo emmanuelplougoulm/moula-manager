@@ -1,13 +1,19 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import NavigationItem from '@/components/navigation-item/navigation-item.vue';
+</script>
 
 <template>
-  <div class="drawer-container" :classes="theme">I AM THE DRAWER</div>
+  <div class="drawer-container">
+    <NavigationItem :link="'/dashboard'" />
+    <NavigationItem :link="'/wallet'" />
+  </div>
 </template>
 
 <style scoped>
 .drawer-container {
+  display: flex;
+  flex-direction: column;
   border: 1px violet solid;
   height: 100%;
-  width: 70px;
 }
 </style>
