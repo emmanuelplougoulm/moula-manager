@@ -1,0 +1,6 @@
+# Ignore everything:
+# /*
+
+# Except following folders:
+# !/apps
+# !/packages
