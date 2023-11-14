@@ -9,7 +9,7 @@
         </div>
 
         <div class="modal-body">
-          <slot name="body"> default body </slot>
+          <slot name="content"> content </slot>
         </div>
 
         <div class="modal-footer">
