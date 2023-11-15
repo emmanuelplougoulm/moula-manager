@@ -1,39 +1,55 @@
 <script setup lang="ts">
-import { reactive, computed } from 'vue';
+import { computed, ref } from 'vue';
+import TabGroup from '@/components/ui/tab-group/tab-group.vue';
 // import httpClient from '../../services/httpClient/httpClient';
-import { createTransaction } from '../../services/transactions/transactions.service';
+// import { createTransaction } from '../../services/transactions/transactions.service';
 
-const transactionState = reactive({
+const transactionState = ref({
   type: '',
   walletName: '',
   date: '',
-  currency: '',
+  currency: 'DOL',
   symbol: '',
   quantity: 0,
   price: 0,
   fees: 0
 });
 
+const optionsCurrency = ['EUR', 'DOL'];
+const optionsType = ['BUY', 'SELL'];
 const total = computed(() => 'toto');
 
 const handleSubmit = () => {
-  createTransaction(transactionState);
+  console.log('transactionState', transactionState.value);
+};
+
+const handleSelect = (event: object) => {
+  // console.log('Selecting coin', event);
+  transactionState.value.symbol = event.target.value;
 };
 </script>
 
 <template>
-  <form action="" method="post" class="form-example card-transaction">
-    <div class="transaction-type">
-      <ul class="buy-or-sell">
-        <li><div @click="transactionState.type = 'BUY'">BUY</div></li>
-        <li><div @click="transactionState.type = 'BUY'">SELL</div></li>
-      </ul>
-    </div>
+  <div class="card-transaction">
+    <!-- <div class="wallet-name">
+      <label for="wallet-name">wallet-name</label>
+      <input
+        type="text"
+        v-model="transactionState.walletName"
+        name="wallet-name"
+        id="wallet-name"
+        required
+      />
+    </div> -->
+    <TabGroup v-model="transactionState.currency" :options="optionsCurrency" />
+    <TabGroup v-model="transactionState.type" :options="optionsType" />
+
     <div class="select-coin">
-      <select>
+      <select @change="handleSelect">
         <option value="BTC">$BTC</option>
         <option value="ETH">$ETH</option>
         <option value="TAO">$TAO</option>
+        <option value="TAO">$CKB</option>
       </select>
     </div>
     <div class="quantity-and-price">
@@ -65,41 +81,24 @@ const handleSubmit = () => {
     <div class="total-spent">
       <div name="total">{{ total }}</div>
     </div>
-    <div class="form-example">
+    <div>
       <input type="submit" value="+ Add transaction" @click="handleSubmit" />
     </div>
-  </form>
+  </div>
+  <div>{{ transactionState }}</div>
 </template>
 
 <style scoped>
-.form-example {
+.card-transaction {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-.card-transaction {
-  border: 1px green solid;
-  background-color: cadetblue;
+  gap: 10px;
+  border-radius: var(--card-border-radius);
+  padding: 10px;
+  background-color: var(--color-bg-darker);
+  border: 1px var(--color-border-grey) solid;
 }
 
-.buy-or-sell {
-  display: flex;
-  flex-direction: row;
-  justify-content: baseline;
-  background-color: lightskyblue;
-  padding: 10px;
-  border-radius: 4px;
-}
-.buy-or-sell li {
-  border: 1px red solid;
-  flex: 1;
-  list-style: none;
-  margin: 5px;
-  border-radius: 4px;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-}
 .select-coin {
   width: 100%;
   border-radius: 4px;
@@ -107,7 +106,9 @@ const handleSubmit = () => {
 .select-coin select {
   width: 100%;
   height: 50px;
-  background-color: lightskyblue;
+  background-color: var(--color-bg-lighter);
+  border: none;
+  color: white;
 }
 
 .quantity-and-price,
