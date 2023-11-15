@@ -12,7 +12,7 @@ body {
 }
 
 .dark-mode body {
-  background-color: #091a28;
+  background-color: var(--color-bg-base);
   color: #ebf4f1;
 }
 

@@ -1,0 +1,55 @@
+:root {
+  --color-bg-darker: #12121a;
+  --color-bg-dark: #171722;
+  --color-bg-base: #1c1c28;
+  --color-border-grey: #2d2d3d;
+  --color-border-lighter: #393953;
+  --color-text-light: #f7f7f7;
+  --app-header-height: 48px;
+}
+
+/* --color-layer-darkest: #0b0b13;
+    --color-layer-darker: #12121a;
+    *--color-layer-dark: #171722;
+   *--color-layer-base: #1c1c28;
+    --color-layer-light: #232334;
+    --color-layer-lighter: #303044;
+    --color-layer-lightest: #454258;
+    --color-loading-bar-shine: #51516d;
+    --color-border-grey: #2d2d3d;
+    --color-border-lighter: #393953;
+    --color-text-light: #f7f7f7;
+    --color-text-base: #c3c2d4;
+    --color-text-dark: #6f6e84;
+    --color-purple: #5973fe;
+    --color-green: #3fb68b;
+    --color-red: #ff5353;
+    --color-yellow: #ffb648;
+    --color-teal: #00ddc6;
+    --color-bronze: #ba6c38;
+    --color-silver: #c1c1c1;
+    --color-gold: #ffb846;
+    --color-platinum: #7af6c2;
+    --color-diamond: #915eff;
+    --page-header-height: 48px;
+    --page-footer-height: 36px;
+    --page-footer-height-mobile: 68px;
+    --sidebar-width: 324px;
+    --collapsed-sidebar-width: 56px;
+    --page-content-max-width: 1280px;
+    --market-info-row-height: 48px;
+    --market-info-row-height-mobile: 72px;
+    --inline-tabs-height: 44px;
+    --inline-tabs-height-mobile: 72px;
+    --orderbook-trades-width: 300px;
+    --table-header-height: 40px;
+    --table-header-height-mobile: 52px;
+    --position-details-width: 368px;
+    --single-unit-min-width: 250px;
+    --single-unit-max-width: 375px;
+    --single-unit-height: 150px;
+    --sidebar-modal-width: 300px;
+    --modal-small-width: 300px;
+    --modal-medium-width: 328px;
+    --modal-large-width: 420px;
+    --modal-header-height: 64px; */
