@@ -12,9 +12,7 @@
   },
   "dependencies": {
     "@material-symbols/svg-600": "^0.4.5",
-    "store": "workspace:*",
-    "vue": "^3.2.45",
-    "vue-datepicker-next": "^1.0.3"
+    "vue": "^3.2.45"
   },
   "devDependencies": {
     "@types/jsdom": "^20.0.1",

@@ -15,8 +15,6 @@
     "@onboarding/ui": "workspace:*",
     "eslint-config-custom": "workspace:*",
     "install": "^0.13.0",
-    "pinia": "^2.0.31",
-    "store": "workspace:*",
     "vue": "^3.2.45"
   },
   "devDependencies": {

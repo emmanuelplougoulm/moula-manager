@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/color-mode'],
-  css: ['~/assets/css/globals.css','~/assets/css/theme.css'],
+  modules: ['@nuxtjs/color-mode', '@pinia/nuxt'],
+  css: ['~/assets/css/globals.css', '~/assets/css/theme.css'],
   devtools: { enabled: true }
 })
+
