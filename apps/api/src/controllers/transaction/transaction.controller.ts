@@ -4,9 +4,9 @@ import { Controller, Get, Post, Body } from '@nestjs/common';
 // import { MessagePattern } from '@nestjs/microservices';
 // import * as val from './validation';
 // import { TransactionRepository } from 'src/repositories/transaction';
-import Transaction from '../../models/transaction';
+// import Transaction from '../../models/transaction';
 import { TransactionService } from '../../services/transaction.service';
-import transaction from '../../models/transaction';
+// import transaction from '../../models/transaction';
 
 
 
@@ -21,6 +21,7 @@ export class TransactionController {
     @Post()
     async createTransaction(@Body() transactionData: any): Promise<any> {
         try {
+            // console.log('transactionData', transactionData)
             this.transactionService.createOneTransaction(transactionData)
         } catch (err) {
             // implement an errorHandler here

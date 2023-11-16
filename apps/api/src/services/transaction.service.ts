@@ -5,8 +5,9 @@ import Transaction from '../models/transaction';
 export class TransactionService {
     async createOneTransaction(transactionData: any): Promise<object> {
         try {
+            // console.log('transactionData', transactionData)
             const transaction = await new Transaction(transactionData).save();
-            console.log('transaction', transaction)
+            // console.log('transaction', transaction)
             return { result: { transactionId: transaction['transactionId'] } };
         } catch {
 
