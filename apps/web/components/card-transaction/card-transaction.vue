@@ -32,17 +32,7 @@ const handleSelect = (event: object) => {
 
 <template>
   <div class="card-transaction">
-    <!-- <div class="wallet-name">
-      <label for="wallet-name">wallet-name</label>
-      <input
-        type="text"
-        v-model="transactionState.walletName"
-        name="wallet-name"
-        id="wallet-name"
-        required
-      />
-    </div> -->
-    <TabGroup v-model="transactionState.currency" :options="optionsCurrency" />
+    <TabGroup v-model="transactionState.currency" :options="optionsCurrency"  />
     <TabGroup v-model="transactionState.type" :options="optionsType" />
 
     <div class="select-coin">
