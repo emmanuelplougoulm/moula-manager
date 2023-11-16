@@ -11,22 +11,32 @@ import ModalWallet from '@/components/ui/modal-wallet/modal-wallet.vue';
 
 import CardTransaction from '@/components/card-transaction/card-transaction.vue';
 import Button from '@/components/button/button.vue';
+import TextInput from '@/components/ui/text-input/text-input.vue';
+import { createWallet } from '@/services/wallets/wallets.service';
 
 const store = useWalletStore();
 const showModal = ref(false);
-console.log('store', store);
+const showTextInput = ref(false);
+const walletState = ref({ name: '' });
+// console.log('store', store);
 
 // const showModal = ref(false);
+
+const handleCreateWallet = () => {
+  return createWallet(walletState);
+};
 </script>
 
 <template>
   <div class="container">
     <div class="left">
-      <Button :text="'Add Wallet'" @click="showModal = true" />
+      <Button :text="'Add Wallet'" @click="showTextInput = true" />
+      <TextInput v-if="showTextInput" :label="'toto'" v-model="walletState.name" />
+      <Button :text="'Valider'" @click="handleCreateWallet" />
     </div>
     <!-- <button id="show-modal" @click="showModal = true">Show Modal</button>
     <ModalTransaction v-if="showModal" @close="showModal = false" /> -->
-    <ModalWallet v-if="showModal" @close="showModal = false" />
+    <!-- <ModalWallet v-if="showModal" @close="showModal = false" /> -->
     <!-- <CardTransaction /> -->
   </div>
 </template>
