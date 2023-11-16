@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import TabGroup from '@/components/ui/tab-group/tab-group.vue';
+import TextInput from '@/components/ui/text-input/text-input.vue';
 // import httpClient from '../../services/httpClient/httpClient';
 // import { createTransaction } from '../../services/transactions/transactions.service';
 
@@ -53,30 +54,12 @@ const handleSelect = (event: object) => {
       </select>
     </div>
     <div class="quantity-and-price">
-      <div class="quantity">
-        <label for="quantity">quantity </label>
-        <input
-          type="text"
-          v-model="transactionState.quantity"
-          name="quantity"
-          id="quantity"
-          required
-        />
-      </div>
-      <div class="price">
-        <label for="price">price </label>
-        <input type="text" v-model="transactionState.price" name="price" id="price" required />
-      </div>
+      <TextInput v-model="transactionState.quantity" :label="'Quantity'" />
+      <TextInput v-model="transactionState.price" :label="'Price'" />
     </div>
     <div class="date-and-fees">
-      <div class="date">
-        <label for="date">date</label>
-        <input type="text" v-model="transactionState.date" name="date" id="date" required />
-      </div>
-      <div class="fees">
-        <label for="fees">fees</label>
-        <input type="text" v-model="transactionState.fees" name="fees" id="fees" required />
-      </div>
+      <TextInput v-model="transactionState.date" :label="'Date'" />
+      <TextInput v-model="transactionState.fees" :label="'Price'" />
     </div>
     <div class="total-spent">
       <div name="total">{{ total }}</div>
@@ -115,6 +98,7 @@ const handleSelect = (event: object) => {
 .date-and-fees {
   display: flex;
   justify-content: center;
+  gap: 8px;
 }
 
 .quantity,
