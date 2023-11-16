@@ -2,10 +2,15 @@
   --color-bg-darker: #12121a;
   --color-bg-dark: #171722;
   --color-bg-base: #1c1c28;
+  --color-bg-light: #232334;
+  --color-bg-lighter: #303044;
+  --color-bg-lightest: #454258;
   --color-border-grey: #2d2d3d;
   --color-border-lighter: #393953;
   --color-text-light: #f7f7f7;
   --app-header-height: 48px;
+
+  --border-radius-base: 4px;
 }
 
 /* --color-layer-darkest: #0b0b13;
