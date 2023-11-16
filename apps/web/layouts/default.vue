@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Header from '@/components/Header/Header.vue';
-import Footer from '@/components/Footer/Footer.vue';
-import Drawer from '@/components/Drawer/Drawer.vue';
+import Header from '@/components/header/header.vue';
+import Footer from '@/components/footer/footer.vue';
+import Drawer from '@/components/drawer/drawer.vue';
 
 const colorMode = useColorMode();
 
@@ -12,23 +12,23 @@ const theme = `${colorMode.preference}-mode`;
   <div class="app-container" :classes="theme">
     <Header />
     <div class="app-content-container">
-      <Drawer />
+      <!-- <Drawer /> -->
       <div class="sub-content-container">
         <NuxtPage />
       </div>
     </div>
   </div>
-  <Footer />
+  <!-- <Footer /> -->
 </template>
 
 <style scoped>
 .app-container {
-  border: 1px red solid;
-  height: 90vh;
+  /* border: 1px red solid; */
+  /* height: 90vh; */
 }
 .app-content-container {
   display: flex;
-  border: 1px red solid;
+  /* border: 1px red solid; */
   /* height: 100%; */
 }
 .sub-content-container {

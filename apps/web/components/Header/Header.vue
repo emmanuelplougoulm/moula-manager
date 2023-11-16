@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import NavigationItem from '@/components/navigation-item/navigation-item.vue';
+
 const colorMode = useColorMode();
 
 console.log(colorMode.preference);
@@ -6,17 +8,22 @@ console.log(colorMode.preference);
 
 <template>
   <div class="header-container">
-    THIS IS A HEADER
     <select v-model="$colorMode.preference">
       <option value="light">Light</option>
       <option value="dark">Dark</option>
     </select>
+    <NavigationItem :link="'/dashboard'" :title="'Dashboard'" />
+    <NavigationItem :link="'/wallet'" :title="'Wallet'" />
   </div>
 </template>
 
 <style scoped>
 .header-container {
-  border: 1px yellow solid;
-  height: 60px;
+  border-bottom: 2px var(--color-border-lighter) solid;
+  height: var(--app-header-height);
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 10px;
 }
 </style>
