@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NavigationItem from '@/components/navigation-item/navigation-item.vue';
+import NavigationItem from '@/components/commons/navigation-item/navigation-item.vue';
 </script>
 
 <template>

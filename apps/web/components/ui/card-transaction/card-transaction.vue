@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import TabGroup from '@/components/ui/tab-group/tab-group.vue';
-import TextInput from '@/components/ui/text-input/text-input.vue';
+import TabGroup from '@/components/commons/tab-group/tab-group.vue';
+import TextInput from '@/components/commons/text-input/text-input.vue';
 // import httpClient from '../../services/httpClient/httpClient';
 // import { createTransaction } from '../../services/transactions/transactions.service';
 
@@ -32,7 +32,7 @@ const handleSelect = (event: object) => {
 
 <template>
   <div class="card-transaction">
-    <TabGroup v-model="transactionState.currency" :options="optionsCurrency"  />
+    <TabGroup v-model="transactionState.currency" :options="optionsCurrency" />
     <TabGroup v-model="transactionState.type" :options="optionsType" />
 
     <div class="select-coin">

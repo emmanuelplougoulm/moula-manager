@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import NavigationItem from '@/components/navigation-item/navigation-item.vue';
+import NavigationItem from '@/components/commons/navigation-item/navigation-item.vue';
 
 const colorMode = useColorMode();
-
-console.log(colorMode.preference);
 </script>
 
 <template>
@@ -13,7 +11,7 @@ console.log(colorMode.preference);
       <option value="dark">Dark</option>
     </select>
     <NavigationItem :link="'/dashboard'" :title="'Dashboard'" />
-    <NavigationItem :link="'/wallet'" :title="'Wallet'" />
+    <NavigationItem :link="'/portfolio'" :title="'Portfolio'" />
   </div>
 </template>
 

@@ -7,11 +7,11 @@
 // import Modal from '@/components/ui/modal/modal.vue';
 // import ModalTransaction from '@/components/ui/modal-transaction/modal-transaction.vue';
 
-import ModalWallet from '@/components/ui/modal-wallet/modal-wallet.vue';
+import ModalPortfolio from '@/components/ui/modal-portfolio/modal-portfolio.vue';
 
-import CardTransaction from '@/components/card-transaction/card-transaction.vue';
+import CardTransaction from '@/components/ui/card-transaction/card-transaction.vue';
 import Button from '@/components/button/button.vue';
-import TextInput from '@/components/ui/text-input/text-input.vue';
+import TextInput from '@/components/commons/text-input/text-input.vue';
 import { createWallet } from '@/services/wallets/wallets.service';
 
 const store = useWalletStore();

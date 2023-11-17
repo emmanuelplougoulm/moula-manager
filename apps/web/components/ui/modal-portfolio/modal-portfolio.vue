@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import Modal from '@/components/ui/modal/modal.vue';
-import TextInput from '@/components/ui/text-input/text-input.vue';
+import Modal from '@/components/commons/modal/modal.vue';
+import TextInput from '@/components/commons/text-input/text-input.vue';
 
 const walletName = ref('');
 </script>

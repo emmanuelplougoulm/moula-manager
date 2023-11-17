@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Modal from '@/components/ui/modal/modal.vue';
-import CardTransaction from '@/components/card-transaction/card-transaction.vue';
+import Modal from '@/components/commons/modal/modal.vue';
+import CardTransaction from '@/components/ui/card-transaction/card-transaction.vue';
 </script>
 
 <template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Header from '@/components/header/header.vue';
-import Footer from '@/components/footer/footer.vue';
-import Drawer from '@/components/drawer/drawer.vue';
+import Header from '@/components/ui/header/header.vue';
+// import Footer from '@/components/ui/footer/footer.vue';
+// import Drawer from '@/components/ui/drawer/drawer.vue';
 
 const colorMode = useColorMode();
 
