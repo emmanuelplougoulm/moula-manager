@@ -10,29 +10,38 @@
 import ModalPortfolio from '@/components/ui/modal-portfolio/modal-portfolio.vue';
 
 import CardTransaction from '@/components/ui/card-transaction/card-transaction.vue';
-import Button from '@/components/button/button.vue';
+import Button from '@/components/commons/button/button.vue';
 import TextInput from '@/components/commons/text-input/text-input.vue';
-import { createWallet } from '@/services/wallets/wallets.service';
+import { createPortfolio } from '@/services/portfolios/portfolios.service';
 
-const store = useWalletStore();
+import Toaster from '@/components/ui/toaster/toaster.vue';
+import { useToasterStore } from '@/stores/toasterStore';
+
+const toasterStore = useToasterStore();
+const successToast = () => toasterStore.success({ text: 'Yahoooooo!' });
+
+const store = usePortfolioStore();
 const showModal = ref(false);
 const showTextInput = ref(false);
-const walletState = ref({ name: '' });
+const portfolioState = ref({ name: '' });
+
 // console.log('store', store);
 
 // const showModal = ref(false);
 
-const handleCreateWallet = () => {
-  return createWallet(walletState);
+const handleCreatePortfolio = () => {
+  return createPortfolio(portfolioState);
 };
 </script>
 
 <template>
   <div class="container">
     <div class="left">
+      <Toaster />
       <Button :text="'Add Wallet'" @click="showTextInput = true" />
-      <TextInput v-if="showTextInput" :label="'toto'" v-model="walletState.name" />
-      <Button :text="'Valider'" @click="handleCreateWallet" />
+      <TextInput v-if="showTextInput" :label="'toto'" v-model="portfolioState.name" />
+      <Button :text="'Valider'" @click="handleCreatePortfolio" />
+      <Button :text="'Trigger notif'" @click="successToast" />
     </div>
     <!-- <button id="show-modal" @click="showModal = true">Show Modal</button>
     <ModalTransaction v-if="showModal" @close="showModal = false" /> -->

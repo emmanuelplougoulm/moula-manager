@@ -1,6 +1,6 @@
 import httpClient from "../httpClient/httpClient";
 
-export async function createWallet(input: object) {
+export async function createPortfolio(input: object) {
     try {
         const response = await httpClient.post("/wallets", input.value);
         return response.data
