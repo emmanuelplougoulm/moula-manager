@@ -6,6 +6,7 @@ const colorMode = useColorMode();
 
 <template>
   <div class="header-container">
+    <div class="app-logo">LOGO</div>
     <select v-model="$colorMode.preference">
       <option value="light">Light</option>
       <option value="dark">Dark</option>
@@ -23,5 +24,14 @@ const colorMode = useColorMode();
   justify-content: flex-start;
   gap: 20px;
   padding: 10px;
+}
+
+.app-logo {
+  height: 100%;
+  width: var(--collapsed-drawer-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px var(--color-border-lighter) solid;
 }
 </style>

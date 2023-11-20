@@ -10,7 +10,8 @@
   --color-text-light: #f7f7f7;
   --app-header-height: 48px;
 
-  --border-radius-base: 4px;
+  --border-radius-base: 0.25rem;
+  --collapsed-drawer-width: 3.5rem;
 }
 
 /* --color-layer-darkest: #0b0b13;

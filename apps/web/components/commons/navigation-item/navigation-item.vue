@@ -19,11 +19,11 @@ defineProps({
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 112px;
+  padding: 0.375rem 0.75rem;
   background-color: var(--color-bg-darker);
   color: var(--color-text-light);
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: var(--border-radius-base);
 }
 
 a,
