@@ -7,6 +7,8 @@
 // import CardTransaction from '@/components/ui/card-transaction/card-transaction.vue';
 
 import Drawer from '@/components/ui/drawer/drawer.vue';
+import Overview from '@/components/ui/overview/overview.vue';
+import Portfolio from '@/components/ui/portfolio/portfolio.vue';
 import Button from '@/components/commons/button/button.vue';
 import TextInput from '@/components/commons/text-input/text-input.vue';
 import { createPortfolio } from '@/services/portfolios/portfolios.service';
@@ -21,6 +23,10 @@ const showModal = ref(false);
 const showTextInput = ref(false);
 const portfolioState = ref({ name: '' });
 
+const drawerStore = useDrawerStore();
+const showOverview = drawerStore.tabs[0].active;
+// const showPortfolio = drawerStore.tabs[0].active !== true;
+
 // const handleCreatePortfolio = () => {
 //   return createPortfolio(portfolioState);
 // };
@@ -29,7 +35,10 @@ const portfolioState = ref({ name: '' });
 <template>
   <div class="container">
     <Drawer />
-    <div class="content"></div>
+    <div class="content">
+      <Overview v-if="showOverview" />
+      <Portfolio v-if="!showOverview" />
+    </div>
   </div>
 </template>
 
