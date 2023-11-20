@@ -9,13 +9,17 @@ import { TransactionService } from '../../services/transaction.service';
 // import transaction from '../../models/transaction';
 
 
-
 @Controller('transactions')
 export class TransactionController {
     constructor(private readonly transactionService: TransactionService) { }
     @Get()
-    findAll(): string {
-        return 'This action returns all transactions';
+    async getTransactions(): Promise<any> {
+        try {
+            return this.transactionService.getAllTransactions()
+        } catch (err) {
+            // implement an errorHandler here
+            return err;
+        }
     }
 
     @Post()
