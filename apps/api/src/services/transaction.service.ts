@@ -3,14 +3,23 @@ import Transaction from '../models/transaction';
 
 @Injectable()
 export class TransactionService {
+    async getAllTransactions(): Promise<any> {
+        try {
+            const transactions = await Transaction.find()
+            console.log('transactions', transactions)
+            return { result: { transactions } }
+        } catch (err) {
+            console.log('err', err)
+            throw err
+        }
+    }
     async createOneTransaction(transactionData: any): Promise<object> {
         try {
-            // console.log('transactionData', transactionData)
             const transaction = await new Transaction(transactionData).save();
-            // console.log('transaction', transaction)
             return { result: { transactionId: transaction['transactionId'] } };
-        } catch {
-
+        } catch (err) {
+            console.log('err', err)
+            throw err
         }
     }
 }
