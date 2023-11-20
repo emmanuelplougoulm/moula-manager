@@ -1,10 +1,6 @@
 module.exports = {
   root: true,
-  extends: [
-    'custom',
-    'prettier'
-    // prettier should remain at the end of the array to avoid conflicts
-  ],
+  extends: ['custom'],
   settings: {
     next: {
       rootDir: ['apps/*/']
