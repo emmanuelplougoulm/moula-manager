@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const store = useDrawerStore();
+
 const isCollapsed = ref(false);
 const handleCollapse = () => {
   isCollapsed.value = !isCollapsed.value;
@@ -9,6 +11,11 @@ const handleCollapse = () => {
   <div class="drawer-container" :class="{ active: !isCollapsed, collapsed: isCollapsed }">
     <div @click="handleCollapse" class="button-collapse" :class="{ hidden: isCollapsed }">
       Collapse
+    </div>
+    <div class="tabs">
+      <div v-for="tab in store.tabs" class="tab" :class="{ active: tab.active }">
+        {{ tab.name }}
+      </div>
     </div>
     <div class="button-expand" :class="{ hidden: !isCollapsed }">
       <div @click="handleCollapse">Collapse</div>
@@ -49,5 +56,14 @@ const handleCollapse = () => {
 }
 .button-expand.hidden {
   display: none;
+}
+
+.tabs {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+.tab.active {
+  color: aqua;
 }
 </style>
