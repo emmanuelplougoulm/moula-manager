@@ -24,7 +24,7 @@ export class CreateTransactionInput {
   type: string;
 
   @IsString()
-  walletName: string;
+  portfolioName: string;
 
   @IsString()
   date: string;
@@ -49,9 +49,4 @@ export class CreateTransaction implements ITransferPayload {
   @IsNotEmptyObject()
   @Type(() => CreateTransactionInput)
   input: CreateTransactionInput;
-
-  // @IsNotEmptyObject()
-  // // @ValidateNested()
-  // @Type(() => CrossServicesMetadata)
-  // metadata: CrossServicesMetadata;
 }
