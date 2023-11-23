@@ -1,31 +1,27 @@
 /* eslint-disable max-lines-per-function */
 import { Controller, Get, Post, Body } from '@nestjs/common';
-// import { EventPattern, MessagePattern } from '@nestjs/microservices';
-// import { MessagePattern } from '@nestjs/microservices';
 // import * as val from './validation';
-// import { TransactionRepository } from 'src/repositories/transaction';
 // import Transaction from '../../models/transaction';
 import { TransactionService } from '../../services/transaction.service';
-// import transaction from '../../models/transaction';
+import { ITransaction } from 'src/types/index';
 
 
 @Controller('transactions')
 export class TransactionController {
     constructor(private readonly transactionService: TransactionService) { }
-    @Get()
-    async getTransactions(): Promise<any> {
-        try {
-            return this.transactionService.getAllTransactions()
-        } catch (err) {
-            // implement an errorHandler here
-            return err;
-        }
-    }
+    // @Get()
+    // async getTransactions(): Promise<any> {
+    //     try {
+    //         return this.transactionService.getAllTransactions()
+    //     } catch (err) {
+    //         // implement an errorHandler here
+    //         return err;
+    //     }
+    // }
 
     @Post()
-    async createTransaction(@Body() transactionData: any): Promise<any> {
+    async createTransaction(@Body() transactionData: ITransaction): Promise<object> {
         try {
-            // console.log('transactionData', transactionData)
             this.transactionService.createOneTransaction(transactionData)
         } catch (err) {
             // implement an errorHandler here
