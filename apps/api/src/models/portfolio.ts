@@ -1,7 +1,11 @@
 import { Schema, model } from 'mongoose';
 
 const portfolioSchema = new Schema({
-    name: String,
+    portfolioName: String,
+    portfolioId: String,
+    timeCreated: String,
+    timeUpdated: String,
+    assets: Array
 });
 
-export default model('Portfolio', portfolioSchema);
+export default model('portfolio', portfolioSchema);
