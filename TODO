@@ -1,0 +1,10 @@
+
+Create Portfolio: 
+☐ when portfolio is created update Pinia so transactions automatically send portfolioId 
+☐ pass it to a transaction and test it from the UI  
+☐ une fois que ce sera fait attele-toi à fabriquer l'UI pour la création 
+    ☐ d'un portfolio + d'une transaction ( avec toast)
+
+
+✘ implem method @cancelled(23-11-23 12:23)
+

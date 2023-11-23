@@ -1,7 +1,13 @@
 <script setup lang="ts">
-const store = useDrawerStore();
+import { ref } from 'vue';
+import ModalPortfolio from '@/components/ui/modal-portfolio/modal-portfolio.vue';
+import { useDrawerStore } from '@/stores/drawerStore';
 
+const drawerStore = useDrawerStore();
+
+const showModalPortfolio = ref(false);
 const isCollapsed = ref(false);
+
 const handleCollapse = () => {
   isCollapsed.value = !isCollapsed.value;
 };
@@ -13,13 +19,15 @@ const handleCollapse = () => {
       Collapse
     </div>
     <div class="tabs">
-      <div v-for="tab in store.tabs" class="tab" :class="{ active: tab.active }">
+      <div v-for="tab in drawerStore.tabs" class="tab" :class="{ active: tab.active }">
         {{ tab.name }}
       </div>
     </div>
+    <div class="create-portfolio" @click="showModalPortfolio = true">Add portfolio +</div>
     <div class="button-expand" :class="{ hidden: !isCollapsed }">
       <div @click="handleCollapse">Collapse</div>
     </div>
+    <ModalPortfolio v-if="showModalPortfolio" @click="showModalPortfolio = false" />
   </div>
 </template>
 
@@ -61,6 +69,12 @@ const handleCollapse = () => {
 .tabs {
   position: absolute;
   top: 50px;
+  left: 20px;
+}
+
+.create-portfolio {
+  position: absolute;
+  top: 150px;
   left: 20px;
 }
 .tab.active {

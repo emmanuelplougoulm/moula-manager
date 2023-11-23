@@ -1,9 +1,25 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { reactive } from 'vue';
+import dayjs from 'dayjs';
 import Modal from '@/components/commons/modal/modal.vue';
 import TextInput from '@/components/commons/text-input/text-input.vue';
+import { createPortfolio } from '@/services/portfolios/portfolios.service';
 
-const walletName = ref('');
+const timeNow = dayjs();
+
+const portfolioState = reactive({
+  portfolioName: '',
+  timeCreated: timeNow,
+  timeUpdated: '',
+  assets: []
+});
+
+const emit = defineEmits(['click']);
+
+const handleCreatePortfolio = () => {
+  createPortfolio(portfolioState);
+  emit('click');
+};
 </script>
 
 <template>
@@ -11,9 +27,12 @@ const walletName = ref('');
     <template #header>
       <h3>Add Wallet</h3>
     </template>
-    <template #content> <TextInput :label="'toto'" v-model="walletName" /> </template>
-    <!-- <template #footer>
+    <template #content>
+      <TextInput :label="'toto'" v-model="portfolioState.portfolioName" />
+    </template>
+    <template #footer>
       <h3>Footer</h3>
-    </template> -->
+      <button class="modal-default-button" @click="handleCreatePortfolio">OK</button>
+    </template>
   </Modal>
 </template>
