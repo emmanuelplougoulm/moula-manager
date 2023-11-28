@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Get, Param } from "@nestjs/common";
+import { Controller, Post, Body, Get, Delete, Param } from "@nestjs/common";
 import { PortfoliosService } from '../../services/portfolios.service';
 import { IPortfolio } from 'src/types/index';
 // import { formatPortfolioTransactions } from "src/utils/format";
@@ -26,6 +26,14 @@ export class PortfoliosController {
     async getPortfolioById(@Param('id') id: string): Promise<object> {
         try {
             return await this.portfoliosService.getPortfolioById(id);
+        } catch (err) {
+            return err;
+        }
+    }
+    @Delete('/delete/:id')
+    async deleteOnePortfolio(@Param('id') id: string): Promise<object> {
+        try {
+            return await this.portfoliosService.deleteOnePortfolio(id);
         } catch (err) {
             return err;
         }

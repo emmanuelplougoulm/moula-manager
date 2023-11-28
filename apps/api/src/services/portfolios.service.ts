@@ -54,4 +54,13 @@ export class PortfoliosService {
             console.log(error)
         }
     }
+    async deleteOnePortfolio(id: string): Promise<object> {
+        try {
+            const portfolio = await Portfolio.deleteOne({ portfolioId: id });
+
+            return { result: portfolio }
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
