@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import ModalPortfolio from '@/components/ui/modal-portfolio/modal-portfolio.vue';
-import { getPortfolios } from '@/services/portfolios/portfolios.service';
+import { getPortfolios, getPortfolioById } from '@/services/portfolios/portfolios.service';
 import { usePortfolioStore } from '@/stores/portfolioStore';
 
 const portfolioStore = usePortfolioStore();
@@ -17,6 +17,11 @@ onMounted(async () => {
   const allPortfolios = await getPortfolios();
   portfolioStore.setPortfolios(allPortfolios);
 });
+
+async function handleActivePortfolio(id: string): Promise<void> {
+  const response = await getPortfolioById(id);
+  portfolioStore.setActivePortfolio(response[0]);
+}
 </script>
 
 <template>
@@ -30,7 +35,7 @@ onMounted(async () => {
         :key="portfolio.portfolioId"
         :class="{ active: portfolioStore.isActive(portfolio.portfolioId) }"
         class="tab"
-        @click="portfolioStore.setActivePortfolio(portfolio)"
+        @click="handleActivePortfolio(portfolio.portfolioId)"
       >
         {{ portfolio.portfolioName }}
       </div>
