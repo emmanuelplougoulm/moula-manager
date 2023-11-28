@@ -5,7 +5,6 @@ const portfolioSchema = new Schema({
     portfolioId: String,
     timeCreated: String,
     timeUpdated: String,
-    assets: Array
 });
 
 export default model('portfolio', portfolioSchema);
