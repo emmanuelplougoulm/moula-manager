@@ -14,14 +14,14 @@ export class PortfoliosController {
             return err;
         }
     }
-    // @Get('/names')
-    // async getPortfoliosNames(): Promise<object> {
-    //     try {
-    //         return await this.portfoliosService.getPortfoliosNames();
-    //     } catch (err) {
-    //         return err;
-    //     }
-    // }
+    @Get()
+    async getPortfolios(): Promise<object> {
+        try {
+            return await this.portfoliosService.getPortfolios();
+        } catch (err) {
+            return err;
+        }
+    }
     // @Get('/:name')
     // async getOnePortfolioByName(@Param('name') name: string): Promise<object> {
     //     try {

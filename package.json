@@ -1,7 +1,7 @@
 {
   "name": "moula-manager",
   "version": "0.0.0",
-  "type":"module",
+  "type": "module",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -17,10 +17,10 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
     "eslint": "^8.53.0",
-    "prettier": "^2.8.4",
+    "eslint-config-custom": "workspace:*",
     "husky": "~8.0.3",
+    "prettier": "^2.8.4",
     "turbo": "~1.10.2",
     "typescript": "^5.0.4"
   },
@@ -31,6 +31,7 @@
   "dependencies": {
     "@intlify/vue-router-bridge": "^1.0.1",
     "dayjs": "^1.11.7",
+    "uuid": "^9.0.1",
     "vue-i18n": "^9.6.5"
   }
 }

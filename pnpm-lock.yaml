@@ -12,10 +12,12 @@ importers:
       prettier: ^2.8.4
       turbo: ~1.10.2
       typescript: ^5.0.4
+      uuid: ^9.0.1
       vue-i18n: ^9.6.5
     dependencies:
       '@intlify/vue-router-bridge': 1.0.1
       dayjs: 1.11.7
+      uuid: 9.0.1
       vue-i18n: 9.6.5
     devDependencies:
       eslint: 8.53.0
@@ -21116,6 +21118,11 @@ packages:
     deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
     hasBin: true
     dev: true
+
+  /uuid/9.0.1:
+    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
+    hasBin: true
+    dev: false
 
   /v8-compile-cache-lib/3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
