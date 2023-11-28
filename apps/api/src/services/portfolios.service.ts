@@ -2,10 +2,12 @@ import { Injectable, BadRequestException } from '@nestjs/common';
 import Portfolio from '../models/portfolio';
 import { v4 as uuidv4 } from 'uuid';
 import { IPortfolio } from 'src/types/index';
-// import Transaction from '../models/transaction';
+import { TransactionService } from "../services/transaction.service";
+import { formatTransactionsByAssets } from "../utils/format";
 
 @Injectable()
 export class PortfoliosService {
+    constructor(private readonly transactionService: TransactionService) { }
     async createOnePortfolio(portfolioData: IPortfolio): Promise<object> {
         try {
             const { portfolioName, timeCreated, timeUpdated, assets } = portfolioData;
@@ -35,6 +37,19 @@ export class PortfoliosService {
             console.log('allPortfolios', allPortfolios);
             // const allNames = allPortfolios.map(item => item.name)
             return { result: allPortfolios }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    async getPortfolioById(id: string): Promise<object> {
+        try {
+            const portfolio = await Portfolio.find({ portfolioId: id });
+            const transactions: any = await this.transactionService.getOnePortfolioTransactions(id);
+
+            const sortedTransactions = formatTransactionsByAssets(transactions.result.transactions);
+            portfolio[0].assets = sortedTransactions;
+
+            return { result: portfolio }
         } catch (error) {
             console.log(error)
         }

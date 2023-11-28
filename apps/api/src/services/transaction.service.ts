@@ -4,7 +4,6 @@ import Transaction from '../models/transaction';
 import { ITransaction } from 'src/types/index';
 import { v4 as uuidv4 } from 'uuid';
 
-
 @Injectable()
 export class TransactionService {
     async createOneTransaction(transactionData: ITransaction): Promise<object> {
@@ -17,6 +16,7 @@ export class TransactionService {
 
             const transactionId = uuidv4();
 
+            //@TODO ask Zach about this 
             const newTransaction = await new Transaction({
                 portfolioId,
                 transactionId,
@@ -32,6 +32,15 @@ export class TransactionService {
 
             // const transaction = await new Transaction(transactionData).save();
             // return { result: { transactionId: transaction['transactionId'] } };
+        } catch (err) {
+            console.log('err', err)
+            throw err
+        }
+    }
+    async getOnePortfolioTransactions(portfolioId: string): Promise<object> {
+        try {
+            const transactions = await Transaction.find({ portfolioId });
+            return { result: { transactions } }
         } catch (err) {
             console.log('err', err)
             throw err

@@ -22,12 +22,12 @@ export class PortfoliosController {
             return err;
         }
     }
-    // @Get('/:name')
-    // async getOnePortfolioByName(@Param('name') name: string): Promise<object> {
-    //     try {
-
-    //     } catch (err) {
-    //         return err;
-    //     }
-    // }
+    @Get('/:id')
+    async getPortfolioById(@Param('id') id: string): Promise<object> {
+        try {
+            return await this.portfoliosService.getPortfolioById(id);
+        } catch (err) {
+            return err;
+        }
+    }
 }
