@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import ModalPortfolio from '@/components/ui/modal-portfolio/modal-portfolio.vue';
-import { useDrawerStore } from '@/stores/drawerStore';
+import { getPortfolios } from '@/services/portfolios/portfolios.service';
+import { usePortfolioStore } from '@/stores/portfolioStore';
 
-const drawerStore = useDrawerStore();
+const portfolioStore = usePortfolioStore();
 
 const showModalPortfolio = ref(false);
 const isCollapsed = ref(false);
@@ -11,6 +12,11 @@ const isCollapsed = ref(false);
 const handleCollapse = () => {
   isCollapsed.value = !isCollapsed.value;
 };
+
+onMounted(async () => {
+  const allPortfolios = await getPortfolios();
+  portfolioStore.setPortfolios(allPortfolios);
+});
 </script>
 
 <template>
@@ -19,8 +25,14 @@ const handleCollapse = () => {
       Collapse
     </div>
     <div class="tabs">
-      <div v-for="tab in drawerStore.tabs" class="tab" :class="{ active: tab.active }">
-        {{ tab.name }}
+      <div
+        v-for="portfolio in portfolioStore.all"
+        :key="portfolio.portfolioId"
+        :class="{ active: portfolioStore.isActive(portfolio.portfolioId) }"
+        class="tab"
+        @click="portfolioStore.setActivePortfolio(portfolio)"
+      >
+        {{ portfolio.portfolioName }}
       </div>
     </div>
     <div class="create-portfolio" @click="showModalPortfolio = true">Add portfolio +</div>
@@ -79,5 +91,8 @@ const handleCollapse = () => {
 }
 .tab.active {
   color: aqua;
+}
+.tab {
+  cursor: pointer;
 }
 </style>

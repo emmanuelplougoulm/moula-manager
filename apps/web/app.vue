@@ -5,4 +5,5 @@ const layout = 'default';
 
 <template>
   <NuxtLayout :name="layout" />
+  <!-- <Toaster /> -->
 </template>

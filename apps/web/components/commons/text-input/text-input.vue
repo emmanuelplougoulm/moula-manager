@@ -11,7 +11,7 @@ const props = defineProps({
     default: ''
   },
   modelValue: {
-    type: Object,
+    type: [String, Number],
     required: true
   }
   //   pattern: {
@@ -53,7 +53,6 @@ const handleInputChange = () => {
       @input="handleInputChange"
       type="text"
       :placeholder="placeholder"
-      :class="inputClass"
       class="input--default"
     />
     <!-- <CaptionItem :text="caption" /> -->
