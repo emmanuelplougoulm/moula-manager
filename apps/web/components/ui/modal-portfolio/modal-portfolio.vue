@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 import Modal from '@/components/commons/modal/modal.vue';
 import TextInput from '@/components/commons/text-input/text-input.vue';
 import { createPortfolio } from '@/services/portfolios/portfolios.service';
+import { useToasterStore } from '@/stores/toasterStore';
 
 const timeNow = dayjs();
 
@@ -14,10 +15,15 @@ const portfolioState = reactive({
   assets: []
 });
 
+const toasterStore = useToasterStore();
+const successToast = () => toasterStore.success({ text: 'Yahoooooo!' });
+
 const emit = defineEmits(['click']);
 
-const handleCreatePortfolio = () => {
-  createPortfolio(portfolioState);
+const handleCreatePortfolio = async () => {
+  const response = await createPortfolio(portfolioState);
+  console.log('response', response);
+  // if (response.result.portfolioId) successToast();
   emit('click');
 };
 </script>
@@ -29,6 +35,7 @@ const handleCreatePortfolio = () => {
     </template>
     <template #content>
       <TextInput :label="'toto'" v-model="portfolioState.portfolioName" />
+      <button @click="successToast">Click me!</button>
     </template>
     <template #footer>
       <h3>Footer</h3>
