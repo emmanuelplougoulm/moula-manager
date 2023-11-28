@@ -34,8 +34,6 @@ export class PortfoliosService {
     async getPortfolios(): Promise<object> {
         try {
             const allPortfolios = await Portfolio.find();
-            console.log('allPortfolios', allPortfolios);
-            // const allNames = allPortfolios.map(item => item.name)
             return { result: allPortfolios }
         } catch (error) {
             console.log(error)
@@ -43,13 +41,18 @@ export class PortfoliosService {
     }
     async getPortfolioById(id: string): Promise<object> {
         try {
+            let aggregatedPortfolio = {};
+
             const portfolio = await Portfolio.find({ portfolioId: id });
+            aggregatedPortfolio = { ...portfolio }
+
+
             const transactions: any = await this.transactionService.getOnePortfolioTransactions(id);
 
             const sortedTransactions = formatTransactionsByAssets(transactions.result.transactions);
-            portfolio[0].assets = sortedTransactions;
+            aggregatedPortfolio.assets = sortedTransactions;
 
-            return { result: portfolio }
+            return { result: aggregatedPortfolio }
         } catch (error) {
             console.log(error)
         }

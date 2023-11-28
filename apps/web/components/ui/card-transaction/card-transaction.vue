@@ -7,7 +7,7 @@ import TextInput from '@/components/commons/text-input/text-input.vue';
 
 const transactionState = ref({
   type: '',
-  walletName: '',
+  portfolioName: '',
   date: '',
   currency: 'DOL',
   symbol: '',
