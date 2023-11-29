@@ -26,10 +26,8 @@ async function handleActivePortfolio(id: string): Promise<void> {
 
 <template>
   <div class="drawer-container" :class="{ active: !isCollapsed, collapsed: isCollapsed }">
-    <div @click="handleCollapse" class="button-collapse" :class="{ hidden: isCollapsed }">
-      Collapse
-    </div>
-    <div class="tabs">
+    <div @click="handleCollapse" class="button-collapse" :class="{ hidden: isCollapsed }">Hide</div>
+    <div class="tabs" :class="{ hidden: isCollapsed }">
       <div
         v-for="portfolio in portfolioStore.all"
         :key="portfolio.portfolioId"
@@ -40,7 +38,13 @@ async function handleActivePortfolio(id: string): Promise<void> {
         {{ portfolio.portfolioName }}
       </div>
     </div>
-    <div class="create-portfolio" @click="showModalPortfolio = true">Add portfolio +</div>
+    <div
+      class="create-portfolio"
+      :class="{ hidden: isCollapsed }"
+      @click="showModalPortfolio = true"
+    >
+      Add portfolio +
+    </div>
     <div class="button-expand" :class="{ hidden: !isCollapsed }">
       <div @click="handleCollapse">Collapse</div>
     </div>
@@ -67,6 +71,12 @@ async function handleActivePortfolio(id: string): Promise<void> {
   position: absolute;
   right: 30px;
   top: 10px;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.button-collapse:hover {
+  background-color: var(--color-bg-lighter);
 }
 .button-collapse.hidden {
   display: none;
@@ -78,26 +88,46 @@ async function handleActivePortfolio(id: string): Promise<void> {
   align-items: center;
   height: 100%;
   transform: rotate(-90deg);
+  cursor: pointer;
 }
 .button-expand.hidden {
   display: none;
 }
 
 .tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   position: absolute;
   top: 50px;
   left: 20px;
+  width: 18rem;
+}
+.tabs.hidden,
+.create-portfolio.hidden {
+  display: none;
 }
 
 .create-portfolio {
+  cursor: pointer;
   position: absolute;
-  top: 150px;
+  top: 200px;
   left: 20px;
+  padding: 8px;
+  border-radius: 4px;
+}
+.create-portfolio:hover {
+  background-color: var(--color-bg-lighter);
 }
 .tab.active {
-  color: aqua;
+  background-color: #12121a;
 }
 .tab {
+  border-radius: 4px;
   cursor: pointer;
+  padding: 8px;
+}
+.tab:hover {
+  background-color: var(--color-bg-lighter);
 }
 </style>
