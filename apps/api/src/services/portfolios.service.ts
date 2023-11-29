@@ -5,6 +5,12 @@ import { IPortfolio } from 'src/types/index';
 import { TransactionService } from "../services/transaction.service";
 import { formatTransactionsByAssets } from "../utils/format";
 
+
+interface AggregatedPortfolio {
+    [key: string]: any; // Index signature pour autoriser des clés arbitraires
+}
+
+
 @Injectable()
 export class PortfoliosService {
     constructor(private readonly transactionService: TransactionService) { }
@@ -41,18 +47,20 @@ export class PortfoliosService {
     }
     async getPortfolioById(id: string): Promise<object> {
         try {
-            let aggregatedPortfolio = {};
+            const portfolio: AggregatedPortfolio | null = await Portfolio.findOne({ portfolioId: id });
 
-            const portfolio = await Portfolio.find({ portfolioId: id });
-            aggregatedPortfolio = { ...portfolio }
+            if (portfolio) {
+                const transactions: any = await this.transactionService.getOnePortfolioTransactions(id);
+                const sortedTransactions = formatTransactionsByAssets(transactions.result.transactions);
 
-
-            const transactions: any = await this.transactionService.getOnePortfolioTransactions(id);
-
-            const sortedTransactions = formatTransactionsByAssets(transactions.result.transactions);
-            aggregatedPortfolio.assets = sortedTransactions;
-
-            return { result: aggregatedPortfolio }
+                const updatedPortfolio: AggregatedPortfolio = {
+                    ...portfolio.toObject(),
+                    assets: sortedTransactions
+                }
+                return { result: { ...updatedPortfolio } }
+            } else {
+                return { return: null }
+            }
         } catch (error) {
             console.log(error)
         }
