@@ -12,9 +12,6 @@ function dbConnection() {
 
   // uncomment when you want to deploy it
 
-  // for now use this one as mongo allows connection without credentials
-  // when it's local
-  const uri = `mongodb+srv://zion_w:9VyrfYVJK4F1Fbj2@mm-db.nno9opr.mongodb.net/`;
 
   mongoose.connection.on('connected', () => {
     logger.info(`@Moula-Manager * connected to / LA GROSSE MOULA database`);
