@@ -14,7 +14,7 @@ function dbConnection() {
 
   // for now use this one as mongo allows connection without credentials
   // when it's local
-  const uri = `mongodb://127.0.0.1:27017/db`;
+  const uri = `mongodb+srv://zion_w:9VyrfYVJK4F1Fbj2@mm-db.nno9opr.mongodb.net/`;
 
   mongoose.connection.on('connected', () => {
     logger.info(`@Moula-Manager * connected to / LA GROSSE MOULA database`);
