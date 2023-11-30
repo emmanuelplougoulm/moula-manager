@@ -1,9 +1,8 @@
 import httpClient from "../httpClient/httpClient";
 
-export async function createTransaction(input: object) {
+export async function createTransaction(transactionData: object) {
     try {
-        console.log('input', input)
-        return await httpClient.post("/transactions", input.value);
+        return await httpClient.post("/transactions", transactionData);
 
     } catch (error) {
         console.error('Error in POST request:', error);

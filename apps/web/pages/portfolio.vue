@@ -27,6 +27,6 @@ const showOverviewComponent = false;
 .content {
   flex: 1;
   border: 1px red solid;
-  height: 500px;
+  height: 800px;
 }
 </style>

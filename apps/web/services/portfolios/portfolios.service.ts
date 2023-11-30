@@ -26,7 +26,6 @@ export async function getPortfolios() {
 export async function getPortfolioById(id: string) {
     try {
         const response = await httpClient.get(`/portfolios/${id}`);
-
         return response.data.result
     } catch (error) {
         console.error('Error in GET portfolio by ID request:', error);

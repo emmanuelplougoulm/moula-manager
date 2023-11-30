@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import CardTransaction from '@/components/ui/card-transaction/card-transaction.vue';
+import { ref } from 'vue';
+import ModalTransaction from '@/components/ui/modal-transaction/modal-transaction.vue';
+import Button from '@/components/commons/button/button.vue';
 
 defineProps({
   portfolio: {
@@ -7,6 +9,8 @@ defineProps({
     required: true
   }
 });
+
+const showModalTransaction = ref(true);
 </script>
 
 <template>
@@ -15,10 +19,12 @@ defineProps({
     <div class="value">VALUE: Display total value here</div>
     <div class="fiat-invested">FIAT INVESTED SINCE BEGINNING: Display FIAT here</div>
     <div class="daily-profit-loss">Daily P/L: Display P/L here</div>
-
-    <div class="transaction">
-      <CardTransaction />
-    </div>
+    <Button
+      :text="'add transaction +'"
+      class="add-transaction"
+      @click="showModalTransaction = true"
+    />
+    <ModalTransaction v-if="showModalTransaction" @close-modal="showModalTransaction = false" />
 
     <div class="assets-list">Assets list: Display assets list here</div>
   </div>
@@ -28,6 +34,13 @@ defineProps({
 .transaction {
   position: absolute;
   right: 20px;
+  top: 200px;
   width: 400px;
+}
+
+.add-transaction {
+  position: absolute;
+  top: 100px;
+  right: 30px;
 }
 </style>

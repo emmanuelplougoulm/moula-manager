@@ -1,47 +1,38 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-import TabGroup from '@/components/commons/tab-group/tab-group.vue';
-import TextInput from '@/components/commons/text-input/text-input.vue';
-// import httpClient from '../../services/httpClient/httpClient';
-// import { createTransaction } from '../../services/transactions/transactions.service';
+import { storeToRefs } from 'pinia';
 
-const transactionState = ref({
-  type: '',
-  portfolioName: '',
-  date: '',
-  currency: 'DOL',
-  symbol: '',
-  quantity: 0,
-  price: 0,
-  fees: 0
-});
+import TabGroup from '@/components/commons/tab-group/tab-group.vue';
+import BaseInput from '@/components/commons/base-input/base-input.vue';
+import Dropdown from '@/components/commons/dropdown/dropdown.vue';
+
+import { useTransactionStore } from '@/stores/transactionStore';
+
+const transactionStore = useTransactionStore();
+
+const { type, portfolioId, transactionId, date, currency, coin, quantity, price, fees } =
+  storeToRefs(transactionStore);
 
 const optionsCurrency = ['EUR', 'DOL'];
 const optionsType = ['BUY', 'SELL'];
-const total = computed(() => 'toto');
 
-const handleSubmit = () => {
-  console.log('transactionState', transactionState.value);
-};
 
-const handleSelect = (event: object) => {
-  // console.log('Selecting coin', event);
-  transactionState.value.symbol = event.target.value;
-};
+const optionsCoins = [
+  { value: 'BTC', text: 'Bitcoin' },
+  { value: 'ETH', text: 'Ethereum' }
+];
+
+
+
+
 </script>
 
 <template>
   <div class="card-transaction">
-    <TabGroup v-model="transactionState.currency" :options="optionsCurrency" />
-    <TabGroup v-model="transactionState.type" :options="optionsType" />
+    <TabGroup v-model="currency" :options="optionsCurrency" />
+    <TabGroup v-model="type" :options="optionsType" />
 
     <div class="select-coin">
-      <select @change="handleSelect">
-        <option value="BTC">$BTC</option>
-        <option value="ETH">$ETH</option>
-        <option value="TAO">$TAO</option>
-        <option value="TAO">$CKB</option>
-      </select>
+      <Dropdown v-model="coin" :options="optionsCoins" />
     </div>
     <div class="quantity-and-price">
       <BaseInput v-model="quantity" :label="'Quantity'" />
@@ -51,23 +42,20 @@ const handleSelect = (event: object) => {
       <BaseInput v-model="date" :label="'Date'" />
       <BaseInput v-model="fees" :label="'Fees'" />
     </div>
-    <div class="total-spent">
+    <!-- <div class="total-spent">
       <div name="total">{{ total }}</div>
-    </div>
-    <div>
-      <input type="submit" value="+ Add transaction" @click="handleSubmit" />
-    </div>
+    </div> -->
   </div>
-  <div>{{ transactionState }}</div>
 </template>
 
 <style scoped>
 .card-transaction {
+  border: 3px blue solid;
   display: flex;
   flex-direction: column;
   gap: 10px;
   border-radius: var(--card-border-radius);
-  padding: 10px;
+  /* padding: 10px; */
   background-color: var(--color-bg-darker);
   border: 1px var(--color-border-grey) solid;
 }
@@ -86,6 +74,7 @@ const handleSelect = (event: object) => {
 
 .quantity-and-price,
 .date-and-fees {
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -101,7 +90,7 @@ const handleSelect = (event: object) => {
 }
 
 .total-spent {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: center;
   height: 80px;
