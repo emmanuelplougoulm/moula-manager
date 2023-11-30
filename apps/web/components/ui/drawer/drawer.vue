@@ -20,7 +20,7 @@ onMounted(async () => {
 
 async function handleActivePortfolio(id: string): Promise<void> {
   const response = await getPortfolioById(id);
-  portfolioStore.setActivePortfolio(response[0]);
+  portfolioStore.setActivePortfolio(response);
 }
 </script>
 
