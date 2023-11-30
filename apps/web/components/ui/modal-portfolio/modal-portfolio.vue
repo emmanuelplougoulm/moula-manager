@@ -2,7 +2,7 @@
 import { reactive } from 'vue';
 import dayjs from 'dayjs';
 import Modal from '@/components/commons/modal/modal.vue';
-import TextInput from '@/components/commons/text-input/text-input.vue';
+import BaseInput from '@/components/commons/base-input/base-input.vue';
 import { createPortfolio } from '@/services/portfolios/portfolios.service';
 import { useToasterStore } from '@/stores/toasterStore';
 
@@ -34,7 +34,7 @@ const handleCreatePortfolio = async () => {
       <h3>Add Wallet</h3>
     </template>
     <template #content>
-      <TextInput :label="'toto'" v-model="portfolioState.portfolioName" />
+      <BaseInput :label="'toto'" v-model="portfolioState.portfolioName" />
       <button @click="successToast">Click me!</button>
     </template>
     <template #footer>

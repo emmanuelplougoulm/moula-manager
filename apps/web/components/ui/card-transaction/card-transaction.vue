@@ -44,12 +44,12 @@ const handleSelect = (event: object) => {
       </select>
     </div>
     <div class="quantity-and-price">
-      <TextInput v-model="transactionState.quantity" :label="'Quantity'" />
-      <TextInput v-model="transactionState.price" :label="'Price'" />
+      <BaseInput v-model="quantity" :label="'Quantity'" />
+      <BaseInput v-model="price" :label="'Price'" />
     </div>
     <div class="date-and-fees">
-      <TextInput v-model="transactionState.date" :label="'Date'" />
-      <TextInput v-model="transactionState.fees" :label="'Price'" />
+      <BaseInput v-model="date" :label="'Date'" />
+      <BaseInput v-model="fees" :label="'Fees'" />
     </div>
     <div class="total-spent">
       <div name="total">{{ total }}</div>
