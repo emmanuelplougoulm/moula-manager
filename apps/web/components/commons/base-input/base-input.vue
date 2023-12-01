@@ -25,11 +25,10 @@ defineProps({
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border: 1px red solid;
 }
 .input-wrap input {
   padding: 8px 12px;
-  font-size: 16px;
+  font-size: 13px;
   height: 3rem;
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
