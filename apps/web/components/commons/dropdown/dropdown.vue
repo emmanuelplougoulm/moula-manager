@@ -33,15 +33,13 @@ const selectedOption = ref(props.modelValue);
 const emit = defineEmits(['update:modelValue']);
 
 const select = (option) => {
-  console.log('option', option);
-  //   selectedOption.value = option;
   open.value = false;
   emit('update:modelValue', option);
 };
 
 const toggle = () => {
   open.value = !open.value;
-  console.log('am inside');
+  // console.log('am inside');
 };
 </script>
 
@@ -52,18 +50,21 @@ const toggle = () => {
   align-items: center;
   border-radius: 0.25rem;
   padding: 0.75rem 1rem;
-  border: 0.125rem solid red;
   position: relative;
-  z-index: 999;
+  height: 40px;
+  background-color: var(--color-bg-lighter);
 }
 .dropdown-wrapper {
   display: flex;
   flex-direction: column;
-  /* height: 3.25rem; */
   gap: 0.5rem;
 }
-.select {
-  height: 3.25rem;
+
+.option {
+  background-color: var(--color-bg-lighter);
+  z-index: 999;
+  position: relative;
+  padding: 0.3rem 1rem;
 }
 .option:hover {
   background-color: aqua;
