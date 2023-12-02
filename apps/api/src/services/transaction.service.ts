@@ -14,6 +14,7 @@ export class TransactionService {
 
             const transactionId = uuidv4();
             transactionData.transactionId = transactionId
+            console.log('transactionData', transactionData)
             const newTransaction = await new Transaction(transactionData).save();
 
             return { result: { transactionId: newTransaction['transactionId'] } }

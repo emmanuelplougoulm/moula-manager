@@ -15,47 +15,57 @@ const { type, portfolioId, transactionId, date, currency, coin, quantity, price,
 const optionsCurrency = ['EUR', 'DOL'];
 const optionsType = ['BUY', 'SELL'];
 
-
 const optionsCoins = [
   { value: 'BTC', text: 'Bitcoin' },
   { value: 'ETH', text: 'Ethereum' }
 ];
-
-
-
-
 </script>
 
 <template>
-  <div class="card-transaction">
-    <TabGroup v-model="currency" :options="optionsCurrency" />
-    <TabGroup v-model="type" :options="optionsType" />
+  <div class="grid-container">
+    <TabGroup class="grid-item" v-model="currency" :options="optionsCurrency" />
+    <TabGroup class="grid-item" v-model="type" :options="optionsType" />
 
-    <div class="select-coin">
+    <div class="select-coin grid-item">
       <Dropdown v-model="coin" :options="optionsCoins" />
     </div>
-    <div class="quantity-and-price">
+    <div class="grid-item input-group">
       <BaseInput v-model="quantity" :label="'Quantity'" />
       <BaseInput v-model="price" :label="'Price'" />
     </div>
-    <div class="date-and-fees">
+    <div class="grid-item input-group">
       <BaseInput v-model="date" :label="'Date'" />
       <BaseInput v-model="fees" :label="'Fees'" />
     </div>
-    <!-- <div class="total-spent">
-      <div name="total">{{ total }}</div>
-    </div> -->
   </div>
 </template>
 
 <style scoped>
+.grid-container {
+  display: grid;
+  grid-template-rows: 30px 30px 40px repeat(2, 70px);
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.grid-item {
+  /* border: 1px solid black; */
+  /* padding: 20px; */
+  /* text-align: center; */
+}
+.input-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+}
+
 .card-transaction {
   border: 3px blue solid;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.5rem;
   border-radius: var(--card-border-radius);
-  /* padding: 10px; */
   background-color: var(--color-bg-darker);
   border: 1px var(--color-border-grey) solid;
 }

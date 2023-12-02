@@ -10,10 +10,10 @@
       "outputs": ["dist/**", ".nuxt/**", "storybook-static/**"]
     },
     "generate": {
-      "dependsOn": ["^generate"],      
+      "dependsOn": ["^generate"],
       "outputs": ["dist/**", ".nuxt/**"],
       "cache": false
-    },        
+    },
     "lint": {
       "outputs": []
     },
