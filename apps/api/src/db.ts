@@ -1,6 +1,8 @@
+/* eslint-disable turbo/no-undeclared-env-vars */
 import mongoose from 'mongoose';
-// import config from '../config/index';
 import { logger } from './utils/logger';
+
+
 
 function dbConnection() {
   // console.log('config', config);
@@ -10,10 +12,7 @@ function dbConnection() {
   // const optionalPort = db.port ? `:${db.port}` : '';
   // const uri = `${db.prefix}${dbAuth}${db.hostname}${optionalPort}/${db.dbName}`;
 
-  // uncomment when you want to deploy it
-
-  // for now use this one as mongo allows connection without credentials
-  // when it's local
+  const uri = process.env.MONGO_URI;
 
   mongoose.connection.on('connected', () => {
     logger.info(`@Moula-Manager * connected to / LA GROSSE MOULA database`);
