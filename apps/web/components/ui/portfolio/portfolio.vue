@@ -16,21 +16,24 @@ const showModalDeletePortfolio = ref(false);
 </script>
 
 <template>
-  <div class="overview">
-    <div class="name">NAME: Display a name here</div>
-    <div class="value">VALUE: Display total value here</div>
-    <div class="fiat-invested">FIAT INVESTED SINCE BEGINNING: Display FIAT here</div>
-    <div class="daily-profit-loss">Daily P/L: Display P/L here</div>
-    <Button
-      :text="'add transaction +'"
-      class="add-transaction"
-      @click="showModalTransaction = true"
-    />
-    <Button
-      :text="'delete portfolio'"
-      class="delete-portfolio"
-      @click="showModalDeletePortfolio = true"
-    />
+  <div>
+    <div class="charts_wrapper">
+      <div>
+        <div class="name">NAME: Display a name here</div>
+        <div class="value">VALUE: Display total value here</div>
+        <div class="fiat-invested">FIAT INVESTED SINCE BEGINNING: Display FIAT here</div>
+        <div class="daily-profit-loss">Daily P/L: Display P/L here</div>
+      </div>
+      <div class="actions_wrapper">
+        <Button
+          :text="'add transaction +'"
+          class="add-transaction"
+          @click="showModalTransaction = true"
+        />
+        <Button :text="'...'" class="delete-portfolio" @click="showModalDeletePortfolio = true" />
+      </div>
+    </div>
+
     <ModalTransaction v-if="showModalTransaction" @close-modal="showModalTransaction = false" />
     <ModalDeletePortfolio
       v-if="showModalDeletePortfolio"
@@ -50,8 +53,36 @@ const showModalDeletePortfolio = ref(false);
 }
 
 .add-transaction {
-  position: absolute;
-  top: 100px;
-  right: 30px;
+  border-radius: 4px;
+  border: 1px solid #5973fe;
+  color: white;
+  font-size: 14px;
+  padding: 0 16px;
+  height: 30px;
+  background-color: #5973fe;
+}
+.delete-portfolio {
+  border-radius: 4px;
+  border: 1px solid grey;
+  color: white;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  background-color: grey;
+  margin-left: 1rem;
+}
+
+.charts_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+}
+.actions_wrapper {
+  display: flex;
+  /* justify-content: end; */
 }
 </style>
