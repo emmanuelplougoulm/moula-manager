@@ -65,7 +65,7 @@ export class PortfoliosService {
             console.log(error)
         }
     }
-    async deleteOnePortfolio(id: string): Promise<object> {
+    async deletePortfolioById(id: string): Promise<object> {
         try {
             const portfolio = await Portfolio.deleteOne({ portfolioId: id });
 

@@ -32,3 +32,14 @@ export async function getPortfolioById(id: string) {
         throw error;
     }
 }
+
+export async function deletePortfolioById(id: string) {
+    try {
+        console.log('id', id)
+        const response = await httpClient.delete(`/portfolios/delete/${id}`);
+        return response.data.result
+    } catch (error) {
+        console.error('Error in DELETE portfolio by ID request:', error);
+        throw error;
+    }
+}

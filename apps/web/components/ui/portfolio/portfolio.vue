@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import ModalTransaction from '@/components/ui/modal-transaction/modal-transaction.vue';
+import ModalDeletePortfolio from '@/components/ui/modal-delete-portfolio/modal-delete-portfolio.vue';
 import Button from '@/components/commons/button/button.vue';
 
 defineProps({
@@ -11,6 +12,7 @@ defineProps({
 });
 
 const showModalTransaction = ref(false);
+const showModalDeletePortfolio = ref(false);
 </script>
 
 <template>
@@ -24,7 +26,16 @@ const showModalTransaction = ref(false);
       class="add-transaction"
       @click="showModalTransaction = true"
     />
+    <Button
+      :text="'delete portfolio'"
+      class="delete-portfolio"
+      @click="showModalDeletePortfolio = true"
+    />
     <ModalTransaction v-if="showModalTransaction" @close-modal="showModalTransaction = false" />
+    <ModalDeletePortfolio
+      v-if="showModalDeletePortfolio"
+      @close-modal="showModalDeletePortfolio = false"
+    />
 
     <div class="assets-list">Assets list: Display assets list here</div>
   </div>
