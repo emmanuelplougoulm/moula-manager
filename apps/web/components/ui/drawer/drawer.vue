@@ -16,6 +16,7 @@ const handleCollapse = () => {
 onMounted(async () => {
   const allPortfolios = await getPortfolios();
   portfolioStore.setPortfolios(allPortfolios);
+  portfolioStore.setActivePortfolio(allPortfolios[0]);
 });
 
 async function handleActivePortfolio(id: string): Promise<void> {
