@@ -4,11 +4,11 @@ import { TRANSACTION_TYPE } from '../constants/index';
 const transactionSchema = new Schema({
   type: { type: String, enum: Object.values(TRANSACTION_TYPE) },
   portfolioId: String,
-  transactionId: String, 
+  transactionId: String,
   date: String,
   currency: String,
-  symbol: String,
-  quantity: Number,
+  asset: String,
+  amount: Number,
   price: Number,
   fees: Number,
 });

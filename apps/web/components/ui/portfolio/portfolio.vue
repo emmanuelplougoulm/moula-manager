@@ -10,7 +10,7 @@ defineProps({
   }
 });
 
-const showModalTransaction = ref(true);
+const showModalTransaction = ref(false);
 </script>
 
 <template>

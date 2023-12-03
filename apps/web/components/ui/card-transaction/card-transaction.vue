@@ -9,7 +9,7 @@ import { useTransactionStore } from '@/stores/transactionStore';
 
 const transactionStore = useTransactionStore();
 
-const { type, portfolioId, transactionId, date, currency, coin, quantity, price, fees } =
+const { type, portfolioId, transactionId, date, currency, asset, quantity, price, fees } =
   storeToRefs(transactionStore);
 
 const optionsCurrency = ['EUR', 'DOL'];
@@ -27,7 +27,7 @@ const optionsCoins = [
     <TabGroup class="grid-item" v-model="type" :options="optionsType" />
 
     <div class="select-coin grid-item">
-      <Dropdown v-model="coin" :options="optionsCoins" />
+      <Dropdown v-model="asset" :options="optionsCoins" />
     </div>
     <div class="grid-item input-group">
       <BaseInput v-model="quantity" :label="'Quantity'" />

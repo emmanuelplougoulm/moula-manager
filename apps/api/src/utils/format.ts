@@ -1,9 +1,9 @@
 import { ITransaction } from '../types/index'
 
 export function formatTransactionsByAssets(transactions: Array<ITransaction>): ITransaction[][] {
-    const symbols = [...new Set(transactions.map(item => item.symbol))]
+    const assetList = [...new Set(transactions.map(item => item.asset))]
 
-    return symbols.map((symbol) => {
-        return transactions.filter(transaction => transaction.symbol === symbol)
+    return assetList.map((asset) => {
+        return transactions.filter(transaction => transaction.asset === asset)
     })
 }

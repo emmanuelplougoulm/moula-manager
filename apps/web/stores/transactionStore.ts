@@ -4,7 +4,7 @@ export const useTransactionStore = defineStore('transaction', {
         type: '',
         date: '',
         currency: '',
-        coin: {
+        asset: {
             value: '$BTC',
             text: 'Bitcoin',
         },

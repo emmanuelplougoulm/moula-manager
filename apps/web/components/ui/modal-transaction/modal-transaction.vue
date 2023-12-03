@@ -18,8 +18,8 @@ const handleAddTransaction = async () => {
     transactionId: store.transactionId,
     date: store.date,
     currency: store.currency,
-    coin: store.coin,
-    quantity: store.quantity,
+    asset: store.asset.value,
+    amount: store.quantity,
     price: store.price,
     fees: store.fees
   };

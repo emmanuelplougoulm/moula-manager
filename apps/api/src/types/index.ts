@@ -12,8 +12,8 @@ export interface ITransaction {
     transactionId: string,
     date: string,
     currency: string,
-    symbol: string,
-    quantity: number,
+    asset: string,
+    amount: number,
     price: number,
     fees: number,
 }
