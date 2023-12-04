@@ -1,13 +1,24 @@
-import Axios from "axios";
-
-const httpClient = Axios.create({
-  baseURL: "http://localhost:9000",
-  timeout: 5000,
+const API_BASE_URL = 'http://localhost:9000';
+const defaultOptions = {
   headers: {
     "Content-Type": "application/json",
   },
-});
+}
 
-// You can add more common configurations like authentication headers, interceptors, etc.
+export const httpClient = (endpoint: string, customOptions = {}) => {
+  const options = {
+    ...defaultOptions,
+    ...customOptions,
+  };
 
-export default httpClient;
+  return window.fetch(`${API_BASE_URL}/${endpoint}`, options).then(async (response) => {
+    if (response.ok) {
+      return response.text().then((text) => (text ? JSON.parse(text) : {}));
+    } else {
+      const { message } = await response.json();
+
+      throw new Error(message);
+    }
+  }
+  )
+}
