@@ -15,10 +15,10 @@ const theme = `${colorMode.preference}-mode`;
       <!-- <Drawer /> -->
       <div class="sub-content-container">
         <NuxtPage />
+        <div id="modal-root"></div>
       </div>
     </div>
   </div>
-  <!-- <Footer /> -->
 </template>
 
 <style scoped>

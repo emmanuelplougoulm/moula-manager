@@ -33,14 +33,22 @@ const showModalDeletePortfolio = ref(false);
         <Button :text="'...'" class="delete-portfolio" @click="showModalDeletePortfolio = true" />
       </div>
     </div>
-
+    <div class="assets_wrapper">
+      <Table />
+    </div>
+    <ClientOnly>
+      <Teleport to="#modal-root">
     <ModalTransaction v-if="showModalTransaction" @close-modal="showModalTransaction = false" />
+      </Teleport>
+    </ClientOnly>
+    <ClientOnly>
+      <Teleport to="#modal-root">
     <ModalDeletePortfolio
       v-if="showModalDeletePortfolio"
       @close-modal="showModalDeletePortfolio = false"
     />
-
-    <div class="assets-list">Assets list: Display assets list here</div>
+      </Teleport>
+    </ClientOnly>
   </div>
 </template>
 

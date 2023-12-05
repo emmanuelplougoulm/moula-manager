@@ -49,7 +49,11 @@ async function handleActivePortfolio(id: string): Promise<void> {
     <div class="button-expand" :class="{ hidden: !isCollapsed }">
       <div @click="handleCollapse">Collapse</div>
     </div>
+    <ClientOnly>
+      <Teleport to="#modal-root">
     <ModalPortfolio v-if="showModalPortfolio" @click="showModalPortfolio = false" />
+      </Teleport>
+    </ClientOnly>
   </div>
 </template>
 
