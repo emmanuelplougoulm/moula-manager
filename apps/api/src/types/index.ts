@@ -9,7 +9,7 @@ export interface IPortfolio {
 export interface ITransaction {
     type: string,
     portfolioId: string,
-    transactionId: string,
+    transactionId?: string,
     date: string,
     currency: string,
     asset: string,

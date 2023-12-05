@@ -6,6 +6,8 @@ import BaseInput from '@/components/commons/base-input/base-input.vue';
 import { createPortfolio } from '@/services/portfolios/portfolios.service';
 
 const timeNow = dayjs();
+// eslint-disable-next-line no-undef
+const toast = useToast();
 
 const portfolioState = reactive({
   portfolioName: '',
@@ -18,8 +20,12 @@ const emit = defineEmits(['click']);
 
 const handleCreatePortfolio = async () => {
   const response = await createPortfolio(portfolioState);
-  console.log('response', response);
-  // if (response.result.portfolioId) successToast();
+
+  if (response.portfolioId) {
+    toast.add({ title: 'Portfolio has been successfully created' });
+  } else {
+    toast.add({ title: 'Error' });
+  }
   emit('click');
 };
 </script>

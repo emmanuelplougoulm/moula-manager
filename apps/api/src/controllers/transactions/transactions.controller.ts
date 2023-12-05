@@ -3,15 +3,16 @@ import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 // import * as val from './validation';
 // import Transaction from '../../models/transaction';
 import { TransactionService } from '../../services/transaction.service';
-import { ITransaction } from 'src/types/index';
+// import { ITransaction } from 'src/types/index';
+import * as val from './validation';
 
 @Controller('transactions')
 export class TransactionController {
     constructor(private readonly transactionService: TransactionService) { }
     @Post()
-    async createTransaction(@Body() transactionData: ITransaction): Promise<object> {
+    async createTransaction(@Body() transactionData: val.CreateTransactionInput): Promise<object> {
         try {
-            this.transactionService.createOneTransaction(transactionData)
+            return await this.transactionService.createOneTransaction(transactionData)
         } catch (err) {
             // implement an errorHandler here
             return err;

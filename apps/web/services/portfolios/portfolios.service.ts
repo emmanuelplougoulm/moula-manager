@@ -2,7 +2,8 @@ import { httpClient } from "../httpClient/httpClient";
 
 export async function createPortfolio(payload: object) {
     try {
-        return httpClient("portfolios", { method: 'POST', body: JSON.stringify(payload) })
+        const response = await httpClient("portfolios", { method: 'POST', body: JSON.stringify(payload) })
+        return response.result
     } catch (error) {
         console.error('Error in POST request:', error);
         throw error;
