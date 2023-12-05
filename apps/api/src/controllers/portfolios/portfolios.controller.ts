@@ -30,7 +30,7 @@ export class PortfoliosController {
             return err;
         }
     }
-    @Delete('/delete/:id')
+    @Delete('/:id')
     async deletePortfolioById(@Param('id') id: string): Promise<object> {
         try {
             return await this.portfoliosService.deletePortfolioById(id);

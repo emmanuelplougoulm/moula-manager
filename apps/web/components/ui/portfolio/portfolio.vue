@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import ModalTransaction from '@/components/ui/modal-transaction/modal-transaction.vue';
+import ModalAddTransaction from '@/components/ui/modal-add-transaction/modal-add-transaction.vue';
 import ModalDeletePortfolio from '@/components/ui/modal-delete-portfolio/modal-delete-portfolio.vue';
 import Button from '@/components/commons/button/button.vue';
+import Table from '@/components/ui/table/table.vue';
 
 defineProps({
   portfolio: {
@@ -12,11 +13,15 @@ defineProps({
 });
 
 const showModalTransaction = ref(false);
-const showModalDeletePortfolio = ref(false);
+const isModalDeletePFOpen = ref(false);
+
+const toggleModalDeletePF = () => {
+  isModalDeletePFOpen.value = !isModalDeletePFOpen.value;
+};
 </script>
 
 <template>
-  <div>
+  <div class="wrapper">
     <div class="charts_wrapper">
       <div>
         <div class="name">NAME: Display a name here</div>
@@ -30,7 +35,7 @@ const showModalDeletePortfolio = ref(false);
           class="add-transaction"
           @click="showModalTransaction = true"
         />
-        <Button :text="'...'" class="delete-portfolio" @click="showModalDeletePortfolio = true" />
+        <Button :text="'...'" class="delete-portfolio" @click="isModalDeletePFOpen = true" />
       </div>
     </div>
     <div class="assets_wrapper">
@@ -38,15 +43,11 @@ const showModalDeletePortfolio = ref(false);
     </div>
     <ClientOnly>
       <Teleport to="#modal-root">
-    <ModalTransaction v-if="showModalTransaction" @close-modal="showModalTransaction = false" />
-      </Teleport>
-    </ClientOnly>
-    <ClientOnly>
-      <Teleport to="#modal-root">
-    <ModalDeletePortfolio
-      v-if="showModalDeletePortfolio"
-      @close-modal="showModalDeletePortfolio = false"
-    />
+        <ModalAddTransaction
+          v-if="showModalTransaction"
+          @close-modal="showModalTransaction = false"
+        />
+        <ModalDeletePortfolio v-if="isModalDeletePFOpen" @modal-close="toggleModalDeletePF" />
       </Teleport>
     </ClientOnly>
   </div>
@@ -80,17 +81,25 @@ const showModalDeletePortfolio = ref(false);
   margin-left: 1rem;
 }
 
+.wrapper {
+  padding: 20px;
+}
+
 .charts_wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 20px;
-  padding: 20px;
   width: 100%;
 }
 .actions_wrapper {
   display: flex;
+  /* justify-content: end; */
+}
+.assets_wrapper {
+  margin-top: 50px;
+  /* display: flex; */
   /* justify-content: end; */
 }
 </style>

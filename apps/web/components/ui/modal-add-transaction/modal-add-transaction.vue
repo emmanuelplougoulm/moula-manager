@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import Modal from '@/components/commons/modal/modal.vue';
+import BaseModal from '@/components/commons/base-modal/base-modal.vue';
 import CardTransaction from '@/components/ui/card-transaction/card-transaction.vue';
 import { createTransaction } from '@/services/transactions/transactions.service';
 import { useTransactionStore } from '@/stores/transactionStore';
 import { usePortfolioStore } from '@/stores/portfolioStore';
+
+defineProps({
+  title: String,
+  required: true
+});
 
 // eslint-disable-next-line no-undef
 const toast = useToast();
@@ -37,15 +42,13 @@ const handleAddTransaction = async () => {
 </script>
 
 <template>
-  <Modal>
-    <template #header>
-      <h3>Add transaction</h3>
-    </template>
+  <BaseModal>
+    <template #header>{{ title }}</template>
     <template #content>
       <CardTransaction />
     </template>
     <template #footer>
-      <button @click="handleAddTransaction">Add transaction</button>
+      <button @click="handleAddTransaction">Validate</button>
     </template>
-  </Modal>
+  </BaseModal>
 </template>

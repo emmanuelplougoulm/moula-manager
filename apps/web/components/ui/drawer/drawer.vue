@@ -1,16 +1,20 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import ModalPortfolio from '@/components/ui/modal-portfolio/modal-portfolio.vue';
+import ModalPortfolio from '@/components/ui/modal-add-portfolio/modal-add-portfolio.vue';
 import { getPortfolios, getPortfolioById } from '@/services/portfolios/portfolios.service';
 import { usePortfolioStore } from '@/stores/portfolioStore';
 
 const portfolioStore = usePortfolioStore();
 
-const showModalPortfolio = ref(false);
+const isModalOpen = ref(false);
 const isCollapsed = ref(false);
 
-const handleCollapse = () => {
+const toggleDrawer = () => {
   isCollapsed.value = !isCollapsed.value;
+};
+
+const toggleModalPF = () => {
+  isModalOpen.value = !isModalOpen.value;
 };
 
 onMounted(async () => {
@@ -27,7 +31,7 @@ async function handleActivePortfolio(id: string): Promise<void> {
 
 <template>
   <div class="drawer-container" :class="{ active: !isCollapsed, collapsed: isCollapsed }">
-    <div @click="handleCollapse" class="button-collapse" :class="{ hidden: isCollapsed }">Hide</div>
+    <div @click="toggleDrawer" class="button-collapse" :class="{ hidden: isCollapsed }">Hide</div>
     <div class="tabs" :class="{ hidden: isCollapsed }">
       <div
         v-for="portfolio in portfolioStore.all"
@@ -39,19 +43,19 @@ async function handleActivePortfolio(id: string): Promise<void> {
         {{ portfolio.portfolioName }}
       </div>
     </div>
-    <div
-      class="create-portfolio"
-      :class="{ hidden: isCollapsed }"
-      @click="showModalPortfolio = true"
-    >
+    <div class="create-portfolio" :class="{ hidden: isCollapsed }" @click="toggleModalPF">
       Add portfolio +
     </div>
     <div class="button-expand" :class="{ hidden: !isCollapsed }">
-      <div @click="handleCollapse">Collapse</div>
+      <div @click="toggleDrawer">Collapse</div>
     </div>
     <ClientOnly>
       <Teleport to="#modal-root">
-    <ModalPortfolio v-if="showModalPortfolio" @click="showModalPortfolio = false" />
+        <ModalPortfolio
+          v-if="isModalOpen"
+          @modal-close="toggleModalPF"
+          :title="'Add a portfolio'"
+        />
       </Teleport>
     </ClientOnly>
   </div>
@@ -65,7 +69,7 @@ async function handleActivePortfolio(id: string): Promise<void> {
   height: 100vh;
   width: 20rem;
   position: relative;
-  transition: width 0.35s cubic-bezier(0.82, 0.085, 0.395, 0.895);
+  transition: width 0.45s cubic-bezier(0.82, 0.085, 0.395, 0.895);
 }
 .drawer-container.collapsed {
   width: 3.5rem;
@@ -96,7 +100,8 @@ async function handleActivePortfolio(id: string): Promise<void> {
   cursor: pointer;
 }
 .button-expand.hidden {
-  display: none;
+  /* display: none; */
+  opacity: 0;
 }
 
 .tabs {
@@ -107,16 +112,19 @@ async function handleActivePortfolio(id: string): Promise<void> {
   top: 50px;
   left: 20px;
   width: 18rem;
+  opacity: 1;
+  transition: opacity 0.1s;
 }
 .tabs.hidden,
 .create-portfolio.hidden {
-  display: none;
+  opacity: 0;
 }
 
 .create-portfolio {
+  opacity: 1;
   cursor: pointer;
   position: absolute;
-  top: 200px;
+  bottom: 200px;
   left: 20px;
   padding: 8px;
   border-radius: 4px;

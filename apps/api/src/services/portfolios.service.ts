@@ -68,8 +68,9 @@ export class PortfoliosService {
     async deletePortfolioById(id: string): Promise<object> {
         try {
             const portfolio = await Portfolio.deleteOne({ portfolioId: id });
+            const { deletedCount } = portfolio;
 
-            return { result: portfolio }
+            return { result: { deletedCount } }
         } catch (error) {
             console.log(error)
         }

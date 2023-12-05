@@ -1,9 +1,14 @@
 <script setup lang="ts">
+import { defineProps } from 'vue';
 import { reactive } from 'vue';
 import dayjs from 'dayjs';
-import Modal from '@/components/commons/modal/modal.vue';
+import BaseModal from '@/components/commons/base-modal/base-modal.vue';
 import BaseInput from '@/components/commons/base-input/base-input.vue';
 import { createPortfolio } from '@/services/portfolios/portfolios.service';
+
+defineProps({
+  title: String
+});
 
 const timeNow = dayjs();
 // eslint-disable-next-line no-undef
@@ -16,7 +21,7 @@ const portfolioState = reactive({
   assets: []
 });
 
-const emit = defineEmits(['click']);
+const emit = defineEmits(['modal-close']);
 
 const handleCreatePortfolio = async () => {
   const response = await createPortfolio(portfolioState);
@@ -26,21 +31,18 @@ const handleCreatePortfolio = async () => {
   } else {
     toast.add({ title: 'Error' });
   }
-  emit('click');
+  emit('modal-close');
 };
 </script>
 
 <template>
-  <Modal>
-    <template #header>
-      <h3>Add Wallet</h3>
-    </template>
+  <BaseModal>
+    <template #header>{{ title }}</template>
     <template #content>
-      <BaseInput :label="'toto'" v-model="portfolioState.portfolioName" />
+      <BaseInput v-model="portfolioState.portfolioName" />
     </template>
     <template #footer>
-      <h3>Footer</h3>
-      <button class="modal-default-button" @click="handleCreatePortfolio">OK</button>
+      <button @click="handleCreatePortfolio">Validate</button>
     </template>
-  </Modal>
+  </BaseModal>
 </template>
