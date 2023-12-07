@@ -4,6 +4,7 @@ import CardTransaction from '@/components/ui/card-transaction/card-transaction.v
 import { createTransaction } from '@/services/transactions/transactions.service';
 import { useTransactionStore } from '@/stores/transactionStore';
 import { usePortfolioStore } from '@/stores/portfolioStore';
+import { getPortfolioById } from '@/services/portfolios/portfolios.service';
 
 defineProps({
   title: String,
@@ -14,6 +15,8 @@ defineProps({
 const toast = useToast();
 const store = useTransactionStore();
 const portfolioStore = usePortfolioStore();
+
+const activePortfolioId = portfolioStore.active.portfolioId;
 
 const emit = defineEmits(['close-modal']);
 
@@ -33,6 +36,8 @@ const handleAddTransaction = async () => {
 
   if (response.transactionId) {
     toast.add({ title: 'Transaction successfully added' });
+    const response = await getPortfolioById(activePortfolioId);
+    portfolioStore.setActivePortfolio(response);
   } else {
     toast.add({ title: 'Error' });
   }
