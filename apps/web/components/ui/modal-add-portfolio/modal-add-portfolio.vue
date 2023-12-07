@@ -5,6 +5,10 @@ import dayjs from 'dayjs';
 import BaseModal from '@/components/commons/base-modal/base-modal.vue';
 import BaseInput from '@/components/commons/base-input/base-input.vue';
 import { createPortfolio } from '@/services/portfolios/portfolios.service';
+import { getPortfolios } from '@/services/portfolios/portfolios.service';
+import { usePortfolioStore } from '@/stores/portfolioStore';
+
+const portfolioStore = usePortfolioStore();
 
 defineProps({
   title: String
@@ -28,6 +32,10 @@ const handleCreatePortfolio = async () => {
 
   if (response.portfolioId) {
     toast.add({ title: 'Portfolio has been successfully created' });
+
+    const allPortfolios = await getPortfolios();
+    portfolioStore.setPortfolios(allPortfolios);
+    portfolioStore.setActivePortfolio(allPortfolios[0]);
   } else {
     toast.add({ title: 'Error' });
   }

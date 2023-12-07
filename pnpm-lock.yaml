@@ -167,6 +167,7 @@ importers:
       '@nuxt/ui': ^2.11.0
       '@nuxtjs/color-mode': ^3.3.0
       '@pinia/nuxt': ^0.5.1
+      '@vueuse/core': ^10.7.0
       axios: ^1.6.1
       eslint: ^8.53.0
       eslint-config-custom: workspace:*
@@ -179,6 +180,7 @@ importers:
     dependencies:
       '@nuxt/ui': 2.11.0_n2z4qzzkbv7xy3oldaxxnkg5la
       '@pinia/nuxt': 0.5.1_vue@3.3.8
+      '@vueuse/core': 10.7.0_vue@3.3.8
       axios: 1.6.1
       pinia: 2.1.7_vue@3.3.8
     devDependencies:

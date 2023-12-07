@@ -1,19 +1,20 @@
 
 Create Portfolio: 
 ✔ when portfolio is created update Pinia so transactions automatically send portfolioId @done(23-11-30 18:09)
-☐ pass it to a transaction and test it from the UI  
-☐ une fois que ce sera fait attele-toi à fabriquer l'UI pour la création 
-    ☐ d'un portfolio + d'une transaction ( avec toast)
+✔ pass it to a transaction and test it from the UI @done(23-12-07 11:32)
+✔ une fois que ce sera fait attele-toi à fabriquer l'UI pour la création @done(23-12-07 11:32)
+    ✔ d'un portfolio + d'une transaction ( avec toast) @done(23-12-07 11:32)
 
 ☐ Il faudra aussi créer un index regroupant tous les stores dans le front 
 ☐ should I remove this ?    "_id": "6560756e34fc97c6bef04645", 
-☐ don't forget to put this back in drawer mapping => :class="{ active: tab.active }", 
+✔ don't forget to put this back in drawer mapping => :class="{ active: tab.active }", @done(23-12-07 11:33)
 
 ☐ finish drawer UI/UX behavior 
 ☐ finish card-transaction UI/UX behavior 
 
 ✔ produce UI mockup for app on balsamiq @done(23-12-01 20:40)
-☐ implement MOCKup with no logic 
+☐ implement MOCKup with no logic
+✔ il faut que tu vérifies que les clés portfolioId et transactionId sont bien présentes dans l'envoi au back, et toujours ! @done(23-12-07 11:33)
 
 
 ✘ implem method @cancelled(23-11-23 12:23)
