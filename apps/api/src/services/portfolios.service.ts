@@ -14,22 +14,17 @@ interface AggregatedPortfolio {
 @Injectable()
 export class PortfoliosService {
     constructor(private readonly transactionService: TransactionService) { }
-    async createOnePortfolio(portfolioData: IPortfolio): Promise<object> {
+    async createPortfolio(portfolioData: IPortfolio): Promise<object> {
         try {
-            const { portfolioName, timeCreated, timeUpdated, assets } = portfolioData;
-
+            const { portfolioName } = portfolioData;
             const existingPortfolio = await Portfolio.findOne({ portfolioName })
-            // console.log('existingPortfolio', existingPortfolio)
-            if (existingPortfolio) throw new BadRequestException('Portfolio already exists')
 
+            if (existingPortfolio) throw new BadRequestException('Portfolio already exists')
 
             const portfolioId = uuidv4();
             const newPortfolio = await new Portfolio({
-                portfolioName,
-                portfolioId,
-                timeCreated,
-                timeUpdated,
-                assets
+                ...portfolioData,
+                portfolioId
             }).save();
             return { result: { portfolioId: newPortfolio['portfolioId'] } }
         }

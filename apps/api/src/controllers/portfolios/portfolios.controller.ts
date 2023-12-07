@@ -1,15 +1,16 @@
 import { Controller, Post, Body, Get, Delete, Param } from "@nestjs/common";
 import { PortfoliosService } from '../../services/portfolios.service';
-import { IPortfolio } from 'src/types/index';
-// import { formatPortfolioTransactions } from "src/utils/format";
+import * as val from './validation';
+
 
 @Controller('portfolios')
 export class PortfoliosController {
     constructor(private readonly portfoliosService: PortfoliosService) { }
     @Post()
-    async createOnePortfolio(@Body() portfolioData: IPortfolio): Promise<any> {
+    async createOnePortfolio(@Body() payload: val.createPortfolio): Promise<any> {
         try {
-            return await this.portfoliosService.createOnePortfolio(portfolioData);
+            const { input } = payload;
+            return await this.portfoliosService.createPortfolio(input);
         } catch (err) {
             return err;
         }

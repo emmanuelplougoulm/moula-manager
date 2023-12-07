@@ -1,4 +1,3 @@
-// import { Injectable, BadRequestException } from '@nestjs/common';
 import { Injectable } from '@nestjs/common';
 import Transaction from '../models/transaction';
 import { ITransaction } from 'src/types/index';

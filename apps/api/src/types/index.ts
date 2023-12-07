@@ -3,7 +3,7 @@ export interface IPortfolio {
     portfolioId: string,
     timeCreated: string,
     timeUpdated: string,
-    assets: Array<object>
+    assets?: Array<object>
 }
 
 export interface ITransaction {
@@ -16,4 +16,12 @@ export interface ITransaction {
     amount: number,
     price: number,
     fees: number,
+}
+
+export interface IResult {
+    [key: string]: any;
+}
+export interface ITransferPayload {
+    input?: { [key: string]: any };
+    result?: IResult;
 }

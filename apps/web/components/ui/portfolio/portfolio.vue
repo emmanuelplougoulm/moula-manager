@@ -8,7 +8,7 @@ import Table from '@/components/ui/table/table.vue';
 defineProps({
   portfolio: {
     type: Object,
-    required: true
+    default: () => ({})
   }
 });
 
