@@ -20,7 +20,9 @@ const toggleModalPF = () => {
 onMounted(async () => {
   const allPortfolios = await getPortfolios();
   portfolioStore.setPortfolios(allPortfolios);
-  portfolioStore.setActivePortfolio(allPortfolios[0]);
+
+  const firstPortfolio = await getPortfolioById(allPortfolios[0].portfolioId);
+  portfolioStore.setActivePortfolio(firstPortfolio);
 });
 
 async function handleActivePortfolio(id: string): Promise<void> {

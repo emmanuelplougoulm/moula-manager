@@ -1,19 +1,21 @@
 <script setup lang="ts">
 import Drawer from '@/components/ui/drawer/drawer.vue';
-import Overview from '@/components/ui/overview/overview.vue';
+// import Overview from '@/components/ui/overview/overview.vue';
 import Portfolio from '@/components/ui/portfolio/portfolio.vue';
 import { usePortfolioStore } from '@/stores/portfolioStore';
 
 const portfolioStore = usePortfolioStore();
-const showOverviewComponent = false;
+
+// const showOverviewComponent = false;
 </script>
 
 <template>
   <div class="container">
     <Drawer />
     <div class="content">
-      <Overview v-if="showOverviewComponent" />
-      <Portfolio v-if="!showOverviewComponent" :portfolio="portfolioStore.active" />
+      {{ portfolioStore.hasAssets }}
+      <!-- <Overview v-if="showOverviewComponent" /> -->
+      <Portfolio :portfolio="portfolioStore.active" />
     </div>
   </div>
 </template>
@@ -26,7 +28,7 @@ const showOverviewComponent = false;
 }
 .content {
   flex: 1;
-  border: 1px red solid;
+  /* border: 1px red solid; */
   height: 800px;
 }
 </style>

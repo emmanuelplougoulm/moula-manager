@@ -3,7 +3,7 @@ import type { IPortfolio } from '@/types/index';
 export const usePortfolioStore = defineStore('portfolio', {
     state: () => ({
         all: [] as IPortfolio[],
-        active: {} as IPortfolio,
+        active: {} as IPortfolio || null,
     }),
     actions: {
         async setPortfolios(array: Array<object>) {
@@ -15,5 +15,9 @@ export const usePortfolioStore = defineStore('portfolio', {
         isActive(id: string): boolean {
             return this.active.portfolioId === id;
         }
+    },
+    getters: {
+        hasAssets: (state) => state.active?.assets?.length > 0 ? true : false,
+        activePortfolio: (state) => state.active
     }
 })

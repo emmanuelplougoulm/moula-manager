@@ -38,7 +38,7 @@ const toggleModalDeletePF = () => {
       </div>
     </div>
     <div class="assets_wrapper">
-      <Table />
+      <AssetsTable v-if="store.hasAssets" :assets="store.activePortfolio.assets" />
     </div>
     <ClientOnly>
       <Teleport to="#modal-root">
