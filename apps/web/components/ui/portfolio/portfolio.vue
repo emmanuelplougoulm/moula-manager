@@ -2,8 +2,12 @@
 import { ref } from 'vue';
 import ModalAddTransaction from '@/components/ui/modal-add-transaction/modal-add-transaction.vue';
 import ModalDeletePortfolio from '@/components/ui/modal-delete-portfolio/modal-delete-portfolio.vue';
+import ChartboxSummary from '@/components/ui/chartbox-summary/chartbox-summary.vue';
 import Button from '@/components/commons/button/button.vue';
-import Table from '@/components/ui/table/table.vue';
+import AssetsTable from '@/components/ui/assets-table/assets-table.vue';
+import { usePortfolioStore } from '@/stores/portfolioStore';
+
+const store = usePortfolioStore();
 
 defineProps({
   portfolio: {
@@ -23,12 +27,7 @@ const toggleModalDeletePF = () => {
 <template>
   <div class="wrapper">
     <div class="charts_wrapper">
-      <div>
-        <div class="name">NAME: Display a name here</div>
-        <div class="value">VALUE: Display total value here</div>
-        <div class="fiat-invested">FIAT INVESTED SINCE BEGINNING: Display FIAT here</div>
-        <div class="daily-profit-loss">Daily P/L: Display P/L here</div>
-      </div>
+      <ChartboxSummary />
       <div class="actions_wrapper">
         <Button
           :text="'add transaction +'"
