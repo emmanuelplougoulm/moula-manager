@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia';
+import { onMounted } from 'vue';
 
 import TabGroup from '@/components/commons/tab-group/tab-group.vue';
 import BaseInput from '@/components/commons/base-input/base-input.vue';
 import Dropdown from '@/components/commons/dropdown/dropdown.vue';
+import allCoins from '@/constants/allCoins.json';
 
 import { useTransactionStore } from '@/stores/transactionStore';
 
@@ -15,10 +17,14 @@ const { type, portfolioId, transactionId, date, currency, asset, quantity, price
 const optionsCurrency = ['EUR', 'DOL'];
 const optionsType = ['BUY', 'SELL'];
 
-const optionsCoins = [
-  { value: 'BTC', text: 'Bitcoin' },
-  { value: 'ETH', text: 'Ethereum' }
-];
+let optionsCoins: Array<object> = [];
+
+onMounted(() => {
+  optionsCoins = allCoins.map((coin) => {
+    return { value: coin.symbol, text: coin.name };
+  });
+  console.log('optionsCoins', optionsCoins);
+});
 </script>
 
 <template>
