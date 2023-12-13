@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import ModalAddTransaction from '@/components/ui/modal-add-transaction/modal-add-transaction.vue';
 import ModalDeletePortfolio from '@/components/ui/modal-delete-portfolio/modal-delete-portfolio.vue';
 import ChartboxSummary from '@/components/ui/chartbox-summary/chartbox-summary.vue';
+import CardTransaction from '@/components/ui/card-transaction/card-transaction.vue';
 import Button from '@/components/commons/button/button.vue';
 import AssetsTable from '@/components/ui/assets-table/assets-table.vue';
 import { usePortfolioStore } from '@/stores/portfolioStore';
@@ -16,8 +16,8 @@ defineProps({
   }
 });
 
-const showModalTransaction = ref(false);
 const isModalDeletePFOpen = ref(false);
+const isPanelOpen = ref(false);
 
 const toggleModalDeletePF = () => {
   isModalDeletePFOpen.value = !isModalDeletePFOpen.value;
@@ -26,33 +26,48 @@ const toggleModalDeletePF = () => {
 
 <template>
   <div class="wrapper">
-    <div class="charts_wrapper">
-      <ChartboxSummary />
-      <div class="actions_wrapper">
-        <Button
-          :text="'add transaction +'"
-          class="add-transaction"
-          @click="showModalTransaction = true"
-        />
-        <Button :text="'...'" class="delete-portfolio" @click="isModalDeletePFOpen = true" />
+    <div class="portfolio-infos">
+      <div class="charts_wrapper">
+        <ChartboxSummary />
+        <div class="actions_wrapper">
+          <Button
+            :text="'add transaction +'"
+            class="add-transaction"
+            @click="isPanelOpen = !isPanelOpen"
+          />
+          <Button :text="'...'" class="delete-portfolio" @click="isModalDeletePFOpen = true" />
+        </div>
+      </div>
+      <div class="assets_wrapper">
+        <AssetsTable v-if="store.hasAssets" :assets="store.activePortfolio.assets" />
       </div>
     </div>
-    <div class="assets_wrapper">
-      <AssetsTable v-if="store.hasAssets" :assets="store.activePortfolio.assets" />
+    <div>
+      <CardTransaction :is-open="isPanelOpen" />
     </div>
-    <ClientOnly>
-      <Teleport to="#modal-root">
-        <ModalAddTransaction
-          v-if="showModalTransaction"
-          @close-modal="showModalTransaction = false"
-        />
-        <ModalDeletePortfolio v-if="isModalDeletePFOpen" @modal-close="toggleModalDeletePF" />
-      </Teleport>
-    </ClientOnly>
   </div>
+  <ClientOnly>
+    <Teleport to="#modal-root">
+      <ModalDeletePortfolio v-if="isModalDeletePFOpen" @modal-close="toggleModalDeletePF" />
+    </Teleport>
+  </ClientOnly>
 </template>
 
 <style scoped>
+.wrapper {
+  height: 100%;
+  /* border: 1px red solid; */
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.portfolio-infos {
+  flex: 1;
+  padding: 20px;
+}
+
 .transaction {
   position: absolute;
   right: 20px;
@@ -78,10 +93,6 @@ const toggleModalDeletePF = () => {
   height: 30px;
   background-color: grey;
   margin-left: 1rem;
-}
-
-.wrapper {
-  padding: 20px;
 }
 
 .charts_wrapper {

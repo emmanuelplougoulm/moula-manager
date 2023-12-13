@@ -2,12 +2,16 @@
 import { computed } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useTransactionStore } from '@/stores/transactionStore';
+import { usePortfolioStore } from '@/stores/portfolioStore';
+import { createTransaction } from '@/services/transactions/transactions.service';
+import { getPortfolioById } from '@/services/portfolios/portfolios.service';
 
 import TabGroup from '@/components/commons/tab-group/tab-group.vue';
 import BaseInput from '@/components/commons/base-input/base-input.vue';
 import SearchableDropdown from '@/components/commons/searchable-dropdown/searchable-dropdown.vue';
 
 import allCoins from '@/constants/allCoins.json';
+import { CONSTANTS } from '@/constants';
 
 defineProps({
   isOpen: {
@@ -17,12 +21,34 @@ defineProps({
 });
 
 const transactionStore = useTransactionStore();
+const portfolioStore = usePortfolioStore();
 
-const { type, portfolioId, transactionId, date, currency, asset, quantity, price, fees } =
-  storeToRefs(transactionStore);
+const activePortfolioId = portfolioStore.active.portfolioId;
+const { type, date, currency, asset, quantity, price, fees } = storeToRefs(transactionStore);
 
-const optionsCurrency = ['EUR', 'DOL'];
-const optionsType = ['BUY', 'SELL'];
+const { FIAT_TYPES, TRANSACTION_TYPES } = CONSTANTS;
+
+const handleAddTransaction = async () => {
+  const newTransaction = {
+    type: transactionStore.type,
+    portfolioId: portfolioStore.active.portfolioId,
+    date: transactionStore.date,
+    currency: transactionStore.currency,
+    asset: transactionStore.asset.value,
+    amount: transactionStore.quantity,
+    price: transactionStore.price,
+    fees: transactionStore.fees
+  };
+
+  const response = await createTransaction(newTransaction);
+  
+  if (response.transactionId) {
+    const response = await getPortfolioById(activePortfolioId);
+    portfolioStore.setActivePortfolio(response);
+  } else {
+    // toast.add({ title: 'Error' });
+  }
+};
 
 let optionsCoins = computed(() => {
   return allCoins.map((coin) => {
@@ -40,22 +66,22 @@ let optionsCoins = computed(() => {
     :class="{ collapsed: isOpen }"
   >
     <div class="grid-container">
-      <TabGroup class="grid-item" v-model="currency" :options="optionsCurrency" />
-      <TabGroup class="grid-item" v-model="type" :options="optionsType" />
+      <TabGroup class="grid-item" v-model="currency" :options="FIAT_TYPES" />
+      <TabGroup class="grid-item" v-model="type" :options="TRANSACTION_TYPES" />
 
-      <div class="grid-item">
+      <div>
         <SearchableDropdown v-model="asset" :options="optionsCoins" />
       </div>
-      <div class="grid-item">
+      <div>
         <BaseInput v-model="quantity" class="input-item" :label="'Quantity'" />
       </div>
-      <div class="grid-item">
+      <div>
         <BaseInput v-model="price" class="input-item" :label="'Price'" />
       </div>
-      <div class="grid-item">
+      <div>
         <BaseInput v-model="date" :label="'Date'" />
       </div>
-      <div class="grid-item">
+      <div>
         <BaseInput v-model="fees" :label="'Fees'" />
       </div>
       <!-- <div>TODO CALCULATE TOTAL</div> -->
