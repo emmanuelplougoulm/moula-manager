@@ -21,3 +21,5 @@ apps/*/node_modules/
 
 ./dist
 apps/*/dist/
+
+packages/eslint-config-custom/node_modules/eslint
