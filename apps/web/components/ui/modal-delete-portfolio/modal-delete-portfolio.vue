@@ -9,9 +9,6 @@ defineProps({
 
 const emit = defineEmits(['modal-close']);
 
-// eslint-disable-next-line no-undef
-const toast = useToast();
-
 const portfolioStore = usePortfolioStore();
 const id = portfolioStore.active.portfolioId;
 
@@ -19,9 +16,9 @@ const handleDeletePortfolio = async () => {
   const response = await deletePortfolioById(id);
 
   if (response.deletedCount === 1) {
-    toast.add({ title: 'Portfolio has been successfully deleted' });
+    // toast.add({ title: 'Portfolio has been successfully deleted' });
   } else {
-    toast.add({ title: 'Error' });
+    // toast.add({ title: 'Error' });
   }
   emit('modal-close');
 };

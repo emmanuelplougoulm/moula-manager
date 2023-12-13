@@ -15,8 +15,6 @@ defineProps({
 });
 
 const timeNow = dayjs();
-// eslint-disable-next-line no-undef
-const toast = useToast();
 
 const portfolioState = reactive({
   portfolioName: '',
@@ -31,13 +29,13 @@ const handleCreatePortfolio = async () => {
   const response = await createPortfolio(portfolioState);
 
   if (response.portfolioId) {
-    toast.add({ title: 'Portfolio has been successfully created' });
+    // toast.add({ title: 'Portfolio has been successfully created' });
 
     const allPortfolios = await getPortfolios();
     portfolioStore.setPortfolios(allPortfolios);
     portfolioStore.setActivePortfolio(allPortfolios[0]);
   } else {
-    toast.add({ title: 'Error' });
+    // toast.add({ title: 'Error' });
   }
   emit('modal-close');
 };

@@ -11,8 +11,6 @@ defineProps({
   required: true
 });
 
-// eslint-disable-next-line no-undef
-const toast = useToast();
 const store = useTransactionStore();
 const portfolioStore = usePortfolioStore();
 
@@ -35,11 +33,11 @@ const handleAddTransaction = async () => {
   const response = await createTransaction(newTransaction);
 
   if (response.transactionId) {
-    toast.add({ title: 'Transaction successfully added' });
+    // toast.add({ title: 'Transaction successfully added' });
     const response = await getPortfolioById(activePortfolioId);
     portfolioStore.setActivePortfolio(response);
   } else {
-    toast.add({ title: 'Error' });
+    // toast.add({ title: 'Error' });
   }
 
   emit('close-modal');

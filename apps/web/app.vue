@@ -5,5 +5,4 @@ const layout = 'default';
 
 <template>
   <NuxtLayout :name="layout" />
-  <UNotifications />
 </template>
