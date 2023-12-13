@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import NavigationItem from '@/components/commons/navigation-item/navigation-item.vue';
-
-const colorMode = useColorMode();
 </script>
 
 <template>

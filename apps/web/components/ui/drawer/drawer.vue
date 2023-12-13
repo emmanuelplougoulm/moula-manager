@@ -69,7 +69,7 @@ async function handleActivePortfolio(id: string): Promise<void> {
   flex-direction: column;
   border-right: 0.0625rem var(--color-border-grey) solid;
   height: 100vh;
-  width: 20rem;
+  width: 323px;
   position: relative;
   transition: width 0.45s cubic-bezier(0.82, 0.085, 0.395, 0.895);
 }
