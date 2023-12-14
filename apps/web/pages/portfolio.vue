@@ -13,7 +13,7 @@ const portfolioStore = usePortfolioStore();
   <div class="container">
     <Drawer />
     <div class="content">
-      {{ portfolioStore.hasAssets }}
+      <!-- {{ portfolioStore.hasAssets }} -->
       <!-- <Overview v-if="showOverviewComponent" /> -->
       <Portfolio :portfolio="portfolioStore.active" />
     </div>
@@ -23,12 +23,12 @@ const portfolioStore = usePortfolioStore();
 <style scoped>
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
+  /* border: 2px violet solid; */
 }
 .content {
   flex: 1;
   /* border: 1px red solid; */
-  height: 800px;
+  /* height: 800px; */
 }
 </style>

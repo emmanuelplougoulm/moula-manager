@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { usePortfolioStore } from '@/stores/portfolioStore';
+
 import ModalDeletePortfolio from '@/components/ui/modal-delete-portfolio/modal-delete-portfolio.vue';
 import ChartboxSummary from '@/components/ui/chartbox-summary/chartbox-summary.vue';
 import CardTransaction from '@/components/ui/card-transaction/card-transaction.vue';
 import Button from '@/components/commons/button/button.vue';
 import AssetsTable from '@/components/ui/assets-table/assets-table.vue';
-import { usePortfolioStore } from '@/stores/portfolioStore';
+
 
 const store = usePortfolioStore();
 
