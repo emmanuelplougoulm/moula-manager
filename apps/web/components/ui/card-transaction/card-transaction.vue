@@ -23,7 +23,7 @@ defineProps({
 const transactionStore = useTransactionStore();
 const portfolioStore = usePortfolioStore();
 
-const activePortfolioId = portfolioStore.active.portfolioId;
+const activePortfolioId = computed(() => portfolioStore.getActivePortfolioId);
 const { type, date, currency, asset, quantity, price, fees } = storeToRefs(transactionStore);
 
 const { FIAT_TYPES, TRANSACTION_TYPES } = CONSTANTS;
@@ -31,7 +31,7 @@ const { FIAT_TYPES, TRANSACTION_TYPES } = CONSTANTS;
 const handleAddTransaction = async () => {
   const newTransaction = {
     type: transactionStore.type,
-    portfolioId: portfolioStore.active.portfolioId,
+    portfolioId: activePortfolioId.value,
     date: transactionStore.date,
     currency: transactionStore.currency,
     asset: transactionStore.asset.value,
@@ -41,9 +41,9 @@ const handleAddTransaction = async () => {
   };
 
   const response = await createTransaction(newTransaction);
-  
+
   if (response.transactionId) {
-    const response = await getPortfolioById(activePortfolioId);
+    const response = await getPortfolioById(activePortfolioId.value);
     portfolioStore.setActivePortfolio(response);
   } else {
     // toast.add({ title: 'Error' });
@@ -55,8 +55,6 @@ let optionsCoins = computed(() => {
     return { value: coin.symbol, name: coin.name };
   });
 });
-
-// console.log('optionsCoins', optionsCoins.value);
 </script>
 
 <template>

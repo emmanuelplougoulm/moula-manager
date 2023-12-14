@@ -18,6 +18,7 @@ export const usePortfolioStore = defineStore('portfolio', {
     },
     getters: {
         hasAssets: (state) => state.active?.assets?.length > 0 ? true : false,
-        activePortfolio: (state) => state.active
+        activePortfolio: (state) => state.active,
+        getActivePortfolioId: (state) => state.active?.portfolioId,
     }
 })
