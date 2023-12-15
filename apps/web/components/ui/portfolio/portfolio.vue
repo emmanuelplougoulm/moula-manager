@@ -8,9 +8,6 @@ import CardTransaction from '@/components/ui/card-transaction/card-transaction.v
 import Button from '@/components/commons/button/button.vue';
 import AssetsTable from '@/components/ui/assets-table/assets-table.vue';
 
-
-const store = usePortfolioStore();
-
 defineProps({
   portfolio: {
     type: Object,
@@ -18,11 +15,15 @@ defineProps({
   }
 });
 
+const store = usePortfolioStore();
 const isModalDeletePFOpen = ref(false);
-const isPanelOpen = ref(false);
+const showPanel = ref(false);
 
 const toggleModalDeletePF = () => {
   isModalDeletePFOpen.value = !isModalDeletePFOpen.value;
+};
+const closePanel = () => {
+  showPanel.value = false;
 };
 </script>
 
@@ -32,11 +33,7 @@ const toggleModalDeletePF = () => {
       <div class="charts_wrapper">
         <ChartboxSummary />
         <div class="actions_wrapper">
-          <Button
-            :text="'add transaction +'"
-            class="add-transaction"
-            @click="isPanelOpen = !isPanelOpen"
-          />
+          <Button :text="'add transaction +'" class="add-transaction" @click="showPanel = true" />
           <Button :text="'...'" class="delete-portfolio" @click="isModalDeletePFOpen = true" />
         </div>
       </div>
@@ -45,7 +42,7 @@ const toggleModalDeletePF = () => {
       </div>
     </div>
     <div>
-      <CardTransaction :is-open="isPanelOpen" />
+      <CardTransaction :is-open="showPanel" @collapse="closePanel" />
     </div>
   </div>
   <ClientOnly>
