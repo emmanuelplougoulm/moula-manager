@@ -1,12 +1,20 @@
 <template>
   <div class="tab-group-container">
-    <div v-for="(option, index) in options" :key="index">
-      <div @click="onClick(option)">{{ option }}</div>
+    <div
+      class="tab-item"
+      @click="onClick(option)"
+      :class="{ selected: modelValue === option }"
+      v-for="(option, index) in options"
+      :key="index"
+    >
+      {{ option }}
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { defineProps, defineEmits } from 'vue';
+
 defineProps({
   modelValue: {
     type: String,
@@ -36,7 +44,7 @@ const onClick = (option: string) => {
   width: 100%;
 }
 
-.tab-group-container div {
+.tab-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,5 +53,12 @@ const onClick = (option: string) => {
   border-radius: var(--border-radius-base);
   background-color: var(--color-bg-lighter);
   cursor: pointer;
+}
+.tab-item:hover {
+  background-color: var(--color-bg-lightest);
+}
+.tab-item.selected {
+  border: 1px #6cf5c7 solid;
+  color: #6cf5c7;
 }
 </style>
